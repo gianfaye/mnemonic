@@ -1,0 +1,1051 @@
+@import '../base/tokens';
+
+/* FORMS */
+
+input[type="text"]:not(.slider),
+input[type="password"],
+input[type="search"],
+select{
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+// All form elements should be grouped 
+.form__group{
+  display: block;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left:  $halfSpace / 2 !important;
+  padding-right:  $halfSpace / 2 !important;
+  margin-block-start: $halfSpace / 2; 
+  margin-block-end: $halfSpace / 2; 
+
+  & > div{
+    padding: 0 10px;
+  }
+
+  /* LABELS */
+  label{
+    text-align: left;
+    font-weight: 500; 
+    line-height: 1;
+    color: $gray-06;
+    margin-right: $gutterSpace;
+  }
+
+  /* Line Height */
+  input[type="text"], 
+  select,
+  .select2{
+    line-height: 1;
+  }
+  textarea{
+    line-height: 1.6;
+  }
+
+  /* TEXT BOX, DROPDOWN SELECT, TEXTAREA */
+  input[type="text"]:not(.slider), 
+  input[type="search"], 
+  input[type="password"],
+  select,
+  .select2, 
+  textarea{
+    width: 100%;
+    display: block;
+    padding: ($halfSpace / 2) $halfSpace;
+    text-align: left;
+    position: relative;
+    border-radius: 3px;
+    border: solid 1px $gray-03;
+
+    &:focus{
+      border: solid 1px $infoColor;
+      box-shadow: 0 0 10px $gray-02;
+    }
+
+    /* PLACEHOLDER */
+    /* User agents are required to ignore a rule with an unknown selector. So we need separate rules for each browser. */
+
+    /* WebKit, Blink, Edge */
+    &::-webkit-input-placeholder { 
+      opacity: 0.8;
+    }
+    /* Mozilla Firefox 4 to 18 */
+    &:-moz-placeholder { 
+      color: $gray-04;
+      opacity: 0.8;
+    }
+    /* Mozilla Firefox 19+ */
+    &::-moz-placeholder { 
+      color: $gray-04;
+      opacity: 0.8;
+    }
+    /* Internet Explorer 10-11 */
+    &:-ms-input-placeholder { 
+      color: $gray-04;
+    }
+    /* Microsoft Edge */
+    &::-ms-input-placeholder { 
+      color: $gray-04;
+    }
+    /* Most modern browsers support this now. */
+    &::placeholder { 
+      color: $gray-04;
+      opacity: 0.8;
+    }
+
+    /* Validation */
+    // Passed validation
+    &.is-passed{
+      border: solid 1px $green;
+      background-color: $green-30;
+
+      &:focus{
+        background-color: #FFF;
+      }
+    }
+
+    // Failed validation
+    &.is-failed{
+      border: solid 1px $red;
+      background-color: $red-30;
+      &:focus{
+        background-color: #FFF;
+      }
+    }
+
+    /* Disabled Status */
+    &:disabled{
+      background-color: $gray-02;
+      color: $gray-04;
+      cursor: not-allowed;
+    }
+
+    /* Read-only Status*/
+    &:not(select):read-only:not(.select2){
+      background-color: $gray-02;
+      cursor: text;
+    }
+  }
+
+  /* Search */
+  input[type="search"]{
+    padding-left: $wholeSpace;
+  } 
+
+  .search__icon{
+    position: absolute;
+    z-index: 1;
+    margin-top: -26px;
+    margin-left: 5px;
+    cursor: pointer;
+    width: 0;
+    color: $gray-07;
+    font-size: 0.75rem;
+  }
+
+  /* Validation Message */
+  span.message{
+    margin-top: $halfSpace / 2;
+    font-size: 0.75em;
+    font-weight: 600;
+    font-style: italic;
+    display: block;
+    position: relative;
+  }
+
+  /* CHECKBOX */
+  input[type="checkbox"],
+  input[type="radio"]{
+    position: absolute; // take it out of document flow
+    opacity: 0; // hide it
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      padding-bottom: $halfSpace / 2;
+      padding-left: 35px;
+      line-height: 1.5;
+    }
+
+    // Box.
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      //vertical-align: text-top;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      margin-top: -3px;
+      margin-left: -30px;
+      border-radius: 3px;
+      border: solid 1px $gray-03;
+      background: white;
+    }
+
+    // Box hover
+    &:hover + label:before {
+      border-color: $blue;
+    }
+    
+    // Box focus
+    &:focus + label:before {
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+    }
+
+    // Box checked
+    &:checked + label:before {
+      background: $blue;
+      border-color: $blue;
+    }
+
+    // Box checked
+    &:checked:hover + label:before {
+      //border-color: $blue;
+    }
+    
+    // Disabled state label
+    &:disabled + label {
+      color: $gray-04;
+      cursor: not-allowed;
+    }
+
+    // Disabled box
+    &:disabled + label:before {
+      box-shadow: none;
+      background: $gray-02;
+      border-color: $gray-03;
+      cursor: not-allowed;
+    }
+
+    // Disabled box
+    &:disabled:hover + label:before {
+      box-shadow: none;
+      border-color: $gray-03;
+      cursor: not-allowed;
+    }
+
+    // Checkbox could be replaced with an image
+    &:checked + label:after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow: 
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+
+  /* RADIO BUTTON */
+  input[type="radio"]{
+    & + label:before {
+      border-radius: 100%;
+    }
+
+    &:checked + label:after{
+      width: 10px;
+      height: 10px;
+      left: 10px;
+      top: 6px;
+      transform: none;
+      box-shadow: none;
+      border-radius: 100%;
+    }
+  }
+
+  /* SWITCH */
+  .switch {
+    display: none;
+    
+    // add default box-sizing for this scope
+    &,
+    &:after,
+    &:before,
+    & *,
+    & *:after,
+    & *:before,
+    & + .tgl-btn {
+      box-sizing: border-box;
+      &::selection {
+        background: none;
+      }
+    }
+    
+    + .switch__button {
+      outline: 0;
+      display: block;
+      width: 4em;
+      height: 2em;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+      margin: 0 auto;
+
+      &:after,
+      &:before {
+        position: relative;
+        display: block;
+        content: "";
+        width: 30px;
+        height: 30px;
+        // box-shadow: 0 1px 3px 0 $gray-03;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        border: solid 1px #FFF;
+      }
+      
+      &:after {
+        left: 0;
+        // right: auto;
+        top: 0;
+      }
+      
+      &:before {
+        display: none;
+      }
+    }
+    
+    // Toggled state: ON
+    &:checked + .switch__button:after {
+      left: 50%;
+      // left: auto;
+      // right: 0;
+      width: 30px;
+      height: 30px;
+      //box-shadow: none;
+      top: 0;
+      transform: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+
+    // Default skin
+
+    + .switch__button {
+      background: $gray-02;
+      border-radius: 2em;
+      padding: 0;
+      transition: all .4s ease;
+      &:after {
+        border-radius: 50%;
+        background: #FFF;
+        transition: all .2s ease;
+      }
+    }
+    
+    &:checked + .switch__button {
+      background: $blue;
+    }
+    &.green:checked + .switch__button{
+      background: $green;
+    }
+    &.yellow:checked + .switch__button{
+      background: $yellow;
+    }
+    &.orange:checked + .switch__button{
+      background: $orange;
+    }
+  }
+
+  /* SLIDER */
+  .slider{
+    -moz-appearance: auto;
+    -webkit-appearance: auto;
+    appearance: auto;
+  }
+  .slider__wrapper{
+    display: block;
+    position: relative;
+    // padding: 10px 0;
+
+    .slider__value{
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    // Default Powerange classes
+
+    .range-bar{
+      background-color: $gray-02;
+      border-radius: 15px;
+      //border: solid 2px $gray-02;
+      display: block;
+      height: 10px;
+      position: relative;
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .range-handle{
+      background: #FFF;
+      top: -10px;
+    }
+
+    .range-quantity{
+      background-color: $blue;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .range-min,
+    .range-max{
+      top: -6px;
+    }
+
+    // Custom colors
+    &.green{
+      .range-quantity{
+        background-color: $green;
+      }
+    }
+    &.yellow{
+      .range-quantity{
+        background-color: $yellow;
+      }
+    }
+    &.orange{
+      .range-quantity{
+        background-color: $orange;
+      }
+    }
+  }
+
+  /* SELECT */
+  select,
+  .select2 {
+    background-color: transparent;
+    border-radius: 4px;
+    display: inline-block;
+    font: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    // Reset
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+
+    option:first-child{
+      color: $gray-04;
+      opacity: 0.9;
+      font-size: 0.875rem;
+      line-height: normal;
+    }
+  }
+
+  select{
+    // Arrow
+    // with pipe
+    /* background-image:
+      linear-gradient(45deg, transparent 50%, $gray-05 50%),
+      linear-gradient(135deg, $gray-05 50%, transparent 50%),
+      linear-gradient(to right, $gray-03, $gray-03); */
+    // without pipe
+    background-image:
+      linear-gradient(45deg, transparent 50%, $gray-05 50%),
+      linear-gradient(135deg, $gray-05 50%, transparent 50%);
+
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.55em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+
+    &:focus {
+      // with pipe
+      /* background-image:
+        linear-gradient(45deg, $gray-05 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, $gray-05 50%),
+        linear-gradient(to right, $gray-03, $gray-03); */
+      // without pipe
+      background-image:
+        linear-gradient(45deg, $gray-05 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, $gray-05 50%);
+        
+      background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        calc(100% - 2.5em) 0.55em;
+      background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+/* FORM SIZES */
+// Add to <form>
+
+// Small
+.form--sm{
+  .form__group{
+    margin-block-start: $halfSpace / 2; 
+    margin-block-end: $halfSpace / 2; 
+  }
+
+  label{
+    font-size: 0.75em;
+  }
+
+  input[type="text"],
+  input[type="password"], 
+  input[type="search"], 
+  select{
+    font-size: 0.75em;
+    padding: ($halfSpace / 4) ($halfSpace / 2);
+  }
+
+  input[type="checkbox"],
+  input[type="radio"]{
+    & + label{
+      padding-bottom: 5px;
+    }
+    & + label:before{
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  input[type="checkbox"]{
+    &:checked+label:after{
+      left: 8px;
+      top: 7px;
+    }
+  }
+
+  input[type="radio"]{
+    &:checked+label:after{
+      left: 10px;
+      top: 5px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .switch{
+    & + .switch__button:after, 
+    & + .switch__button:before,
+    &:checked+.switch__button:after{
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .slider__wrapper{
+    .slider__value{
+      font-size: 0.875em;
+    }
+    .range-bar{
+      height: 5px;
+      margin-top: 9px;
+    }
+    .range-handle{
+      width: 24px;
+      height: 24px;
+    }
+    .range-min, 
+    .range-max{
+      top: -9px;
+    }
+  }
+
+  select,
+  .select2{
+    padding-right: 30px;
+  }
+
+  select{
+    background-position: 
+      calc(100% - 12px) calc(1em + -1px),
+      calc(100% - 7px) calc(1em + -1px),
+      calc(100% - 2em) 0.3em;
+    &:focus{
+      background-position:
+        calc(100% - 7px) 0.8em,
+        calc(100% - 12px) 0.8em,
+        calc(100% - 2em) 0.3em;
+    }
+  }
+}
+
+// Medium 
+.form--md{
+  .form__group{
+    margin-block-start: $halfSpace / 2; 
+    margin-block-end: $halfSpace / 2; 
+  }
+
+  label{
+    font-size: 0.875em;
+  }
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="search"],
+  select{
+    font-size: 0.875em;
+    padding: ($halfSpace / 2) $halfSpace;
+  }
+
+  select{
+    line-height: 1.5rem;
+  }
+
+  input[type="checkbox"]{
+    &:checked+label:after{
+      top: 9px;
+    }
+  }
+
+  input[type="radio"]{
+    &:checked+label:after{
+      top: 5px;
+    }
+  }
+
+  .switch{
+    & + .switch__button:after, 
+    & + .switch__button:before,
+    &:checked+.switch__button:after{
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  .slider__wrapper{
+    .slider__value{
+      font-size: 1em;
+    }
+    .range-bar{
+      height: 8px;
+      margin-top: 9px;
+    }
+    .range-handle{
+      width: 28px;
+      height: 28px;
+    }
+    .range-min, 
+    .range-max{
+      top: -9px;
+    }
+  }
+
+  select,
+  .select2{
+    padding-right: 50px;
+  }
+
+  select{
+    background-position: 
+      calc(100% - 22px) calc(1em + 5px),
+      calc(100% - 17px) calc(1em + 5px),
+      calc(100% - 3em) 0.8em;
+    &:focus{
+      background-position:
+        calc(100% - 17px) 1.25em,
+        calc(100% - 22px) 1.25em,
+        calc(100% - 3em) 0.8em;
+    }
+  }
+}
+
+// Large
+.form--lg{
+  .form__group{
+    margin-block-start: $halfSpace / 2; 
+    margin-block-end: $halfSpace / 2; 
+  }
+
+  label{
+    font-size: 1.125em;
+    display: block;
+    padding-bottom: $halfSpace / 2;
+  }
+
+  input[type="text"], 
+  input[type="password"], 
+  input[type="search"],
+  select{
+    font-size: 1.125em;
+    padding: $halfSpace $wholeSpace;
+  }
+
+  input[type="checkbox"],
+  input[type="radio"]{
+    & + label{
+      padding-bottom: 15px;
+    }
+    & + label:before{
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  input[type="checkbox"]{
+    &:checked+label:after{
+      left: 12px;
+      top: 13px;
+    }
+  }
+
+  input[type="radio"]{
+    &:checked+label:after{
+      left: 11px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  .switch{
+    & + .switch__button:after, 
+    & + .switch__button:before,
+    &:checked+.switch__button:after{
+      width: 34px;
+      height: 34px;
+    }
+  }
+
+  .slider__wrapper{
+    .slider__value{
+      font-size: 1.125em;
+    }
+    .range-bar{
+      height: 15px;
+      margin-top: 4px;
+    }
+    .range-handle{
+      width: 36px;
+      height: 36px;
+    }
+    .range-min, 
+    .range-max{
+      top: -4px;
+    }
+  }
+
+  select,
+  .select2{
+    padding-right: 70px;
+  }
+
+  select{
+    background-position: 
+      calc(100% - 29px) calc(1em + 11px),
+      calc(100% - 24px) calc(1em + 11px),
+      calc(100% - 3em) 1em;
+    &:focus{
+      background-position:
+        calc(100% - 24px) 1.5em,
+        calc(100% - 29px) 1.5em,
+        calc(100% - 3em) 1em;
+    }
+  }
+}
+
+// Search
+.search {
+  .form__group{
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+}
+
+// Label Position 
+// Add to <form>
+.label--top{
+  input[type="text"],
+  select, 
+  label{
+    display: block;
+  }
+  label{
+    padding-bottom: $halfSpace / 3;
+  }
+  input[type="text"], 
+  select{
+    width: 100%;
+  }
+}
+
+.label--side{
+  input[type="text"], 
+  select, 
+  label{
+    display: inline;
+  }
+  .form__group{
+    display: flex;
+    align-items: center;
+    label{
+      flex: 1 1 30%;
+    }
+    input, select, textarea{
+      flex: 1 1 70%;
+    }
+    // Add to form__group with textarea
+    &.label--align-top{
+      align-items: start;
+    }
+  }
+  // label{
+  //   width: 30%;
+  // }
+  // input{
+  //   width: 70%;
+  // }
+}
+
+// Label Alignment
+// Add to <form>
+.label--align-right{
+  label{
+    text-align: right;
+  }
+}
+
+.label--align-center{
+  label{
+    text-align: center;
+  }
+}
+
+// FLOAT LABELS
+// Add to .form__group
+.float-label{
+  position: relative;
+  //width: max-content;
+
+  & > label{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.2s;
+    padding: 15px;
+    opacity: 0.5;
+    font-size: 1.25rem;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  & > input{
+    padding: 25px 15px 5px 15px !important;
+  }
+
+  input:focus + label {
+    padding: 10px 15px;
+    opacity: 0.8;
+    font-size: 0.875rem;
+  }
+
+  input:valid + label{
+    padding: 10px 15px;
+    opacity: 0.8;
+    font-size: 0.875rem;
+  }
+}
+
+/* Custom */
+
+.form--outline{  
+  .icon-search--inline {
+    position: absolute;
+    right: 15px;
+    top: 19px;
+  }
+
+  input[type="text"]{
+    background: transparent;
+    color: #FFF;
+    padding: 10px;
+    border-color: #FFF;
+    border: 1px solid;
+    font-family: $regularFont;
+
+    /* User agents are required to ignore a rule with an unknown selector. So we need separate rules for each browser. */
+    &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+      color: #fff;
+      opacity: 0.5;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color: #fff;
+       opacity: 0.5;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color: #fff;
+       opacity: 0.5;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color: #fff;
+    }
+    &::-ms-input-placeholder { /* Microsoft Edge */
+       color: #fff;
+    }
+
+    &::placeholder { /* Most modern browsers support this now. */
+       color: #fff;
+      opacity: 0.5;
+    }
+
+    &.large{
+      // display: inline-block;
+      border: 4px solid #FFF;
+      font-size: 30px;    
+      padding: 10px 15px;
+      border-radius: 0;
+      font-weight: 500;
+      line-height: 1;
+    }
+  }
+
+  &-blue{
+    text-align: left;
+    h4{
+      margin-bottom: 10px !important;
+    }
+    select {
+      color: rgba(51, 51, 51, 0.7);
+      font-size: 20px;
+      line-height: 1.5;
+      box-sizing: border-box;
+      margin: 0;
+      box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+      //   linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+      background-repeat: no-repeat, repeat;
+      background-position: right .7em top 50%, 0 0;
+      background-size: .65em auto, 100%;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    select:hover {
+        // box-shadow: 0 1px 0 1px rgba(0,0,0,.05);
+    }
+    select:focus {
+      border-color: #aaa;
+      box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+      box-shadow: 0 0 0 3px -moz-mac-focusring;
+      color: #222; 
+      outline: none;
+    }
+    select option {
+      font-weight:normal;
+    }
+  }
+}
+
+.form__results{
+  display: block;
+  text-align: left;
+  > div{
+    margin-bottom: 20px;
+  }
+  > div:last-child{
+    margin-bottom: 0;
+  }
+}
+.form__result-label{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.25;
+  display: block;
+  text-align: center;
+}
+.form__result{
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+  display: block;
+  &.blue{
+    color: $brandColor;
+  }
+}
+
+input[type="text"]{
+  &:placeholder-shown + svg {
+    visibility: visible;
+  }
+}
+
+.easy-autocomplete {
+  display: inline; 
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+select, label{
+  font-family: $regularFont;
+}
+
+@media (min-width: 1024px){
+  .form--outline{  
+    .icon-search--inline {
+      top: 18px;
+    }
+  }
+
+  .form__group{
+    & > div:first-child{
+      padding-left: 0;
+    }
+    & > div:last-child{
+      padding-right: 0;
+    }
+  }
+
+  .form__result-label{
+    font-size: 22px;
+  }
+  .form__result{
+    font-size: 30px;
+  }
+
+  _:-ms-fullscreen, 
+  :root .form--outline-blue input {
+    padding: 7px 15px 15px 15px;
+  }
+
+  .form__result-label{
+    text-align: left;
+  }
+  .form__result{
+    text-align: right;
+  }
+}

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Accordion</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all" />
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)" />
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)" />
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)" />
+  
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+          <a href="#">
+          <picture>
+            <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+            <img src="images/page_template/logo.png" alt="Logo">
+          </picture>
+          </a>
+        </div-->
+                <div class="nav__brand-text">
+                  <a href="/">MNEMONIC &bull; Design System</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group">
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="#menuTheme" class="accordion has-caret inverted">Theme</a>
+                <div id="menuTheme" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="color.html"><i class="fas fa-palette"></i> &nbsp; Colors</a>
+                    </li>
+                    <li>
+                      <a href="typography.html"><i class="fas fa-font"></i> &nbsp; Typography</a>
+                    </li>
+                    <li>
+                      <a href="icon.html"><i class="fas fa-icons"></i> &nbsp; Icons</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuLayout" class="accordion has-caret inverted">Layout</a>
+                <div id="menuLayout" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="grid.html"><i class="fas fa-th"></i> &nbsp; Grid</a>
+                    </li>
+                    <li>
+                      <a href="flex.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Flex</a>
+                    </li>
+                    <li>
+                      <a href="spacing.html"><i class="fas fa-grip-lines"></i> &nbsp; Spacing</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li>
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li>
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted is-expanded">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li class="active">
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li>
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuNavigation" class="accordion has-caret inverted"> Navigation</a>
+                <div id="menuNavigation" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="menu.html"><i class="fas fa-bars"></i> &nbsp; Menu</a>
+                    </li>
+                    <li>
+                      <a href="anchor.html"><i class="fas fa-anchor"></i> &nbsp; Anchor Links</a>
+                    </li>
+                    <li>
+                      <a href="breadcrumb.html"><i class="fas fa-angle-double-right"></i> &nbsp; Breadcrumbs</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuModules" class="accordion has-caret inverted"> Modules</a>
+                <div id="menuModules" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="banner.html"><i class="far fa-image"></i> &nbsp; Banners</a>
+                    </li>
+                    <li>
+                      <a href="gallery.html"><i class="far fa-images"></i> &nbsp; Gallery</a>
+                    </li>
+                    <li>
+                      <a href="carousel.html"><i class="far fa-caret-square-right"></i> &nbsp; Carousel</a>
+                    </li>
+                    <li>
+                      <a href="datatable.html"><i class="fas fa-digital-tachograph"></i> &nbsp; Datatables</a>
+                    </li>
+                    <li>
+                      <a href="wizard.html"><i class="fas fa-magic"></i> &nbsp; Form Wizards</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuState" class="accordion has-caret inverted"> State</a>
+                <div id="menuState" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="animate.html"><i class="fas fa-quidditch"></i> &nbsp; Animate</a>
+                    </li>
+                    <li>
+                      <a href="preloader.html"><i class="fas fa-border-none"></i> &nbsp; Preloader</a>
+                    </li>
+                    <li>
+                      <a href="lazyload.html"><i class="fas fa-tasks"></i> &nbsp; Lazyload</a>
+                    </li>
+                    <li>
+                      <a href="sticky.html"><i class="fas fa-thumbtack"></i> &nbsp; Sticky</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Accordion</h1>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Components</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="accordion.html">Accordion</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Default</h2>
+        </section>
+        <section class="section__body">
+          <div class="flex--half">
+            <div class="accordion-no-caret">
+              <h3>No Caret</h3>
+              <div class="card">
+                <div class="card__body">
+                  <ul class="accordion-container--collapsed">
+                    <li>
+                      <a href="#faqFirst" class="accordion">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-with-caret">
+              <h3>With Caret <small><code>.has-caret</code></small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <ul class="accordion-container--collapsed">
+                    <li>
+                      <a href="#faqFirst" class="accordion has-caret">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion has-caret">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Inverted <small><code>.inverted</code></small></h2>
+        </section>
+        <section class="section__body">
+          <div class="flex--half">
+            <div class="accordion-no-caret">
+              <h3>No Caret</h3>
+              <div class="card">
+                <div class="card__body bg--dark">
+                  <ul class="accordion-container--collapsed">
+                    <li>
+                      <a href="#faqFirst" class="accordion inverted">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion inverted">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-with-caret">
+              <h3>With Caret <small><code>.has-caret</code></small></h3>
+              <div class="card">
+                <div class="card__body bg--dark">
+                  <ul class="accordion-container--collapsed">
+                    <li>
+                      <a href="#faqFirst" class="accordion has-caret inverted">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion has-caret inverted">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>State</h2>
+          <p>All accordions are collapsed by default.</p>
+          <p>To set the state to expanded on page load,<br> use the <code>.accordion-container--expanded</code> class on the container <br>and add the <code>.is-expanded</code> class to the <code>&lt;a&gt;</code> tag with the <code>.accordion</code> class.
+          </p>
+          <p>If you need to trigger the accordion as collapsed, <br>add the <code>.accordion-container--collapsed</code> class on the container <br>and remove the <code>.is-expanded</code> class from the <code>&lt;a&gt;</code> tags with the <code>.accordion</code> class.</p>
+        </section>
+        <section class="section__body">
+          <div class="flex--half">
+            <div class="accordion-no-caret">
+              <h3>Expanded Without Caret</h3>
+              <div class="card">
+                <div class="card__body">
+                  <ul class="accordion-container--expanded">
+                    <li>
+                      <a href="#faqFirst" class="accordion is-expanded">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion is-expanded">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-with-caret">
+              <h3>Expanded With Caret</h3>
+              <div class="card">
+                <div class="card__body">
+                  <ul class="accordion-container--expanded">
+                    <li>
+                      <a href="#faqFirst" class="accordion has-caret is-expanded">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion has-caret is-expanded">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Single View</h2>
+          <p>If you want to hide the other accordions within the same container after you've expanded one, <br>add the the <code>.singleview</code> class to the container with the <code>.accordion-container</code> class.</p>
+        </section>
+        <section class="section__body">
+          <div class="flex--auto">
+            <div class="accordion-no-caret">
+              <div class="card max--half">
+                <div class="card__body">
+                  <ul class="accordion-container singleview">
+                    <li>
+                      <a href="#faqFirst" class="accordion has-caret is-expanded">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFirst" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqSecond" class="accordion has-caret">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqSecond" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqThird" class="accordion has-caret">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqThird" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#faqFourth" class="accordion has-caret">
+                        Lorem ipsum dolor sit amet?
+                      </a>
+                      <div id="faqFourth" class="accordion__content">
+                        <p>
+                          Lorem ipsum dolor sit amet consequitir.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>One Time</h2>
+          <p>If you want to hide the accordion link after you've expanded the accordion content, <br>add the <code>.one-time</code> class to the <code>&lt;a&gt;</code> tag with the <code>.accordion</code> class</p>
+        </section>
+        <section class="section__body">
+          <div class="flex--auto">
+            <div class="accordion-no-caret">
+              <div class="card max--half">
+                <div class="card__body">
+                  <ul class="accordion-container single-view">
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <br>
+                      <div class="text--right">
+                        <a href="#faqFirst" class="accordion one-time text--sm">
+                          Read more
+                        </a>
+                        <div id="faqFirst" class="accordion__content text--left">
+                          <p>
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+  
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+/* PLUGIN OVERRIDES */
+
+
+// Override Font Awesome Icon List
+.fa-ul{
+  margin-left: 22px;
+  h5{
+    margin: 0;
+    padding-bottom: 0;
+  }
+  p{
+    padding-bottom: 0;
+  }
+  span{
+    line-height: 1;
+    &.fa-li{
+      line-height: 1.5;
+    }
+  }
+  li{
+    padding-bottom: 10px;
+  }
+  &.compact{
+    li{
+      padding-bottom: 0;
+    }
+  }
+}

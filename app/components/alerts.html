@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>MNEMONIC | Alerts</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	<!-- Bootstrap Grid -->
+	<!-- <link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.min.css"> -->
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../css/master.css" media="all" />
+	<link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)" />
+	<link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)" />
+	<link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)" />
+	<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+	<script src="../js/html5.js"></script>
+</head>
+
+<body>
+	<div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="index.html">MNEMONIC &bull; Components</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Components</a>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li>
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li>
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li>
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted is-expanded"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li class="active">
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li>
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+		<main role="main">
+			<section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Alerts</h1>
+              <p>Shows a message to the user</p>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Components</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="alerts.html">Alerts</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+			</section>
+			<section class="section__content">
+				<section class="section__header">
+					<h2>States</h2>
+				</section>
+				<section class="section__body">
+					<div class="alert-success-wrapper">
+						<div class="alert alert-success flex--third">
+							<div class="flex--two-third">
+								<h5>Success</h5>
+								<p>You've successfully updated your profile.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-check fa-7x alert-icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="alert-info-wrapper">
+						<div class="alert alert-info flex--third">
+							<div class="flex--two-third">
+								<h5>Info</h5>
+								<p>Your project is on track.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-info-circle fa-7x alert-icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="alert-warning-wrapper">
+						<div class="alert alert-warning flex--third">
+							<div class="flex--two-third">
+								<h5>Warning</h5>
+								<p>This action requires that you fully understand the workflow.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-exclamation-triangle fa-7x alert-icon"></i>
+							</div>
+						</div>
+					</div>
+					<div class="alert-danger-wrapper">
+						<div class="alert alert-danger flex--third">
+							<div class="flex--two-third">
+								<h5>Error</h5>
+								<p>You are not connected to a network. Please try again later.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-times fa-7x alert-icon"></i>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="section__content">
+				<section class="section__header">
+					<h2>Dismissable</h2>
+					<p>Add the <code>.alert-dismissible</code> class to the container with the <code>.alert</code> class.</p>
+				</section>
+				<section class="section__body">
+					<div class="alert-success-wrapper">
+						<div class="alert alert-success alert-dismissible fade show flex--third" role="alert">
+							<div class="flex--two-third">
+								<h5>Success</h5>
+								<p>You've successfully updated your profile.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-check fa-7x alert-icon"></i>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true"><i class="fas fa-times"></i></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="alert-info-wrapper">
+						<div class="alert alert-info alert-dismissible fade show flex--third" role="alert">
+							<div class="flex--two-third">
+								<h5>Info</h5>
+								<p>Your project is on track.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-info-circle fa-7x alert-icon"></i>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true"><i class="fas fa-times"></i></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="alert-warning-wrapper">
+						<div class="alert alert-warning alert-dismissible fade show flex--third" role="alert">
+							<div class="flex--two-third">
+								<h5>Warning</h5>
+								<p>This action requires that you fully understand the workflow.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-exclamation-triangle fa-7x alert-icon"></i>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true"><i class="fas fa-times"></i></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="alert-danger-wrapper">
+						<div class="alert alert-danger alert-dismissible fade show flex--third" role="alert">
+							<div class="flex--two-third">
+								<h5>Error</h5>
+								<p>You are not connected to a network. Please try again later.</p>
+							</div>
+							<div class="p--0">
+								<i class="fas fa-times fa-7x alert-icon"></i>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true"><i class="fas fa-times"></i></span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+		<footer></footer>
+	</div>
+
+	<!-- jQuery, Bootstrap, & Lazyload -->
+	<script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+	<script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+	<script type="text/javascript" async src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+
+	<!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+
+</html>

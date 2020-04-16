@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Spacing</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="/">MNEMONIC &bull; Design System</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="../components/index.html">Components &nbsp; <span class="badge">22</span></a>
+              </li>
+              <li>
+                <a href="../modules/index.html">Modules &nbsp; <span class="badge">10</span></a>
+              </li>
+              <li>
+                <a href="../templates/index.html">Templates &nbsp; <span class="badge">8</span></a>
+              </li>
+              <li>
+                <a href="#menuTheme" class="accordion has-caret inverted">Theme</a>
+                <div id="menuTheme" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../theme/color.html"><i class="fas fa-palette"></i> &nbsp; Colors</a>
+                    </li>
+                    <li>
+                      <a href="../theme/typography.html"><i class="fas fa-font"></i> &nbsp; Typography</a>
+                    </li>
+                    <li>
+                      <a href="../theme/icon.html"><i class="fas fa-icons"></i> &nbsp; Icons</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuLayout" class="accordion has-caret inverted is-expanded">Layout</a>
+                <div id="menuLayout" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="grid.html"><i class="fas fa-th"></i> &nbsp; Grid</a>
+                    </li>
+                    <li>
+                      <a href="flex.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Flex</a>
+                    </li>
+                    <li class="active">
+                      <a href="spacing.html"><i class="fas fa-grip-lines"></i> &nbsp; Spacing</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuState" class="accordion has-caret inverted"> State</a>
+                <div id="menuState" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../state/animate.html"><i class="fas fa-quidditch"></i> &nbsp; Animate</a>
+                    </li>
+                    <li>
+                      <a href="../state/preloader.html"><i class="fas fa-border-none"></i> &nbsp; Preloader</a>
+                    </li>
+                    <li>
+                      <a href="../state/lazyload.html"><i class="fas fa-tasks"></i> &nbsp; Lazyload</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content">
+        <section class="section__header">
+          <h1>Spacing</h1>
+          <p>
+            Dictates hierarchy and grouping of elements. 
+          </p>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>General</h2>
+        </section>
+        <section class="section__body">
+          <p>The token <strong><code>$baseSpace</code></strong> dictates the base value of the spacing. All element spacing follow the base value. When adjusted, all components should be relative to it. </p>
+
+          <table id="tableBasicCaptionTop" class="table--columns table--compact text--center">
+            <thead>
+              <tr>
+                <td></td>
+                <th scope="col">Computation</th>
+                <th scope="col">Value</th>
+                <th scope="col">Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><code>$baseSpace</code></th>
+                <td> None </td>
+                <td> 40px </td>
+                <td> Can be changed </td>
+              </tr>
+              <tr>
+                <th scope="row"><code>$wholeSpace</code></th>
+                <td><code>$wholeSpace = $baseSpace</code></td>
+                <td>40px</td>
+                <td> Paddings and margins </td>
+              </tr>
+              <tr>
+                <th scope="row"><code>$halfSpace</code></th>
+                <td><code>$halfSpace = $wholeSpace / 2</code></td>
+                <td>20px</td>
+                <td> Paddings and margins </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Helper Classes</h2>
+          <p>In case there's a need to explicitly set the <strong>margins</strong> or <strong>paddings</strong>, use these classes.</p>
+        </section>
+        <section class="section__body">
+          <section class="margins">
+            <h3>Margins</h3>
+            <table id="tableBasicCaptionTop" class="table--columns table--compact text--center">
+              <thead>
+                <tr>
+                  <td></td>
+                  <th scope="col">All</th>
+                  <th scope="col">Top</th>
+                  <th scope="col">Right</th>
+                  <th scope="col">Bottom</th>
+                  <th scope="col">Left</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">None</th>
+                  <td><code>.m--0</code></td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                </tr>
+                <tr>
+                  <th scope="row">Small</th>
+                  <td><code>.m--sm</code></td>
+                  <td><code>.m-t--sm</code></td>
+                  <td><code>.m-r--sm</code></td>
+                  <td><code>.m-b--sm</code></td>
+                  <td><code>.m-l--sm</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Medium</th>
+                  <td><code>.m--md</code></td>
+                  <td><code>.m-t--md</code></td>
+                  <td><code>.m-r--md</code></td>
+                  <td><code>.m-b--md</code></td>
+                  <td><code>.m-l--md</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Large</th>
+                  <td><code>.m--lg</code></td>
+                  <td><code>.m-t--lg</code></td>
+                  <td><code>.m-r--lg</code></td>
+                  <td><code>.m-b--lg</code></td>
+                  <td><code>.m-l--lg</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Auto</th>
+                  <td><code>.m--auto</code></td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <hr class="gradient">
+          <section class="paddings">
+            <h3>Paddings</h3>
+            <table id="tableBasicCaptionTop" class="table--columns table--compact text--center">
+              <thead>
+                <tr>
+                  <td></td>
+                  <th scope="col">All</th>
+                  <th scope="col">Top</th>
+                  <th scope="col">Right</th>
+                  <th scope="col">Bottom</th>
+                  <th scope="col">Left</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">None</th>
+                  <td><code>.p--0</code></td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                </tr>
+                <tr>
+                  <th scope="row">Small</th>
+                  <td><code>.p--sm</code></td>
+                  <td><code>.p-t--sm</code></td>
+                  <td><code>.p-r--sm</code></td>
+                  <td><code>.p-b--sm</code></td>
+                  <td><code>.p-l--sm</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Medium</th>
+                  <td><code>.p--md</code></td>
+                  <td><code>.p-t--md</code></td>
+                  <td><code>.p-r--md</code></td>
+                  <td><code>.p-b--md</code></td>
+                  <td><code>.p-l--md</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Large</th>
+                  <td><code>.p--lg</code></td>
+                  <td><code>.p-t--lg</code></td>
+                  <td><code>.p-r--lg</code></td>
+                  <td><code>.p-b--lg</code></td>
+                  <td><code>.p-l--lg</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Auto</th>
+                  <td><code>.p--auto</code></td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                  <td> - </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+    
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

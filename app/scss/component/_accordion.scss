@@ -1,0 +1,72 @@
+// @import '../base/mixins';
+@import '../base/tokens';
+
+/* ACCORDION */
+
+.accordion{
+  position: relative;
+  &__content{
+    display: none;
+  }
+  &.one-time{
+    &.is-expanded{
+      display:none;
+    }
+  }
+}
+
+// If accordion has caret
+.accordion.has-caret{
+  padding-right: 30px;
+  line-height: 1.5;
+  &:before{
+    content: '';
+    width: 0;
+    right: 0;
+    height: 6px;
+    border-top: 6px solid #333;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    // right: 0;
+    top: 50%;
+    margin-top: -3px; // half the border size
+  }
+  &.is-expanded:hover:before,
+  &.is-expanded:focus:before{
+    border-top: none;
+    border-bottom: 6px solid #333;
+  }
+}
+  
+// If accordion has dark background
+.accordion.inverted{
+	&.has-caret{
+		&:before{
+    	border-top: 6px solid #FFF;
+  	}
+    &.is-expanded:before{
+  		border-top: none;
+    	border-bottom: 6px solid #FFF !important;
+    	margin-top: -12px; // twice the border size
+    }
+	}
+  & ~ .accordion__content p{
+    color: #FFF;
+  }
+}
+
+@media (min-width: 1024px){
+  .accordion-container{
+    &.expanded{
+      .accordion__content{
+        display: block;
+      }
+    }
+    &.collapsed{
+      .accordion__content{
+        display: none;
+      }
+    }
+  }
+}

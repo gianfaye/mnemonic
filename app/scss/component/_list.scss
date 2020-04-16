@@ -1,0 +1,137 @@
+@import '../base/tokens';
+// @import '../base/mixins';
+
+/* LISTS */
+
+ul{
+  li{
+    p{
+      line-height: 1.45;
+    }
+  }
+  li:last-child{
+    p{
+      padding-bottom: 0;
+    }
+  }
+}
+
+%list{
+  display: inline-block;
+  list-style-position: outside;
+  padding-left: 18px;
+  margin: 0;
+  // margin-top: 20px;
+  // margin-bottom: 0;
+  // text-align: left;
+  li{
+    // margin-bottom: 20px;
+    // padding-left: 30px !important;
+    // &:before{
+    //   display: inline-block;
+    //   height: 30px;
+    //   position: absolute;
+    //   margin-left: -30px;
+    // }
+  }
+  p{
+    // display: inline;
+    // font-size: 18px;
+    // font-weight: 500;
+    // color: #333;
+    // position: relative;
+  }
+  span{
+    // font-size: 16px;
+    // font-weight: normal;
+    // color: rgba(51, 51, 51, 0.7);
+    // display: block;
+  }
+}
+
+.list{
+  // &__check--gray{
+  //   @extend %list;
+  //   margin-top: 0;
+  //   margin-left: -30px;
+  //   display: block;
+  //   li{
+  //     margin-bottom: 0;
+  //     &:before{
+  //       content: url('../images/page_template/icon-check-gray.png');
+  //       margin-top: 3px;
+  //     }
+  //     span{
+  //       color: #333;
+  //       font-size: 16px;
+  //     }
+  //   }
+  // }
+  &__icon{
+    @extend %list;
+
+  }
+  &--inline{
+    @extend %list;
+    li{
+      display: inline;
+    }
+  }
+  &--bullet{
+    @extend %list;
+    list-style-type: disc;
+  }
+  &--square{
+    @extend %list;
+    list-style-type: square;
+  }
+  &--number{
+    @extend %list;
+    list-style-type: decimal;
+  }
+  &--lower-alpha{
+    @extend %list;
+    list-style-type: lower-alpha;
+  }
+  &--upper-alpha{
+    @extend %list;
+    list-style-type: upper-alpha;
+  }
+  &--textdef{
+    @extend %list;
+    margin-block-start: $halfSpace; 
+    margin-block-end: $halfSpace; 
+    li{
+      margin-block-start: $halfSpace; 
+      margin-block-end: $halfSpace; 
+    }
+  }
+}
+
+.card__list ul{
+  &.centered{
+    display: block;
+    max-width: 530px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px){
+  .list__check--gray,
+  .list__info--blue,
+  .list__check--blue{
+    margin-top: 0;
+    li span{
+      font-size: 1.25rem;
+    }
+    li:last-child{
+      margin-bottom: 0;
+    }
+  }
+  .list__check--gray{
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}

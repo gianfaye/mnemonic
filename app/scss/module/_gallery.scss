@@ -1,0 +1,32 @@
+// @import '../base/mixins';
+@import '../base/tokens';
+
+/* GALLERY */
+
+// Core variables and mixins
+@import "../gallery/lg-variables";
+@import "../gallery/lg-mixins";
+@import "../gallery/lg-fonts";
+@import "../gallery/lg-theme-default";
+@import "../gallery/lg-thumbnail";
+@import "../gallery/lg-video";
+@import "../gallery/lg-autoplay";
+@import "../gallery/lg-zoom";
+@import "../gallery/lg-pager";
+@import "../gallery/lg-fullscreen";
+@import "../gallery/lg-share";
+
+// Core
+@import "../gallery/lg-core";
+
+// Mnemonic Custom CSS
+
+.gallery{
+  li{
+    padding: 0;
+  }
+  .caption{
+    display: none;
+  }
+}
+

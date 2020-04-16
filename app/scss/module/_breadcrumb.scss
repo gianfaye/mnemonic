@@ -1,0 +1,42 @@
+/* Breadcrumbs */
+
+.breadcrumb{
+  li,
+  li a {
+    font-size: 0.875rem;
+  }
+  li + li::before{
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    color: $gray-05;
+    content: "/";
+  }
+  &.arrow{
+    li + li::before{
+      content: '\203A';
+    }
+  }
+  &.double-arrow{
+    li + li::before{
+      content: '\00bb';
+    }
+  }
+  &.dot{
+    li + li::before{
+      content: '\22C5';
+    }
+  }
+  &.bullet{
+    li + li::before{
+      content: '\2022';
+    }
+  }
+  li.active a{
+    color: $gray-06;
+  }
+}
+
+.sticky .breadcrumb{
+  margin-bottom: ($halfSpace / 4) !important;
+}

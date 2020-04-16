@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Drawer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="../index.html">MNEMONIC &bull; Modules</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Modules</a>
+              </li>
+              <li>
+                <a href="#menuNavigation" class="accordion has-caret inverted is-expanded"> Navigation</a>
+                <div id="menuNavigation" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="menu-toolbar.html"><i class="fas fa-ellipsis-h"></i> &nbsp; Toolbar</a>
+                    </li>
+                    <li class="active">
+                      <a href="menu-drawer.html"><i class="fas fa-ellipsis-v"></i> &nbsp; Drawer</a>
+                    </li>
+                    <li>
+                      <a href="anchor.html"><i class="fas fa-anchor"></i> &nbsp; Anchor Links</a>
+                    </li>
+                    <li>
+                      <a href="breadcrumb.html"><i class="fas fa-angle-double-right"></i> &nbsp; Breadcrumbs</a>
+                    </li>
+                    <li>
+                      <a href="sticky.html"><i class="fas fa-thumbtack"></i> &nbsp; Sticky</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuMedia" class="accordion has-caret inverted">Media</a>
+                <div id="menuMedia" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="banner.html"><i class="far fa-image"></i> &nbsp; Banners</a>
+                    </li>
+                    <li>
+                      <a href="gallery.html"><i class="far fa-images"></i> &nbsp; Gallery</a>
+                    </li>
+                    <li>
+                      <a href="carousel.html"><i class="far fa-caret-square-right"></i> &nbsp; Carousel</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Forms</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="datatable.html"><i class="fas fa-digital-tachograph"></i> &nbsp; Datatables</a>
+                    </li>
+                    <li>
+                      <a href="wizard.html"><i class="fas fa-magic"></i> &nbsp; Form Wizards</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Drawer</h1>
+              <p>Toggles a menu on the side of the page. <br>Toggle the &nbsp;<i class="fas fa-bars"></i> MENU &nbsp;on the left for demonstration.</p>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Modules</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="menu-drawer.html">Drawer</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Anatomy</h2>
+        </section>
+        <section class="section__body">
+          <h3>Toggle</h3>
+          <p>The link that the user clicks to toggle the side menu should have the class <code>.nav__drawer-toggle</code></p>
+          <h3>Container</h3>
+          <p>The container that contains the side menu items should have the class <code>.nav__drawer</code></p>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Code</h2>
+        </section>
+        <section class="section__body">
+          <h3>SCSS</h3>
+          <p>The styling rules for the side menu can be found on <code>_menu.scss</code></p>
+          <h3>JavaScript</h3>
+          <p>The scripts for the side menu can be found on <code>app.js</code> using the method <code>toggleSideMenu()</code>.
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Behavior</h2>
+        </section>
+        <section class="section__body">
+          <div class="menu-drawer-default">
+            <h3>Default</h3>
+            <p>By default, the side menu is collapsed on page reload. It also overlaps with the page content when expanded.</p>
+          </div>
+          <div class="menu-drawer-expand">
+            <h3>Expand</h3>
+            <p>To expand the side menu on page load, add the <code>.expanded</code> class on the div or section with the <code>.nav__drawer</code> class.</p>
+          </div>
+          <div class="menu-drawer-push">
+            <h3>Push</h3>
+            <p>To push the content when the side menu is expanded, add the <code>.push</code> class on the div or section with the <code>.nav__drawer</code> class.</p>
+          </div>
+          <div class="menu-drawer-minify">
+            <h3>Minify</h3>
+            <p>Allows you to minify the sidemenu to only show icons</p>
+            <a href="menu-drawer-minify.html" target="_blank" class="button--primary button--md">
+              Launch Demo
+            </a>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+// @import '../base/mixins';
+@import '../base/tokens';
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+}
+
+/* BUTTONS */
+
+%button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    font-family: $regularFont;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: .438rem .75rem;
+    line-height: normal;
+    min-width: 125px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    border: 3px solid transparent;
+
+    //box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+    &:focus {
+        color: #FFF;
+        box-shadow: none;
+    }
+
+    &:hover {
+        opacity: 0.7;
+        color: #FFF;
+    }
+
+    &.left {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    &.right {
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .fa, i, span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 0.95rem;
+        top: -2px;
+        position: relative;
+    }
+}
+
+.button--primary {
+    @extend %button;
+    background-color: $primaryColor ;
+    color: #fff ;
+
+    span {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    &.success {
+        background-color: $successColor;
+        border-color: $successColor;
+    }
+
+    &.info {
+        background-color: $infoColor;
+        border-color: $infoColor;
+    }
+
+    &.warning {
+        background-color: $warningColor;
+        border-color: $warningColor;
+    }
+
+    &.danger {
+        background-color: $dangerColor;
+        border-color: $dangerColor;
+    }
+
+    &.light {
+        background-color: $gray-01;
+        color: $gray-05;
+    }
+
+    &.dark {
+        background-color: $black ;
+        color: #FFF;
+    }
+
+    &.neutral {
+        background-color: $gray-01;
+        color: $gray-05;
+    }
+
+    &.disabled {
+        background-color: $gray-02;
+        color: $gray-04;
+        cursor: not-allowed;
+
+        //pointer-events: none;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.button--secondary {
+    @extend %button;
+    border: 3px solid $brandColor;
+    color: $brandColor;
+
+    &:hover {
+        color: $brandColor;
+    }
+
+    &.success {
+        border-color: $successColor;
+        color: $successColor;
+    }
+
+    &.info {
+        border-color: $infoColor;
+        color: $infoColor;
+    }
+
+    &.warning {
+        border-color: $warningColor;
+        color: $warningColor;
+    }
+
+    &.danger {
+        border-color: $dangerColor;
+        color: $dangerColor;
+    }
+
+    &.light {
+        border-color: $lightBg;
+        color: $lightBg;
+    }
+
+    &.dark {
+        border-color: $darkBg;
+        color: $darkBg;
+    }
+
+    &.disabled {
+        border-color: $gray-04;
+        color: $gray-04;
+        cursor: not-allowed;
+
+        //pointer-events: none;
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.button--sm {
+    font-size: 0.60rem !important;
+    min-width: 0;
+    padding: .350rem .50rem;
+    line-height: 0.875 !important;
+
+    .fa, i, span {
+        top: -1px;
+    }
+}
+
+.button--md {
+    font-size: 0.75rem !important;
+    padding: .400rem .75rem;
+}
+
+.button--lg {
+    font-size: 1.125em !important;
+    padding: .600rem 1rem;
+
+    .fa, i, span {
+        font-size: 1.2rem;
+    }
+}
+
+.button--full {
+    display: block !important;
+    width: 100% !important;
+}

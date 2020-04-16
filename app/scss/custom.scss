@@ -1,0 +1,166 @@
+@import	'base/mixins';
+@import 'base/tokens';
+
+
+.login--wrap {
+	max-width: 420px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.model-item {
+	border-top: 1px solid #f2f2f2;
+	border-bottom: 1px solid #fefefe;
+
+		
+	a {
+		display: block;
+		padding: 10px 20px;
+		color: $black;
+		-webkit-transition:all 0.4s ease;
+		-moz-transition:all 0.4s ease;
+		transition:all 0.4s ease;
+
+		&.active, &:hover {
+			background: $gray-02;
+		}
+	}
+
+	h4, p {
+		margin: 0;
+
+	}
+
+	p {
+		padding-bottom: 0;
+	}
+
+	h4 {
+
+	}
+}
+
+
+/*** Popup Over ***/
+.popover {
+	margin-left: -20px !important;
+}
+
+.popup-over-content {
+	
+
+	li {
+		border-bottom: 1px solid $gray-02;
+		padding: 0px 20px;
+		margin: 0px -10px;
+		width: auto;
+
+		&:last-child {
+			border-bottom: none;
+		}
+
+		a {
+			padding: 10px 20px 5px;
+			display: block;
+			text-transform: uppercase;
+			font-size: 1rem;
+		}
+	}
+}
+
+
+/*** Model Data Select ***/
+
+.model-data-list {
+	overflow-x: auto;
+	width: auto;
+
+
+	> li {
+		min-width: 25%;
+
+		&:nth-child(even) {
+			
+			background: $gray-02;
+		}
+
+		&:nth-child(odd) {
+			background: $gray-01;
+		}
+	}
+
+
+	.card {
+		border: none;
+		background: transparent;
+		border-radius: 0;
+
+		.card__body {
+			background: transparent;
+			max-height: 400px;
+			overflow: auto;
+
+
+		}
+	}
+}
+
+.model-dl-link {
+	padding: 10px 15px;
+	display: block;
+	font-size: 12px;
+	border-top: 1px solid rgba($black, 0.1);
+	color: $gray-06;
+	white-space: nowrap;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	border-radius: 0;
+
+	&:hover {
+		background: rgba($blue, 0.2);
+		color: $gray-04;
+	}
+
+	&.active {
+		background: rgba($blue, 1);
+		color: $white;
+
+		&.prev-active {
+			background: rgba($blue, 0.2);
+			color: $gray-04;
+		}
+
+	}
+}
+
+
+.tab__toggle {
+	margin-top: 0;
+
+	li {
+
+		&.active {
+			background: $white;
+			border-radius: 4px 4px 0 0;
+
+
+
+		}
+
+		a {
+			padding: 10px 20px !important;
+			font-size: 12px;
+		}
+	}
+}
+
+
+.tab__content {
+
+	> .card {
+		border: none;
+		border-radius: 0px 0px 4px 4px;
+	}
+}

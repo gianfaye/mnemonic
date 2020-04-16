@@ -1,0 +1,281 @@
+@charset 'utf-8';
+
+/* Limit the number of fonts loaded, only the first three fonts will be loaded on IE11 so the fonts for headers and paragraph should be prioritized */
+
+
+// Regular
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-regular.eot');
+    src: url('../fonts/raleway-regular.eot') format('embedded-opentype'),
+         url('../fonts/raleway-regular.woff2') format('woff2'),
+         url('../fonts/raleway-regular.woff') format('woff'),
+         url('../fonts/raleway-regular.ttf') format('truetype'),
+         url('../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Regular
+@font-face {
+    font-family: 'Cabin';
+    src: url('../fonts/cabin-regular.eot');
+    src: url('../fonts/cabin-regular.eot') format('embedded-opentype'),
+         url('../fonts/cabin-regular.woff2') format('woff2'),
+         url('../fonts/cabin-regular.woff') format('woff'),
+         url('../fonts/cabin-regular.ttf') format('truetype'),
+         url('../fonts/cabin-regular.svg#cabin-regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Semi-Bold
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-semibold.eot');
+    src: url('../fonts/raleway-semibold.eot') format('embedded-opentype'),
+         url('../fonts/raleway-semibold.woff2') format('woff2'),
+         url('../fonts/raleway-semibold.woff') format('woff'),
+         url('../fonts/raleway-semibold.ttf') format('truetype'),
+         url('../fonts/raleway-semibold.svg#raleway-semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+// Bold
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-bold.eot');
+    src: url('../fonts/raleway-bold.eot') format('embedded-opentype'),
+         url('../fonts/raleway-bold.woff2') format('woff2'),
+         url('../fonts/raleway-bold.woff') format('woff'),
+         url('../fonts/raleway-bold.ttf') format('truetype'),
+         url('../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Add other low-priority fonts here */
+
+
+// Medium
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-medium.eot');
+    src: url('../fonts/raleway-medium.eot') format('embedded-opentype'),
+         url('../fonts/raleway-medium.woff2') format('woff2'),
+         url('../fonts/raleway-medium.woff') format('woff'),
+         url('../fonts/raleway-medium.ttf') format('truetype'),
+         url('../fonts/raleway-medium.svg#raleway-medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+// Regular Italic
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/raleway-regular.eot');
+    src: url('../fonts/raleway-regular.eot') format('embedded-opentype'),
+         url('../fonts/raleway-regular.woff2') format('woff2'),
+         url('../fonts/raleway-regular.woff') format('woff'),
+         url('../fonts/raleway-regular.ttf') format('truetype'),
+         url('../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?irbb9b');
+  src:  url('../fonts/icomoon.eot?irbb9b#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?irbb9b') format('truetype'),
+    url('../fonts/icomoon.woff?irbb9b') format('woff'),
+    url('../fonts/icomoon.svg?irbb9b#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon--"], [class*=" icon--"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-add-filter:before {
+  content: "\e900";
+}
+.icon-advance-ilter:before {
+  content: "\e901";
+}
+.icon-check:before {
+  content: "\e902";
+}
+.icon-community:before {
+  content: "\e904";
+}
+.icon-costumer-care:before {
+  content: "\e905";
+}
+.icon-docs:before {
+  content: "\e906";
+}
+.icon-dollar:before {
+  content: "\e907";
+}
+.icon-down-arrow:before {
+  content: "\e908";
+}
+.icon-cross:before {
+  content: "\e909";
+}
+.icon-image:before {
+  content: "\e90a";
+}
+.icon-easing:before {
+  content: "\e90b";
+}
+.icon-left-arrow:before {
+  content: "\e90c";
+}
+.icon-pause:before {
+  content: "\e90d";
+}
+.icon-pdf:before {
+  content: "\e90e";
+}
+.icon-peso:before {
+  content: "\e90f";
+}
+.icon-pin:before {
+  content: "\e910";
+}
+.icon-play:before {
+  content: "\e911";
+}
+.icon-right-arrow:before {
+  content: "\e912";
+}
+.icon-search:before {
+  content: "\e913";
+}
+.icon-share:before {
+  content: "\e914";
+}
+.icon-up-arrow:before {
+  content: "\e915";
+}
+.icon-adress:before {
+  content: "\e916";
+  color: #1f80c4;
+}
+.icon-bathroom:before {
+  content: "\e917";
+  color: #1f80c4;
+}
+.icon-bedroom:before {
+  content: "\e918";
+  color: #1f80c4;
+}
+.icon-book:before {
+  content: "\e919";
+  color: #1f80c4;
+}
+.icon-building:before {
+  content: "\e91a";
+  color: #1f80c4;
+}
+.icon-calendar:before {
+  content: "\e91b";
+  color: #1f80c4;
+}
+.icon-capacity:before {
+  content: "\e91c";
+  color: #1f80c4;
+}
+.icon-enroll:before {
+  content: "\e91d";
+  color: #1f80c4;
+}
+.icon-fb:before {
+  content: "\e91e";
+  color: #1f80c4;
+}
+.icon-floor:before {
+  content: "\e91f";
+  color: #1f80c4;
+}
+.icon-floor-area:before {
+  content: "\e920";
+  color: #1f80c4;
+}
+.icon-ig:before {
+  content: "\e921";
+  color: #1f80c4;
+}
+.icon-location:before {
+  content: "\e922";
+  color: #1f80c4;
+}
+.icon-mobile:before {
+  content: "\e923";
+  color: #1f80c4;
+}
+.icon-phone:before {
+  content: "\e924";
+  color: #1f80c4;
+}
+.icon-price-range:before {
+  content: "\e925";
+  color: #1f80c4;
+}
+.icon-oroperty:before {
+  content: "\e926";
+  color: #1f80c4;
+}
+.icon-qr:before {
+  content: "\e927";
+  color: #1f80c4;
+}
+.icon-search:before {
+  content: "\e928";
+  color: #1f80c4;
+}
+.icon-setting:before {
+  content: "\e929";
+  color: #1f80c4;
+}
+.icon-twitter:before {
+  content: "\e92a";
+  color: #1f80c4;
+}
+.icon-condition:before {
+  content: "\e92b";
+  color: #1f80c4;
+}
+.icon-user:before {
+  content: "\e92c";
+  color: #1f80c4;
+}
+.icon-venue:before {
+  content: "\e92d";
+  color: #1f80c4;
+}
+.icon-written:before {
+  content: "\e92e";
+  color: #1f80c4;
+}
+.icon-youtube:before {
+  content: "\e92f";
+  color: #1f80c4;
+}
+
+

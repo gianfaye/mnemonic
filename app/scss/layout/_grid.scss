@@ -1,0 +1,185 @@
+//@import '../theme/spacing';
+
+/* CSS GRID */
+
+%grid{
+  display: grid;
+  // margin: $baseSpace;
+  // padding: $baseSpace;
+  & > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $halfSpace;
+  }
+}
+
+.grid{
+  @extend %grid;
+}
+
+/* 
+ * Body Sidebar
+ * - add to <body>
+ */
+.grid--left-sidebar,
+.grid--right-sidebar {
+  @extend %grid;
+  grid-template-columns: 1fr;
+}
+
+.grid--right-sidebar {
+  aside {
+    grid-row: 2;
+  }
+}
+
+@media (min-width: 769px) {
+  .grid--left-sidebar {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .grid--right-sidebar {
+    grid-template-columns: 2fr 1fr;
+    aside {
+      grid-row: 1;
+      grid-column: 2;
+    }
+  }
+  .grid--no-sidebar {
+    aside { display: none; }
+  }
+}
+
+/* =====================================
+ * COLUMNS
+ * Max of 12 grid columns
+ ======================================*/
+
+@for $i from 2 through 12 {
+  /* -----------GRID COLUMN----------- 
+   * Outputs class .grid--col-NUM
+   * where NUM is the number of columns
+   * Add to <ul> or <div> container 
+   -----------------------------------*/
+  .grid--col-#{$i} {
+    @extend %grid;
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+  }
+
+  /* --------GRID COLUMN SPAN--------- 
+   * Outputs class .grid--colspan-NUM
+   * where NUM is the number the column spans
+   * Add to <li> or <div> column 
+   -----------------------------------*/
+  .grid--colspan-#{$i}{
+    grid-column: span #{$i};
+  }
+}
+
+
+/* =====================================
+ * ROWS
+ * Set the maximum number of rows 
+ * by replacing 10 on the for loop below
+ ======================================*/
+
+@for $i from 2 through 10 {
+  /* -------------GRID ROWS------------ 
+   * Outputs class .grid--row-NUM
+   * where NUM is the number of rows
+   * Add to <ul> or <div> container 
+   -----------------------------------*/
+  .grid--row-#{$i} {
+    @extend %grid;
+    @media (min-width: 769px) {
+      grid-template-rows: repeat(#{$i}, 1fr);
+    }
+  }
+
+  /* ----------GRID ROW SPAN----------- 
+   * Outputs class .grid--rowspan-NUM
+   * where NUM is the number the column spans
+   * Add to <li> or <div> column 
+   -----------------------------------*/
+  .grid--rowspan-#{$i}{
+    grid-row: span #{$i};
+  }
+}
+
+/* =====================================
+ * GRID SPACING
+ * - add to <ul>
+ =====================================*/
+
+// Disregards container padding
+.grid--fluid{
+  margin-left: -$wholeSpace;
+  margin-right: -$wholeSpace;
+}
+
+// Column and Row gap
+.grid--gap{
+  &-xs{
+    grid-gap: 5px;
+  }
+  &-sm{
+    grid-gap: $halfSpace;
+  }
+  &-md{
+    grid-gap: $wholeSpace;
+  }
+  &-lg{
+    grid-gap: $wholeSpace * 2;
+  }
+}
+
+// Column gap
+.grid--col-gap{
+  &-sm{
+    grid-column-gap: $halfSpace;
+  }
+  &-md{
+    grid-column-gap: $wholeSpace;
+  }
+  &-lg{
+    grid-column-gap: $wholeSpace * 2;
+  }
+
+}
+
+// Row gap
+.grid--row-gap{
+  &-sm{
+    grid-row-gap: $halfSpace;
+  }
+  &-md{
+    grid-row-gap: $wholeSpace;
+  }
+  &-lg{
+    grid-row-gap: $wholeSpace * 2;
+  }
+}
+
+
+/* =====================================
+ * COLUMN COUNT
+ ======================================*/
+
+@for $i from 2 through 4 {
+  .col-count--#{$i} {
+    @media (min-width: 769px) {
+      width: 100%;
+      display: inline-block;
+      column-count: #{$i};
+      // add any element you wish not to break within
+      li{
+        -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+      }
+    }
+  }
+}

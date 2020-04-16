@@ -1,0 +1,212 @@
+/* SETTINGS 
+
+  Terminologies:
+
+  $config - enable/disable components; set default states, orientation
+
+  $dimensions - set width, height, and sizes of components and sections
+
+  $spacing - set margin and padding of elements and components
+
+  $cosmetics - set alignment, colors, border, font styles, opacity and anything related to the cosmetic components or sections
+
+  --------
+
+  Usage:
+
+  To use the height of the navbar, 
+  `$navbarHeight: map-fetch($dimensions, navbar, height);`
+
+  Visit _variables.sccs to refer to the existing shorthand variables using these SASS maps
+
+*/
+
+// START SETUP 
+
+// ------------CONFIG------------- //
+
+$config: (
+  navbar: (
+    position        : top,      // top | bottom
+    attachment      : fixed,    // fixed | static
+  ),
+
+  drawer: (
+    slide-from      : left,     // top | left | right
+  )
+);
+
+// ----------DIMENSIONS----------- //
+
+$dimensions: (
+  container: (
+    width-small     : 800px,
+    width-medium    : 1200px,
+    width-large     : 1480px,
+  ),
+
+  navbar: (
+    height          : 60px,
+  ),
+
+  drawer: (
+    width           : 250px,
+  ),
+
+  drawer-mini: (
+    width-expanded  : 180px,
+    width-collapsed : 70px,
+  ),
+
+  nav-icon: (
+    min-width       : 30px,
+    width-collapsed : 130px, 
+    icon-width      : 20px, 
+    icon-thickness  : 2px,
+    icon-line-gap   : 3px,
+  ),
+
+  logo: (
+    max-width       : 80px,
+  ),
+
+  dropdown: (
+    arrow-size      : 4px,
+  ),
+
+  dropdown-vertical: (
+    width         : 200px,
+  ),
+
+  dropdown-horizontal: (
+    height        : 60px,  
+  ),
+
+  banner: (
+    min-height      : 320px,
+    max-height      : 680px,
+  ),
+
+  footer: (
+    bottom-height   : 60px,
+  )
+);
+
+// ----------SPACING----------- //
+
+$spacing: (
+  navbar: (
+    padding         : 0 $wholeSpace,
+  ),
+
+  brand-logo: (
+    margin          : 0,
+    padding         : 5px 0 5px 0,
+  ),
+
+  drawer: (
+    link-gap        : 5px,
+  ),
+    // If .nav__drawer has sublinks
+    drawer-parent: (
+
+    ),
+
+    drawer-children: (
+
+    ),
+);
+
+// ----------COSMETICS----------- //
+
+$cosmetics: (
+  navbar: (
+    background      : $white,
+    color           : $gray-03,
+    border-bottom   : 1px solid $gray-02,
+    box-shadow      : 0px 2px 10px rgba($black, 0),
+    font-size       : 0.875em,
+    font-weight     : 600,
+    line-height     : 1.3, 
+  ),
+
+    navbar-scrolled: (
+      /* Uncomment below if need to add custom styling for navbar when scrolled */
+      // background     : '',
+      // color          : '',
+    ),
+
+  dropdown-vertical: (
+    background       : $white,
+    border           : 1px solid $gray-01,
+    border-radius    : true, // sets bottom radius only, gets value from token $borderRadius
+    separator        : 1px solid $gray-01, // border between each menu item from the dropdown
+
+    /* Uncomment below if need to add custom hover and active styling */
+    // active-background: '', 
+    // active-color     : '',
+  ),
+
+  dropdown-horizontal: (
+    background       : $white,
+    border-bottom    : 1px solid $gray-02,
+    active-border    : true, // adds line below each link when hovered and active
+    line-thickness   : 3px,
+    line-style       : solid,
+    line-color       : $brandColor,
+
+    /* Uncomment below if need to add custom hover and active styling */
+    // active-background: '',
+    // active-color     : '',
+  ),
+
+  mega-menu: (
+    background-color  : $white, 
+  ),
+
+  nav-icon: (
+    background      : transparent,
+    color           : $black,
+    border-width    : 0 1px 0 0, // top right bottom left
+    border-style    : solid,
+    border-color    : $gray-02,
+  ),
+
+  nav-icon-text: (
+    font-size       : 1rem,
+    font-weight     : 500,
+  ),
+
+  brand-logo: (
+    background      : transparent,
+  ),
+
+  brand-name: (
+
+  ),
+
+  drawer: (
+    background      : $black,
+    color           : rgba($white, 0.8),
+    font-weight     : normal
+  ),
+    // If .nav__drawer has sublinks
+    drawer-parent: (
+
+    ),
+
+    drawer-children: (
+
+    ),
+
+  drawer-link: (
+    background        : $gray-07,
+    color             : rgba($white, 0.8),
+    hover-background  : $gray-06,
+    hover-color       : rgba($white, 0.8),
+    active-background : $black,
+    active-color      : $brandColor,
+  )
+);
+
+// END SETUP

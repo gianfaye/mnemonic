@@ -1,0 +1,301 @@
+/* FLEX */
+
+%flex{
+  display: flex;
+  flex-wrap: wrap;
+  
+	& > li,
+	& > div{
+		padding: $halfSpace;
+		flex: 1 1 100%;
+		img{
+			margin: 0 auto;
+		}
+	}
+
+	&.no-wrap{
+		flex-wrap: nowrap;
+	}
+
+	&.less-margin{
+		margin: 0 -$halfSpace / 2;
+	}
+	&.center{
+		align-items: center;
+	}
+
+	// Indicate flexbox item orientation
+	&.row {
+		flex-direction: row;
+	}
+	&.column {
+		flex-direction: column;
+	}
+}
+
+// Add to <ul> or <div> container
+.flex{
+	&,
+	&--auto,
+	&--half,
+	&--third,
+	&--quarter,
+	&--fifths,
+	&--sixths,
+	&--eights{
+		@extend %flex;
+	}
+}
+
+// Vertical alignment of items within flexbox container
+.v{
+	&--start {
+		align-items: flex-start !important;
+	}
+
+	&--center {
+		align-items: center !important;
+	}
+
+	&--stretch {
+		align-items: stretch !important;
+	}
+
+	&--end {
+		align-items: flex-end !important;
+	}
+}
+
+// Horizontal alignment of content inside flexbox container
+.h{
+	&--start {
+		justify-content: flex-start !important;
+	}
+
+	&--center {
+		justify-content: center !important;
+	}
+
+	&--end {
+		justify-content: flex-end !important;
+	}
+
+	&--space-between {
+		justify-content: space-between !important;
+	}
+
+	&--space-around {
+		justify-content: space-around !important;
+	}
+}
+
+@media (min-width: 769px){
+	.flex{
+		&--auto{
+			& > li,
+			& > div{
+				flex: 1 1 auto;
+			}
+		}
+
+		&--half{
+			& > li,
+			& > div{
+				flex: 0 1 50%;
+			}
+		}
+
+		&--third{
+			& > li,
+			& > div{
+				width: 33.3333%;
+				flex: 0 1 33.3333%;
+				&.flex--two-third{
+					flex: 0 1 66.6666%;
+				}
+			}
+		}
+
+		&--quarter{
+			& > li,
+			& > div{
+				flex: 0 1 25%;
+				&.flex--two-fourth{
+					flex: 0 1 50%;
+				}
+			}
+		}
+
+		&--fifths{
+			& > li,
+			& > div{
+				flex: 0 1 20%;
+				&.flex--two-fifth{
+					flex: 0 1 40%;
+				}
+				&.flex--three-fifth{
+					flex: 0 1 60%;
+				}
+			}
+		}
+
+		&--sixths{
+			& > li,
+			& > div{
+				flex: 0 1 16.6666%;
+				&.flex--two-sixth{
+					flex: 0 1 33.3333%;
+				}
+				&.flex--three-sixth{
+					flex: 0 1 50%;
+				}
+				&.flex--four-sixth{
+					flex: 0 1 66.6666%;
+				}
+				&.flex--five-sixth{
+					flex: 0 1 83.3333%;
+				}
+			}
+		}
+
+		&--eights{
+			& > li,
+			& > div{
+				flex: 0 1 12.5%;
+			}
+		}
+	}
+
+	.masonry{
+		&--half{
+			& > li,
+			& > div{
+				width: 50%;
+			}
+		}
+
+		&--third{
+			& > li,
+			& > div{
+				width: 33.3333%;
+			}
+		}
+
+		&--quarter{
+			& > li,
+			& > div{
+				width: 25%;
+			}
+		}
+
+		&--fifths{
+			& > li,
+			& > div{
+				width: 20%;
+			}
+		}
+
+		&--sixths{
+			& > li,
+			& > div{
+				width: 16.6666%;
+			}
+		}
+
+		&--eights{
+			& > li,
+			& > div{
+				width: 12.5%;
+			}
+		}
+	}
+}
+
+/* Masonry */
+%masonry {
+  display: flex;
+  align-content: space-between;
+  flex-flow: column wrap;
+
+  & > li{
+		padding: $halfSpace;
+  }
+
+	&::before,
+	&::after {
+	  content: "";
+	  flex-basis: 100%;
+	  width: 0;
+	  order: 2;
+	}
+
+	// For demo purposes only
+	& > li:nth-child(1n) {
+	  background-color: #96ceb4;  
+	}
+
+	& > li:nth-child(2n) {
+	  background-color: #ff6f69;
+	}
+
+	& > li:nth-child(3n) {
+	  background-color: #ecb3d2;
+	}
+
+	& > li:nth-child(4n) {
+	  background-color: #ffcc5c;
+	}
+
+	& > li:nth-child(5n) {
+	  background-color: #83b8f4;
+	}
+
+	& > li:nth-child(6n) {
+	  background-color: #afe5ad;
+	}
+
+	& > li:nth-child(7n) {
+	  background-color: #cf95e3;
+	}
+
+	& > li:nth-child(8n) {
+	  background-color: #bae1ff;
+	}
+
+	& > li:nth-child(9n) {
+	  background-color: #ffffba;
+	}
+
+	& > li:nth-child(10n) {
+	  background-color: #ffb3ba;
+	}
+}
+
+// Left to Right
+.masonry--ltr{
+	@extend %masonry;
+
+  /* The container needs a fixed height, and it 
+   * needs to be taller than its tallest column but not too much. */
+  height: 830px;
+
+	// Re-order items into rows 
+	& > li:nth-child(3n+1) { order: 1; }
+	& > li:nth-child(3n+2) { order: 2; }
+	& > li:nth-child(3n)   { order: 3; }
+}
+
+// Top to bottom
+.masonry--ttb{
+	@extend %masonry;
+
+  /* The container needs a fixed height, and it 
+   * needs to be taller than its tallest column but not too much. */
+  height: 800px;
+}
+
+// Reset
+.no-flex{
+	display: inline-block !important;
+}
+

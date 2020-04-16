@@ -1,0 +1,120 @@
+// variables
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$gutter: 30px;
+$max-cell: 12;
+
+// stolen from bootstrap
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// the magic
+@mixin ms-grid-template($rows, $cols, $size, $gap) {
+  display: -ms-grid;
+  @if $rows > 1 {
+      -ms-grid-rows: unquote("#{$size} (#{$gap} #{$size})[#{$rows - 1}]");
+  } @else if $rows == 1 {
+      -ms-grid-rows: $size;
+  }
+
+  @if $cols > 1 {
+      -ms-grid-columns: unquote("#{$size} (#{$gap} #{$size})[#{$cols - 1}]");
+  } @else if $cols == 1 {
+      -ms-grid-columns: $size;
+  }
+}
+
+@mixin ms-cell-pos($r, $c) {
+  -ms-grid-row: $r * 2 - 1;
+  -ms-grid-column: $c * 2 - 1;
+}
+
+@mixin ms-cell-size($r, $c) {
+  -ms-grid-row-span: ($r - 1) * 2 + 1;
+  -ms-grid-column-span: ($c - 1) * 2 + 1;
+}
+
+
+// grids (col)
+@mixin make-grid($infix) {
+    @for $r from 1 through $max-cell {
+        @for $c from 1 through $max-cell {
+            .grid#{$infix}-#{$r}x#{$c} {
+                @include ms-grid-template($r, $c, 1fr, $gutter);
+                display: grid;
+                grid-gap: $gutter;
+                grid-template-rows: repeat($r, 1fr);
+                grid-template-columns: repeat($c, 1fr);
+            }
+        }
+    }
+}
+
+// cell position
+@mixin make-grid-cell-pos($infix) {
+    @for $r from 1 through $max-cell {
+        @for $c from 1 through $max-cell {
+            .cell-pos#{$infix}-#{$r}x#{$c} {
+                @include ms-cell-pos($r, $c);
+                grid-row-start: $r;
+                grid-column-start: $c;
+            }
+        }
+    }
+}
+
+// cell size
+@mixin make-grid-cell-size($infix) {
+    @for $r from 1 through $max-cell {
+        @for $c from 1 through $max-cell {
+            .cell-size#{$infix}-#{$r}x#{$c} {
+                @include ms-cell-size($r, $c);
+                grid-row-end: span $r;
+                grid-column-end: span $c;
+            }
+        }
+    }
+}
+
+@include make-grid('');
+@include make-grid-cell-pos('');
+@include make-grid-cell-size('');
+
+// breakpoint versions
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        @include make-grid($infix);
+        @include make-grid-cell-pos($infix);
+        @include make-grid-cell-size($infix);
+    }
+}
+
+.grid-window {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    padding: $gutter;
+}

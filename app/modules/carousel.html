@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Carousel</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="../index.html">MNEMONIC &bull; Modules</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Modules</a>
+              </li>
+              <li>
+                <a href="#menuNavigation" class="accordion has-caret inverted"> Navigation</a>
+                <div id="menuNavigation" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="menu-toolbar.html"><i class="fas fa-ellipsis-h"></i> &nbsp; Toolbar</a>
+                    </li>
+                    <li>
+                      <a href="menu-drawer.html"><i class="fas fa-ellipsis-v"></i> &nbsp; Drawer</a>
+                    </li>
+                    <li>
+                      <a href="menu-dropdown.html"><i class="far fa-caret-square-down"></i> &nbsp; Dropdown</a>
+                    </li>
+                    <li>
+                      <a href="menu-mega.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Mega Menu</a>
+                    </li>
+                    <li>
+                      <a href="anchor.html"><i class="fas fa-anchor"></i> &nbsp; Anchor Links</a>
+                    </li>
+                    <li>
+                      <a href="breadcrumb.html"><i class="fas fa-angle-double-right"></i> &nbsp; Breadcrumbs</a>
+                    </li>
+                    <li>
+                      <a href="sticky.html"><i class="fas fa-thumbtack"></i> &nbsp; Sticky</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuMedia" class="accordion has-caret inverted is-expanded">Media</a>
+                <div id="menuMedia" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="banner.html"><i class="far fa-image"></i> &nbsp; Banners</a>
+                    </li>
+                    <li>
+                      <a href="gallery.html"><i class="far fa-images"></i> &nbsp; Gallery</a>
+                    </li>
+                    <li class="active">
+                      <a href="carousel.html"><i class="far fa-caret-square-right"></i> &nbsp; Carousel</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Forms</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="datatable.html"><i class="fas fa-digital-tachograph"></i> &nbsp; Datatables</a>
+                    </li>
+                    <li>
+                      <a href="wizard.html"><i class="fas fa-magic"></i> &nbsp; Form Wizards</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Carousel</h1>
+              <p>Mnemonic uses the <strong>jQuery lightSlider</strong> plugin <a href="http://sachinchoolur.github.io/lightslider/" target="_blank"><i class="fas fa-external-link-alt"></i></a> <br>for image and video carousel sliders</p>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="./index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Modules</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="carousel.html">Carousel</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Carousel Only</h2>
+        </section>
+        <section class="section__body">
+          <div class="slider-single">
+            <h3>Single Item</h3>
+            <ul id="sliderSingle" class="carousel content-slider">
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/71/200/100"  data-src="https://picsum.photos/id/71/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/19/200/100"  data-src="https://picsum.photos/id/19/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/22/200/100"  data-src="https://picsum.photos/id/22/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/921/200/100"  data-src="https://picsum.photos/id/921/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/732/200/100"  data-src="https://picsum.photos/id/732/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/552/200/100"  data-src="https://picsum.photos/id/552/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/227/200/100"  data-src="https://picsum.photos/id/227/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/172/200/100"  data-src="https://picsum.photos/id/172/1200/800" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/666/200/100"  data-src="https://picsum.photos/id/666/1200/800" />
+              </li>
+            </ul>
+          </div>
+          <hr class="gradient">
+          <div class="slider-multiple">
+            <h3>Multiple Items</h3>
+            <ul id="sliderMultiple" class="carousel content-slider">
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/71/200/100"  data-src="https://picsum.photos/id/71/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/19/200/100"  data-src="https://picsum.photos/id/19/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/22/200/100"  data-src="https://picsum.photos/id/22/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/921/200/100"  data-src="https://picsum.photos/id/921/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/732/200/100"  data-src="https://picsum.photos/id/732/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/552/200/100"  data-src="https://picsum.photos/id/552/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/227/200/100"  data-src="https://picsum.photos/id/227/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/172/200/100"  data-src="https://picsum.photos/id/172/300/200" />
+              </li>
+              <li>
+                <img class="width--full lazyload" src="https://picsum.photos/id/666/200/100"  data-src="https://picsum.photos/id/666/300/200" />
+              </li>
+            </ul>
+          </div>
+          <hr class="gradient">
+          <div>
+            <h3>Featured Item with Thumbnails</h3>
+          </div>
+          <div class="slider-thumbnails max--half">
+            <ul id="sliderFeatured" class="carousel list-unstyled cS-hidden">
+              <li data-thumb="https://picsum.photos/id/871/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/871/200/100"  data-src="https://picsum.photos/id/871/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/622/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/622/200/100"  data-src="https://picsum.photos/id/622/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/292/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/292/200/100"  data-src="https://picsum.photos/id/292/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/371/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/371/200/100"  data-src="https://picsum.photos/id/371/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/177/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/177/200/100"  data-src="https://picsum.photos/id/177/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/38/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/38/200/100"  data-src="https://picsum.photos/id/38/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/911/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/911/200/100"  data-src="https://picsum.photos/id/911/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/662/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/662/200/100"  data-src="https://picsum.photos/id/662/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/512/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/512/200/100"  data-src="https://picsum.photos/id/512/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/96/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/96/200/100"  data-src="https://picsum.photos/id/96/1200/800" />
+              </li>
+              <li data-thumb="https://picsum.photos/id/71/300/200" class="animated fadeIn"> 
+                <img class="width--full lazyload" src="https://picsum.photos/id/71/200/100"  data-src="https://picsum.photos/id/71/1200/800" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Carousel with Gallery View</h2>
+        </section>
+        <section class="section__body">
+          <div class="slider-single-gallery">
+            <h3>Single Item with Gallery</h3>
+            <ul id="sliderSingleGallery" class="carousel content-slider">
+              <li data-src="https://picsum.photos/id/71/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/71/200/100"  data-src="https://picsum.photos/id/71/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/19/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/19/200/100" data-src="https://picsum.photos/id/19/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/22/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/22/200/100"  data-src="https://picsum.photos/id/22/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/921/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/921/200/100"  data-src="https://picsum.photos/id/921/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/732/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/732/200/100"  data-src="https://picsum.photos/id/732/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/552/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/552/200/100"  data-src="https://picsum.photos/id/552/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/227/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/227/200/100"  data-src="https://picsum.photos/id/227/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/172/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/172/200/100"  data-src="https://picsum.photos/id/172/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/666/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/666/200/100"  data-src="https://picsum.photos/id/666/1200/800" />
+              </li>
+            </ul>
+          </div>
+          <hr class="gradient">
+          <div class="slider-multiple-gallery">
+            <h3>Multiple Items with Gallery</h3>
+            <ul id="sliderMultipleGallery" class="carousel content-slider">
+              <li data-src="https://picsum.photos/id/71/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/71/200/100"  data-src="https://picsum.photos/id/71/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/19/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/19/200/100" data-src="https://picsum.photos/id/19/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/22/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/22/200/100"  data-src="https://picsum.photos/id/22/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/921/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/921/200/100"  data-src="https://picsum.photos/id/921/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/732/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/732/200/100"  data-src="https://picsum.photos/id/732/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/552/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/552/200/100"  data-src="https://picsum.photos/id/552/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/227/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/227/200/100"  data-src="https://picsum.photos/id/227/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/172/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/172/200/100"  data-src="https://picsum.photos/id/172/1200/800" />
+              </li>
+              <li data-src="https://picsum.photos/id/666/1200/800">
+                <img class="width--full lazyload" src="https://picsum.photos/id/666/200/100"  data-src="https://picsum.photos/id/666/1200/800" />
+              </li>
+            </ul>
+          </div>
+          <hr class="gradient">
+          <div>
+            <h3>Featured Item with Thumbnails and Gallery</h3>
+          </div>
+          <div class="slider-gallery max--half">
+            <ul id="sliderFeaturedGallery" class="carousel list-unstyled cS-hidden">
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/737/1200/800" 
+                  data-thumb="https://picsum.photos/id/737/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/737/200/100"  
+                     data-src="https://picsum.photos/id/737/1200/800" />
+              </li>
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/117/1200/800" 
+                  data-thumb="https://picsum.photos/id/117/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/117/200/100"  
+                     data-src="https://picsum.photos/id/117/1200/800" />
+              </li>
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/71/1200/800" 
+                  data-thumb="https://picsum.photos/id/71/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/71/200/100"  
+                     data-src="https://picsum.photos/id/71/1200/800" />
+              </li>
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/552/1200/800" 
+                  data-thumb="https://picsum.photos/id/552/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/552/200/100"  
+                     data-src="https://picsum.photos/id/552/1200/800" />
+              </li>
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/61/1200/800" 
+                  data-thumb="https://picsum.photos/id/61/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/61/200/100"  
+                     data-src="https://picsum.photos/id/61/1200/800" />
+              </li>
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/227/1200/800" 
+                  data-thumb="https://picsum.photos/id/227/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/227/200/100"  
+                     data-src="https://picsum.photos/id/227/1200/800" />
+              </li>
+              <li class="animated fadeIn"
+                  data-src="https://picsum.photos/id/541/1200/800" 
+                  data-thumb="https://picsum.photos/id/541/300/200"> 
+                <img class="width--full lazyload" 
+                     src="https://picsum.photos/id/541/200/100"  
+                     data-src="https://picsum.photos/id/541/1200/800" />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__body">
+          <small>For the full documentation and usage, visit <strong>jQuery lightSlider</strong> <a href="http://sachinchoolur.github.io/lightslider/" target="_blank"><i class="fas fa-external-link-alt"></i></a></small>
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+
+  <!-- jQuery, Lazyload, LightSlider, LightGallery -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lightslider/lightslider.js"></script>
+  <script type="text/javascript" async src="../plugins/lightgallery/lightgallery-all.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+  
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+      // Carousel only
+      $("#sliderSingle").lightSlider({
+        loop: true,
+        keyPress: true,
+        item: 1
+      });
+      $("#sliderMultiple").lightSlider({
+        loop: true,
+        keyPress: true,
+        item: 4,
+        responsive : [{
+          breakpoint: 800,
+          settings: {
+            item:3,
+            slideMove:1,
+            slideMargin:6,
+          }
+        },{
+          breakpoint: 480,
+          settings: {
+            item: 2,
+            slideMove: 1
+          }
+        },{
+          breakpoint: 320,
+          settings: {
+            item: 1,
+            slideMove: 1
+          }
+        }]
+      });
+      $('#sliderFeatured').lightSlider({
+        gallery: true,
+        item: 1,
+        thumbItem: 4,
+        slideMargin: 0,
+        speed: 500,
+        currentPagerPosition: 'left',
+        // auto:true,
+        loop: true,
+        responsive : [{
+          breakpoint: 800,
+          settings: {
+            thumbItem: 3,
+            slideMove: 1,
+            slideMargin: 6,
+          }
+        },{
+          breakpoint: 480,
+          settings: {
+            thumbItem: 2,
+            slideMove: 1
+          }
+        },{
+          breakpoint: 321,
+          settings: {
+            thumbItem: 0,
+            slideMove: 1
+          }
+        }],
+        onSliderLoad: function() {
+          $('#sliderFeatured').removeClass('cS-hidden');
+        }  
+      });
+      // Carousel with Gallery
+      $("#sliderSingleGallery").lightSlider({
+        loop: true,
+        keyPress: true,
+        item: 1,
+        enableDrag: false,
+        onSliderLoad: function(el) {
+          $('#sliderSingleGallery').removeClass('cS-hidden');
+          el.lightGallery({
+            selector: '#sliderSingleGallery .lslide'
+          });
+        }  
+      });
+      $("#sliderMultipleGallery").lightSlider({
+        loop: true,
+        keyPress: true,
+        item: 4,
+        enableDrag: false,
+        responsive : [{
+          breakpoint: 800,
+          settings: {
+            item:3,
+            slideMove:1,
+            slideMargin:6,
+          }
+        },{
+          breakpoint: 480,
+          settings: {
+            item: 2,
+            slideMove: 1
+          }
+        },{
+          breakpoint: 320,
+          settings: {
+            item: 1,
+            slideMove: 1
+          }
+        }],
+        onSliderLoad: function(el) {
+          $('#sliderMultipleGallery').removeClass('cS-hidden');
+          el.lightGallery({
+            selector: '#sliderMultipleGallery .lslide'
+          });
+        }  
+      });
+      $('#sliderFeaturedGallery').lightSlider({
+        gallery: true,
+        item: 1,
+        thumbItem: 4,
+        slideMargin: 0,
+        speed: 500,
+        currentPagerPosition: 'left',
+        enableDrag: false,
+        loop: true,
+        responsive : [{
+          breakpoint: 800,
+          settings: {
+            thumbItem: 3,
+            slideMove: 1,
+            slideMargin: 6,
+          }
+        },{
+          breakpoint: 480,
+          settings: {
+            thumbItem: 2,
+            slideMove: 1
+          }
+        },{
+          breakpoint: 321,
+          settings: {
+            thumbItem: 0,
+            slideMove: 1
+          }
+        }],
+        onSliderLoad: function(el) {
+          $('#sliderFeaturedGallery').removeClass('cS-hidden');
+          el.lightGallery({
+            selector: '#sliderFeaturedGallery .lslide'
+          });
+        }  
+      });
+    });
+  </script>
+</body>
+</html>

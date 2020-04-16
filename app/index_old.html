@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>MNEMONIC | Home</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/master.css" media="all"/>
+	<link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)"/>
+	<link rel="stylesheet" href="css/tablet.css" media="(max-width: 1024px)"/>
+	<link rel="stylesheet" href="css/desktop.css" media="(min-width: 1025px)"/>
+
+	<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+	<script src="js/html5.js"></script>
+</head>
+<body>
+	<div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+            <li class="nav__icon expanded">
+              <div class="drawer-icon-container">
+                <div class="nav__drawer-icon">
+                  <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                </div>
+              </div>
+            </li>
+            <li class="nav__brand">
+              <!--div class="nav__brand-logo">
+                <a href="#">
+                  <picture>
+                    <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                    <img src="images/page_template/logo.png" alt="Logo">
+                  </picture>
+                </a>
+              </div-->
+              <div class="nav__brand-text">
+                <a href="/">MNEMONIC <span class="hidden-xs">&nbsp;&bull; Design System</span></a>
+              </div>
+            </li>
+            <li class="nav__toolbar--left">
+              <ul>
+                <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                  <a href="#" class="dropdown__button">Vertical</a>
+                  <div class="dropdown__content">
+                    <ul>
+                      <li>
+                        <a href="#">Apple</a>
+                      </li>
+                      <li>
+                        <a href="#">Banana</a>
+                      </li>
+                      <li>
+                        <a href="#">Orange</a>
+                      </li>
+                      <li>
+                        <a href="#">Grapes</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                  <a href="#" class="dropdown__button">Horizontal</a>
+                  <div class="dropdown__content">
+                    <ul>
+                      <li>
+                        <a href="#">Asparagus</a>
+                      </li>
+                      <li>
+                        <a href="#">Broccoli</a>
+                      </li>
+                      <li>
+                        <a href="#">Carrots</a>
+                      </li>
+                      <li>
+                        <a href="#">Squash</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__toolbar--right">
+              <ul>
+                <li class="hidden-xs">
+                  <a href="about.html">About</a>
+                </li>
+                <li class="hidden-xs">
+                  <a href="status.html">Status</a>
+                </li>
+                <li>
+                  <a href="#search">
+                    <i class="fas fa-search"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#login">
+                    <i class="fas fa-user"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="components/index.html">Components &nbsp; <span class="badge">22</span></a>
+              </li>
+              <li>
+                <a href="modules/index.html">Modules &nbsp; <span class="badge">12</span></a>
+              </li>
+              <li>
+                <a href="templates/index.html">Templates &nbsp; <span class="badge">8</span></a>
+              </li>
+              <li>
+                <a href="#menuTheme" class="accordion has-caret inverted">Theme</a>
+                <div id="menuTheme" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="theme/color.html"><i class="fas fa-palette"></i> &nbsp; Colors</a>
+                    </li>
+                    <li>
+                      <a href="theme/typography.html"><i class="fas fa-font"></i> &nbsp; Typography</a>
+                    </li>
+                    <li>
+                      <a href="theme/icon.html"><i class="fas fa-icons"></i> &nbsp; Icons</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuLayout" class="accordion has-caret inverted">Layout</a>
+                <div id="menuLayout" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="layout/grid.html"><i class="fas fa-th"></i> &nbsp; Grid</a>
+                    </li>
+                    <li>
+                      <a href="layout/flex.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Flex</a>
+                    </li>
+                    <li>
+                      <a href="layout/spacing.html"><i class="fas fa-grip-lines"></i> &nbsp; Spacing</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuState" class="accordion has-caret inverted"> State</a>
+                <div id="menuState" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="state/animate.html"><i class="fas fa-quidditch"></i> &nbsp; Animate</a>
+                    </li>
+                    <li>
+                      <a href="state/preloader.html"><i class="fas fa-border-none"></i> &nbsp; Preloader</a>
+                    </li>
+                    <li>
+                      <a href="state/lazyload.html"><i class="fas fa-tasks"></i> &nbsp; Lazyload</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+		<main role="main">
+      <section class="section__content">
+        <section class="section__header">
+          <h1>Mnemonic</h1>
+          <p>Design systems aim to streamline the design and development process <br>by providing pre-built components and modules that are <br> <strong>modular</strong>, <strong>reusable</strong>, <strong>consistent</strong>, <strong>customizable</strong>, and <strong>relevant</strong>.</p>
+        </section>
+      </section>
+      <section class="section__content mnemonic-overview">
+        <section class="section__header">
+          <h2>Overview</h2>
+        </section>
+        <section class="section__body">
+          <section class="mnemonic-blocks">
+            <ul class="mnemonic-items flex--third">
+              <li>
+                <a href="components/index.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-5x">22</i>
+                      <h6 class="p-t--sm">Components</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="modules/index.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-5x">12</i>
+                      <h6 class="p-t--sm">Modules</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="templates/index.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-5x">8</i>
+                      <h6 class="p-t--sm">Templates</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <hr class="gradient">
+          <section class="mnemonic-theme">
+            <h3>Theme</h3>
+            <ul class="mnemonic-items flex--third">
+              <li>
+                <a href="theme/color.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-palette fa-3x"></i>
+                      <h6 class="p-t--sm">Colors</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="theme/typography.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-font fa-3x"></i>
+                      <h6 class="p-t--sm">Typography</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="theme/icon.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-icons fa-3x"></i>
+                      <h6 class="p-t--sm">Icons</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <hr class="gradient">
+          <section class="mnemonic-layout">
+            <h3>Layout</h3>
+            <ul class="mnemonic-items flex--third">
+              <li>
+                <a href="layout/grid.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-th fa-3x"></i>
+                      <h6 class="p-t--sm">Grid</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="layout/flex.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-grip-horizontal fa-3x"></i>
+                      <h6 class="p-t--sm">Flex</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="layout/spacing.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-grip-lines fa-3x"></i>
+                      <h6 class="p-t--sm">Spacing</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+          <hr class="gradient">
+          <section class="mnemonic-state">
+            <h3>State</h3>
+            <ul class="mnemonic-items flex--third">
+              <li>
+                <a href="state/animate.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-quidditch fa-3x"></i>
+                      <h6 class="p-t--sm">Animate</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="state/preloader.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-border-none fa-3x"></i>
+                      <h6 class="p-t--sm">Preloader</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="state/lazyload.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--lg p-b--lg">
+                        <i class="fas fa-tasks fa-3x"></i>
+                      <h6 class="p-t--sm">Lazyload</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+		</main>
+	</div>
+	<footer></footer>
+
+	<!-- jQuery & Lazyload -->
+	<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" async src="plugins/lazysizes/lazysizes.min.js"></script>
+	<script type="text/javascript" src="plugins/jquery/jquery.appear.js"></script>
+  
+	<!-- Mnemonic JS -->
+  <script type="text/javascript" src="js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

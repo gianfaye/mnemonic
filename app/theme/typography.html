@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Typography</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+  
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all" />
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)" />
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)" />
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)" />
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="/">MNEMONIC &bull; Design System</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="../components/index.html">Components &nbsp; <span class="badge">22</span></a>
+              </li>
+              <li>
+                <a href="../modules/index.html">Modules &nbsp; <span class="badge">10</span></a>
+              </li>
+              <li>
+                <a href="../templates/index.html">Templates &nbsp; <span class="badge">8</span></a>
+              </li>
+              <li>
+                <a href="#menuTheme" class="accordion has-caret inverted is-expanded">Theme</a>
+                <div id="menuTheme" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="color.html"><i class="fas fa-palette"></i> &nbsp; Colors</a>
+                    </li>
+                    <li class="active">
+                      <a href="typography.html"><i class="fas fa-font"></i> &nbsp; Typography</a>
+                    </li>
+                    <li>
+                      <a href="icon.html"><i class="fas fa-icons"></i> &nbsp; Icons</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuLayout" class="accordion has-caret inverted">Layout</a>
+                <div id="menuLayout" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../layout/grid.html"><i class="fas fa-th"></i> &nbsp; Grid</a>
+                    </li>
+                    <li>
+                      <a href="../layout/flex.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Flex</a>
+                    </li>
+                    <li>
+                      <a href="../layout/spacing.html"><i class="fas fa-grip-lines"></i> &nbsp; Spacing</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuState" class="accordion has-caret inverted"> State</a>
+                <div id="menuState" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../state/animate.html"><i class="fas fa-quidditch"></i> &nbsp; Animate</a>
+                    </li>
+                    <li>
+                      <a href="../state/preloader.html"><i class="fas fa-border-none"></i> &nbsp; Preloader</a>
+                    </li>
+                    <li>
+                      <a href="../state/lazyload.html"><i class="fas fa-tasks"></i> &nbsp; Lazyload</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content">
+        <section class="section__header">
+          <h1>Typography</h1>
+          <p></p>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Type Scale</h2>
+          <p>Shows the scaling of text</p>
+        </section>
+        <section class="section__body">
+          <div class="card">
+            <div class="card__body">
+              <table id="tableBasicCaptionTop" class="table--columns text--center">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Tag</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Weight</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <h1>Heading One</h1>
+                    </td>
+                    <td><code>h1</code></td>
+                    <td><code>2rem / 32px</code></td>
+                    <td>Bold (700)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h2>Heading Two</h2>
+                    </td>
+                    <td><code>h2</code></td>
+                    <td><code>1.5rem / 24px</code></td>
+                    <td>Semi-bold (600)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h3>Heading Three</h3>
+                    </td>
+                    <td><code>h3</code></td>
+                    <td><code>1.25rem / 20px</code></td>
+                    <td>Semi-bold (600)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h4>Heading Four</h4>
+                    </td>
+                    <td><code>h4</code></td>
+                    <td><code>1rem / 16px</code></td>
+                    <td>Medium (500)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h5>Heading Five</h5>
+                    </td>
+                    <td><code>h5</code></td>
+                    <td><code>0.875rem / 14px</code></td>
+                    <td>Semi-bold (600)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h6>Heading Six</h6>
+                    </td>
+                    <td><code>h6</code></td>
+                    <td><code>0.75rem / 12px</code></td>
+                    <td>Semi-bold (600)</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Body</p>
+                    </td>
+                    <td><code>p</code></td>
+                    <td><code>0.875rem / 14px</code></td>
+                    <td>Normal (400)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Body Bold</strong></td>
+                    <td><code>strong</code></td>
+                    <td><code>0.875rem / 14px</code></td>
+                    <td>Bold (700)</td>
+                  </tr>
+                  <tr>
+                    <td><small>Small</small></td>
+                    <td><code>small</code></td>
+                    <td><code>0.75rem / 12px</code></td>
+                    <td>Normal (400)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Paragraph</h2>
+          <p>The default body text is <strong>14px</strong>.</p>
+          <p>For optimum reading length, the paragraph width for articles is capped at <strong>635px</strong>.<br> Use the <code>&lt;article&gt;</code> tag to apply the <code>max-width</code> property to <code>&lt;p&gt;</code> tags.</p>
+        </section>
+        <section class="section__body">
+          <div class="card">
+            <div class="card__body">
+              <article class="m--auto p-t--lg p-b--lg">
+                <h2>Main section title</h2>
+                <h5>Text Align Left</h5>
+                <p class="text--left">Lorem ipsum dolor <span class="font--bold">left</span> sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h5>Text Align Centered</h5>
+                <p class="text--center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span class="font--bold">center</span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h5>Text Align Right</h5>
+                <p class="text--right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <span class="font--bold">right</span> incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h5>Text Align Justified</h5>
+                <p class="text--justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <span class="font--bold">justify</span>. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Blockquotes</h2>
+        </section>
+        <section class="section__body">
+          <div class="card">
+            <div class="card__body">
+              <div class="m--auto p-t--sm p-b--sm">
+                <h3>Small</h3>
+                <blockquote class="sm" cite="">
+                  <p>The cost of being wrong is less than the cost of doing nothing.</p>
+                  <footer>
+                    —Seth Godin, <cite>Startup Vitamins</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card__body">
+              <div class="m--auto p-t--md p-b--md">
+                <h3>Medium</h3>
+                <blockquote class="md" cite="">
+                  <p>The cost of being wrong is less than the cost of doing nothing.</p>
+                  <footer>
+                    —Seth Godin, <cite>Startup Vitamins</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <div class="card__body">
+              <div class="m--auto p-t--lg p-b--lg">
+                <h3>Large</h3>
+                <blockquote class="lg" cite="">
+                  <p>The cost of being wrong is less than the cost of doing nothing.</p>
+                  <footer>
+                    —Seth Godin, <cite>Startup Vitamins</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

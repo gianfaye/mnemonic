@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Badge</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="index.html">MNEMONIC &bull; Components</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Components</a>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li>
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li>
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li>
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted is-expanded"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li class="active">
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Badge</h1>
+              <p>Use badges as indicators of numerical data, statistics, or states.</p>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Components</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="badge.html">Badges</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2></h2>
+        </section>
+        <section class="section__body">
+          <div class="card">
+            <div class="card__body">
+              <table class="text--center">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Labels</th>
+                    <th>Badges</th>
+                    <th>Square Badges</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Default</td>
+                    <td><span class="label">Default</span></td>
+                    <td><span class="badge">6</span></td>
+                    <td><span class="badge square">6</span></td>
+                  </tr>
+                  <tr>
+                    <td>Success</td>
+                    <td><span class="label success">Success</span>
+                    </td>
+                    <td><span class="badge success">8</span></td>
+                    <td><span class="badge success square">8</span></td>
+                  </tr>
+                  <tr>
+                    <td>Info</td>
+                    <td><span class="label info">Info</span></td>
+                    <td><span class="badge info">2</span></td>
+                    <td><span class="badge info square">2</span></td>
+                  </tr>
+                  <tr>
+                    <td>Warning</td>
+                    <td><span class="label warning">Warning</span></td>
+                    <td><span class="badge warning">7</span></td>
+                    <td><span class="badge warning square">7</span></td>
+                  </tr>
+                  <tr>
+                    <td>Danger</td>
+                    <td><span class="label danger">Danger</span></td>
+                    <td><span class="badge danger">4</span></td>
+                    <td><span class="badge danger square">4</span></td>
+                  </tr>
+                  <tr>
+                    <td>Light</td>
+                    <td><span class="label light">Light</span></td>
+                    <td><span class="badge light">5</span></td>
+                    <td><span class="badge light square">5</span></td>
+                  </tr>
+                  <tr>
+                    <td>Dark</td>
+                    <td><span class="label dark">Dark</span></td>
+                    <td><span class="badge dark">12</span></td>
+                    <td><span class="badge dark square">12</span></td>
+                  </tr>
+                  <tr>
+                    <td>Muted</td>
+                    <td><span class="label muted">Muted</span></td>
+                    <td><span class="badge muted">0</span></td>
+                    <td><span class="badge muted square">0</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Sizes</h2>
+          <p>Add the following classes to your <code>&lt;span&gt;</code> tag with the <br> <code>.label</code> or  <code>.badge</code> class to set the size of the badge.</p>
+        </section>
+        <section class="section__body">
+          <section class="label--size-small">
+            <h3>Small <small><code>.label--sm</code></small></h3>
+            <div class="card">
+              <div class="card__body">
+                <form class="form--sm label--top">
+                  <div class="">
+                    <ul class="flex--third text--center">
+                      <li>
+                        <span class="label label--sm">Success</span>
+                      </li>
+                      <li>
+                        <span class="badge label--sm">19</span>
+                      </li>
+                      <li>
+                        <span class="badge square label--sm">19</span>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <hr class="gradient">
+          <section class="label--size-medium">
+            <h3>Medium <small><code>.label--md</code></small></h3>
+            <div class="card">
+              <div class="card__body">
+                <form class="form--sm label--top">
+                  <div class="">
+                    <ul class="flex--third text--center">
+                      <li>
+                        <span class="label label--md">Success</span>
+                      </li>
+                      <li>
+                        <span class="badge label--md">19</span>
+                      </li>
+                      <li>
+                        <span class="badge square label--md">19</span>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <hr class="gradient">
+          <section class="label--size-large">
+            <h3>Large <small><code>.label--lg</code></small></h3>
+            <div class="card">
+              <div class="card__body">
+                <form class="form--lg label--top">
+                  <div class="">
+                    <ul class="flex--third text--center">
+                      <li>
+                        <span class="label label--lg">Success</span>
+                      </li>
+                      <li>
+                        <span class="badge label--lg">19</span>
+                      </li>
+                      <li>
+                        <span class="badge square label--lg">19</span>
+                      </li>
+                    </ul>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

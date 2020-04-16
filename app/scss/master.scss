@@ -1,0 +1,106 @@
+/** ----------------------
+		Master .scss file
+
+  > Comment out necessary scss files
+  > Leave reset and normalize as they were
+  > Customize global variables on tokens.scss
+ ----------------------**/
+
+/* ===== BASE ====== */
+
+@import 'base/fonts';
+@import	'base/reset';
+@import	'base/normalize';
+@import	'base/mixins';
+@import 'base/functions';
+@import 'base/tokens'; 
+@import 'base/settings'; 
+@import 'base/variables'; 
+
+/* ===== LAYOUT ===== */
+
+@import 'layout/grid'; // CSS Grid
+@import 'layout/flex'; // CSS Flex
+@import 'layout/bootstrap'; // Bootstrap Grid system 
+//@import 'layout/oocss'; // Object Oriented CSS
+
+/* ===== THEME ===== */
+
+@import 'theme/typography';
+@import	'theme/spacing';
+@import	'theme/settings';
+
+/* ===== SECTIONS ===== */
+
+@import 'section/header'; 
+@import 'section/navigation';  
+@import 'section/main'; 
+@import 'section/footer'; 
+
+/* ===== COMPONENTS ===== */
+
+/* Form elements */
+@import 'component/form'; 
+@import 'component/select2'; 
+@import 'component/button'; 
+@import 'component/slider'; 
+@import 'component/datepicker'; 
+
+/* Content Grouping */
+@import 'component/list'; 
+@import 'component/table'; 
+@import 'component/card'; 
+
+/* Content Display */
+@import 'component/tab'; 
+@import 'component/accordion'; 
+@import 'component/modal'; 
+
+/* System status visibility */
+@import 'component/alert'; 
+@import 'component/tooltip';  
+@import 'component/popover';  
+@import 'component/progress'; 
+@import 'component/badge';
+
+/* ===== MODULES ===== */
+
+/* Navigation */
+@import 'module/dropdown'; 
+@import 'module/drawer'; 
+// @import 'module/toolbar'; 
+@import 'module/breadcrumb';
+@import 'module/sticky'; 
+
+/* Media */
+@import 'module/banner'; 
+@import 'module/gallery'; 
+@import 'module/carousel'; 
+ 
+/* Forms */
+//@import 'module/search'; 
+//@import 'module/datatables'; 
+//@import 'module/wizard';  
+
+/* User Profile */
+
+/* ===== STATE ===== */
+
+@import 'misc/animate'; 
+@import 'misc/preload'; 
+
+/* ===== ICONS ===== */
+
+@import 'icons/fontawesome';
+@import 'icons/solid'; // Font Awesome - Solid 
+@import 'icons/regular'; // Font Awesome - Outline 
+@import 'icons/brands'; // Font Awesome - Brands 
+
+/* ===== PLUGINS ===== */
+
+@import 'plugin/overrides'; 
+
+
+/* ===== PAGE-SPECIFIC ===== */
+
+/* @import 'page/custom'; */

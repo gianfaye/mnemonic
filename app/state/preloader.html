@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>MNEMONIC | Preloader</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../css/master.css" media="all"/>
+	<link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+	<link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+	<link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+	<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+	<script src="js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="/">MNEMONIC &bull; Design System</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="../components/index.html">Components &nbsp; <span class="badge">22</span></a>
+              </li>
+              <li>
+                <a href="../modules/index.html">Modules &nbsp; <span class="badge">10</span></a>
+              </li>
+              <li>
+                <a href="../templates/index.html">Templates &nbsp; <span class="badge">8</span></a>
+              </li>
+              <li>
+                <a href="#menuTheme" class="accordion has-caret inverted">Theme</a>
+                <div id="menuTheme" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../theme/color.html"><i class="fas fa-palette"></i> &nbsp; Colors</a>
+                    </li>
+                    <li>
+                      <a href="../theme/typography.html"><i class="fas fa-font"></i> &nbsp; Typography</a>
+                    </li>
+                    <li>
+                      <a href="../theme/icon.html"><i class="fas fa-icons"></i> &nbsp; Icons</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuLayout" class="accordion has-caret inverted">Layout</a>
+                <div id="menuLayout" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../layout/grid.html"><i class="fas fa-th"></i> &nbsp; Grid</a>
+                    </li>
+                    <li>
+                      <a href="../layout/flex.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Flex</a>
+                    </li>
+                    <li>
+                      <a href="../layout/spacing.html"><i class="fas fa-grip-lines"></i> &nbsp; Spacing</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuState" class="accordion has-caret inverted is-expanded"> State</a>
+                <div id="menuState" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="animate.html"><i class="fas fa-quidditch"></i> &nbsp; Animate</a>
+                    </li>
+                    <li class="active">
+                      <a href="preloader.html"><i class="fas fa-border-none"></i> &nbsp; Preloader</a>
+                    </li>
+                    <li>
+                      <a href="lazyload.html"><i class="fas fa-tasks"></i> &nbsp; Lazyload</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main" class="">
+      <section class="section__content">
+        <section class="section__header">
+          <h1>Preloader</h1>
+          <p>
+            Content preloader
+          </p>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__body">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <div class="card m-b--lg">
+                <div class="card__body">
+                  <div class="row">
+                    <div class="col-xs-4 col-md-4">
+                      <div class="avatar avatar__loading animated hiding" data-animation="fadeIn" data-delay="100">
+                        <img src="https://picsum.photos/100/100" class="loader lazyload">
+                      </div>
+                    </div>
+                    <div class="col-xs-8 col-md-8">
+                      <div class="text__loading">
+                        <br>
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload"><h4>Amaya Cruz<h4></span>
+                        </div>
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload">2h ago</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <br>
+                      <div class="text__loading">
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload">The Mixins example </span>
+                        </div>
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload">already looks like a function.</span>
+                        </div>
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload"> There is, however, the ability to do </span>
+                        </div>
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload">some powerful stuff with calculating values.</span>
+                        </div>
+                        <div class="text__loading--line animated hiding" data-animation="fadeIn" data-delay="4000">
+                          <span class="lazyload">Lorem ipsum dolor.</span>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <br><br>
+                      <div class="img__loading">
+                        <img src="https://picsum.photos/400/300" class="lazyload">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+
+	<!-- jQuery & Lazyload -->
+	<script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+	<script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+	
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

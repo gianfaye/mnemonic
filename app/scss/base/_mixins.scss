@@ -1,0 +1,160 @@
+@import '../base/tokens';
+
+/* BREAKPOINTS */
+@mixin for-phone-320 {
+  @media (max-width: 320px) { @content; }
+}
+@mixin for-phone-480 {
+  @media (max-width: 480px) { @content; }
+}
+@mixin for-tablet-768 {
+  @media (max-width: 768px) { @content; }
+}
+@mixin for-tablet-992 {
+  @media (max-width: 992px) { @content; }
+}
+@mixin for-desktop-1024 {
+  @media (max-width: 1024px) { @content; }
+}
+
+/*** DEfault 1440px ***/
+
+@mixin for-desktop-1366 {
+  @media (min-width: 1366px) { @content; }
+}
+@mixin for-widescreen-1600 {
+  @media (min-width: 1600px) { @content; }
+}
+@mixin for-widescreen-1824 {
+  @media (min-width: 1824px) { @content; }
+}
+@mixin for-widescreen-1920 {
+  @media (min-width: 1920px) { @content; }
+}
+
+/* --------
+ Usage:
+.my-box {
+  padding: 10px;
+  
+  @include for-desktop-1024 {
+    padding: 20px;
+  }
+}
+*/
+
+
+/* VENDOR PREFIXES */
+
+/* CSS3 Transition */
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+/* --------
+  Usage:
+  .class-name { @include transition(all 0.5s ease); } 
+ --------- */
+
+
+/* CSS3 Transition Delay */
+@mixin transition-delay($args...) {
+  -webkit-transition-delay: $args;
+     -moz-transition-delay: $args;
+      -ms-transition-delay: $args;
+       -o-transition-delay: $args;
+          transition-delay: $args;
+}
+/* --------
+  Usage:
+  .class-name { @include transition-delay(all 0.5s ease); }
+ --------- */
+
+
+/* CSS3 Transform */
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+     -moz-transform: $transform;
+      -ms-transform: $transform;
+       -o-transform: $transform;
+          transform: $transform;
+}
+/* --------
+  Usage:
+  .class-name { @include transform(all 0.5s ease); }
+ --------- */
+
+
+/* CSS3 Transform Style */
+@mixin transform-style($transform-style...) {
+  -webkit-transform: $transform-style;
+     -moz-transform: $transform-style;
+      -ms-transform: $transform-style;
+       -o-transform: $transform-style;
+          transform: $transform-style;
+}
+/* --------
+  Usage:
+  .class-name { @include transform-style(preserve-3d); } 
+ --------- */
+
+
+/* CSS3 Animation */
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} { @content; }
+     @-moz-keyframes #{$animation-name} { @content; }
+      @-ms-keyframes #{$animation-name} { @content; }
+       @-o-keyframes #{$animation-name} { @content; }
+          @keyframes #{$animation-name} { @content; }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+     -moz-animation: #{$str};
+      -ms-animation: #{$str};
+       -o-animation: #{$str};
+          animation: #{$str};
+}
+/* --------
+  Usage:
+  @include keyframes(animationName) {
+    0% { opacity: 1; }
+    90% { opacity: 0; }
+  }
+  class-name {
+    @include animation('animationName 5s 3');
+  } 
+ --------- */
+
+@mixin animation-delay($animdelay) {
+  -webkit-animation-delay: #{$animdelay};
+     -moz-animation-delay: #{$animdelay};
+      -ms-animation-delay: #{$animdelay};
+       -o-animation-delay: #{$animdelay};
+          animation-delay: #{$animdelay};
+}
+
+
+@mixin animation-fill-mode($fillmode) {
+  -webkit-animation-fill-mode: #{$fillmode};
+     -moz-animation-fill-mode: #{$fillmode};
+      -ms-animation-fill-mode: #{$fillmode};
+       -o-animation-fill-mode: #{$fillmode};
+          animation-fill-mode: #{$fillmode};
+}
+/* --------
+  Usage:
+  .class-name { @include animation-fill-mode(forwards); } 
+ --------- */
+
+/* For loading placeholder */
+@mixin nth-children($points...) {
+  @each $point in $points {
+      &:nth-child(#{$point}) {
+          @content;
+      }
+  }
+}

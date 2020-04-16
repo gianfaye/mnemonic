@@ -1,0 +1,125 @@
+/* RESETS & DEFAULTS */
+
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1;
+}
+
+html, 
+body { 
+  height: 100%; 
+  min-height: 100%; 
+  -webkit-text-size-adjust: 100%; 
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* Give a help cursor to elements that give extra info on `:hover` */
+
+abbr[title],dfn[title] {
+  cursor:help;
+}
+
+/* Remove underlines from potentially troublesome elements */
+u,ins {
+  text-decoration:none;
+}
+
+/* Apply faux underline via `border-bottom` */
+ins {
+  border-bottom: 1px solid;
+}
+
+/* So that 'alt' text is visually offset if images don't load */
+img {
+  font-style: italic;
+}
+
+/* Give form elements some cursor interactions */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+.input:active,
+.input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:before, 
+.clearfix:after {
+  content:'';
+  display: block;
+  float: none;
+  clear: both;
+}

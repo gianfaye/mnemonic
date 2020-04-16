@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | List</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all" />
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)" />
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)" />
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)" />
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="index.html">MNEMONIC &bull; Components</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Components</a>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li>
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted is-expanded">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li class="active">
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li>
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li>
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Lists</h1>
+              <p>Displays a collection of data grouped into a list</p>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Components</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="list.html">Lists</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Basic</h2>
+        </section>
+        <section class="section__body">
+          
+          <div class="row flex">
+            <div class="col-md-4">
+              <h3>Default <br><small>No additional class</small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <h6>Continents of the World</h6>
+                  <ul>
+                    <li>
+                      <p>Africa</p>
+                    </li>
+                    <li>
+                      <p>Europe</p>
+                    </li>
+                    <li>
+                      <p>Asia</p>
+                    </li>
+                    <li>
+                      <p>North America</p>
+                    </li>
+                    <li>
+                      <p>South America</p>
+                    </li>
+                    <li>
+                      <p>Australia</p>
+                    </li>
+                    <li>
+                      <p>Antartica</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h3>Bulleted <br><small><code>.list--bullet</code></small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <h6>Continents of the World</h6>
+                  <ul class="list--bullet">
+                    <li>
+                      <p>Africa</p>
+                    </li>
+                    <li>
+                      <p>Europe</p>
+                    </li>
+                    <li>
+                      <p>Asia</p>
+                    </li>
+                    <li>
+                      <p>North America</p>
+                    </li>
+                    <li>
+                      <p>South America</p>
+                    </li>
+                    <li>
+                      <p>Australia</p>
+                    </li>
+                    <li>
+                      <p>Antartica</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h3>Square <br><small><code>.list--square</code></small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <h6>Continents of the World</h6>
+                  <ul class="list--square">
+                    <li>
+                      <p>Africa</p>
+                    </li>
+                    <li>
+                      <p>Europe</p>
+                    </li>
+                    <li>
+                      <p>Asia</p>
+                    </li>
+                    <li>
+                      <p>North America</p>
+                    </li>
+                    <li>
+                      <p>South America</p>
+                    </li>
+                    <li>
+                      <p>Australia</p>
+                    </li>
+                    <li>
+                      <p>Antartica</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>With Icons</h2>
+          <p><strong>Font Awesome</strong> icons can be used to add styling to lists. <a href="https://fontawesome.com/how-to-use/on-the-web/styling/icons-in-a-list" target="_blank"><i class="fas fa-external-link-alt"></i></a> <br>Use <code>.fa-ul</code> on the <code>&lt;ul&gt;</code> tag and <code>.fa-li</code> on the <code>&lt;li&gt;</code> tags</p>
+        </section>
+        <section class="section__body">
+
+          <div class="row m-b--md flex--third">
+            <div class="col-md-4">
+              <div class="list-check">
+                <h3>Check <br><small><code>.fas .fa-check</code></small></h3>
+                <div class="card">
+                  <div class="card__body">
+                    <h6>Continents of the World</h6>
+                    <ul class="fa-ul">
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          Africa
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          Europe
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          Asia
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          North America
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          South America
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          Australia
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check"></i></span>
+                          Antartica
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>    
+            </div>
+
+            <div class="col-md-4">
+              <div class="list-check-circle">
+                <h3>Check <small>Circle (Regular)</small><br><small><code>.far .fa-check-circle</code></small></h3>
+                <div class="card">
+                  <div class="card__body">
+                    <h6>Continents of the World</h6>
+                    <ul class="fa-ul">
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          Africa
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          Europe
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          Asia
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          North America
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          South America
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          Australia
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="far fa-check-circle"></i></span>
+                          Antartica
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+
+            <div class="col-md-4">
+              <div class="list-check-circle">
+                <h3>Check <small>Circle (Solid)</small><br><small><code>.fas .fa-check-circle</code></small></h3>
+                <div class="card">
+                  <div class="card__body">
+                    <h6>Continents of the World</h6>
+                    <ul class="fa-ul">
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          Africa
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          Europe
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          Asia
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          North America
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          South America
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          Australia
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                          Antartica
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+          </div>
+
+          <div class="row m-b--md flex--auto">
+            <div class="col-md-4"><div class="list-check-square">
+              <h3>Check <small>Square (Regular)</small><br><small><code>.far .fa-check-square</code></small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <h6>Continents of the World</h6>
+                  <ul class="fa-ul">
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        Africa
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        Europe
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        Asia
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        North America
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        South America
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        Australia
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="far fa-check-square"></i></span>
+                        Antartica
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+             <div class="col-md-4"> <div class="list-check-square">
+              <h3>Check <small>Square (Solid)</small><br><small><code>.fas .fa-check-square</code></small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <h6>Continents of the World</h6>
+                  <ul class="fa-ul">
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        Africa
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        Europe
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        Asia
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        North America
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        South America
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        Australia
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-square"></i></span>
+                        Antartica
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+             <div class="col-md-4"> <div class="list-info-circle">
+              <h3>Info <small>Circle (Solid)</small><br><small><code>.fas .fa-info-circle</code></small></h3>
+              <div class="card">
+                <div class="card__body">
+                  <h6>Continents of the World</h6>
+                  <ul class="fa-ul">
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        Africa
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        Europe
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        Asia
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        North America
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        South America
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        Australia
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-info-circle"></i></span>
+                        Antartica
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+          </div>
+          <div class="row flex--auto">
+            <div class="col-md-12">
+              <div class="list-mixed">
+                <h3>Mixed Icons</h3>
+                <div class="card max--third">
+                  <div class="card__body">
+                    <ul class="fa-ul">
+                      <li>
+                        <span class="fa-li"><i class="fas fa-user"></i></span>
+                        <h5>Name</h5>
+                        <p>Amaya Dela Cruz</p>
+                      </li>
+                      <li>
+                        <span class="fa-li"><i class="fas fa-home"></i></span>
+                        <h5>Address</h5>
+                        <p>
+                          123 Apple Bldg, Banana st.<br>
+                          Brgy. Carrot, Strawberry City,<br>
+                          Metro Manila, Philippines, 1234
+                        </p>
+                      </li>
+                      <li>
+                        <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                        <h5>Email Address</h5>
+                        <p>amayadelacruz@mail.com</p>
+                      </li>
+                      <li>
+                        <span class="fa-li"><i class="fas fa-mobile-alt"></i></span>
+                        <h5>Contact Number</h5>
+                        <p>+63 912 345 6789</p>
+                      </li>
+                      <li>
+                        <span class="fa-li"><i class="fas fa-venus-mars"></i></span>
+                        <h5>Gender</h5>
+                        <p>Female</p>
+                      </li>
+                      <li>
+                        <span class="fa-li"><i class="fas fa-birthday-cake"></i></span>
+                        <h5>Birthday</h5>
+                        <p>January 1, 1989</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Multiline</h2>
+        </section>
+        <section class="section__body">
+          <div class="row flex--half">
+
+            <div class="col-md-6"><div class="list-multi-basic">
+              <h3>Basic</h3>
+              <div class="card">
+                <div class="card__body">
+                  <ul class="list--bullet">
+                    <li>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </li>
+                    <li>
+                      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </li>
+                    <li>
+                      <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </li>
+                    <li>
+                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+            <div class="col-md-6"><div class="list-multi-icon">
+              <h3>With Icons</h3>
+              <div class="card">
+                <div class="card__body">
+                  <ul class="fa-ul">
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <span class="fa-li"><i class="fas fa-check-circle"></i></span>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </div>
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script>
+  $(document).ready(function() {
+    App.init();
+  });
+  </script>
+</body>
+</html>

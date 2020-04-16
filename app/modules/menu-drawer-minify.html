@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Minify Drawer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body id="sidebarMinify">
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+            <li class="nav__icon expanded">
+              <div class="drawer-icon-container">
+                <div class="nav__drawer-icon">
+                  <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                </div>
+              </div>
+            </li>
+            <li class="nav__brand">
+              <!--div class="nav__brand-logo">
+                <a href="#">
+                  <picture>
+                    <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                    <img src="images/page_template/logo.png" alt="Logo">
+                  </picture>
+                </a>
+              </div-->
+              <div class="nav__brand-text">
+                <a href="/">MNEMONIC &bull; Design System</a>
+              </div>
+            </li>
+            <li class="nav__toolbar--left">
+              <ul>
+                <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                  <a href="#" class="dropdown__button">Vertical</a>
+                  <div class="dropdown__content">
+                    <ul>
+                      <li>
+                        <a href="#">Apple</a>
+                      </li>
+                      <li>
+                        <a href="#">Banana</a>
+                      </li>
+                      <li>
+                        <a href="#">Orange</a>
+                      </li>
+                      <li>
+                        <a href="#">Grapes</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                  <a href="#" class="dropdown__button">Horizontal</a>
+                  <div class="dropdown__content">
+                    <ul>
+                      <li>
+                        <a href="#">Asparagus</a>
+                      </li>
+                      <li>
+                        <a href="#">Broccoli</a>
+                      </li>
+                      <li>
+                        <a href="#">Carrots</a>
+                      </li>
+                      <li>
+                        <a href="#">Squash</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__toolbar--right">
+              <ul>
+                <li class="hidden-xs">
+                  <a href="../about.html">About</a>
+                </li>
+                <li class="hidden-xs">
+                  <a href="../status.html">Status</a>
+                </li>
+                <li>
+                  <a href="#search">
+                    <i class="fas fa-search"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#login">
+                    <i class="fas fa-user"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li class="m--sm">
+                <button href="button.html" class="button--primary success p--sm button--full"><i class="fas fa-plus"></i> <span>&nbsp; Create</span></button>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="fas fa-compress-arrows-alt"></i> <span>&nbsp; Buttons</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="fas fa-text-width"></i> <span>&nbsp; Text Input</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="fas fa-text-height"></i> <span>&nbsp; Textarea</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="far fa-check-square"></i> <span>&nbsp; Checkbox</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="far fa-dot-circle"></i> <span>&nbsp; Radio Button</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="fas fa-toggle-on"></i> <span>&nbsp; Switch</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="fas fa-sliders-h"></i> <span>&nbsp; Slider</span></a>
+              </li>
+              <li>
+                <a href="javascript:;"><i class="fas fa-search"></i> <span>&nbsp; Search Bar</span></a>
+              </li>
+            </ul>
+            <div class="drawer__icon">
+              <div class="drawer-icon-container">
+                <div class="drawer-icon">
+                  <!-- TOGGLE -->
+                  <div class="drawer-toggle" data-target="drawerNav" data-toggle="minify" role="button">
+                    <div class="drawer-icons gray">
+                      <span class="minify-bar"></span>
+                      <span class="minify-bar"></span>
+                      <span class="minify-bar"></span>
+                    </div>
+                    <!-- <div class="nav__drawer-text">
+                      <span>MENU</span>
+                    </div> -->
+                  </div>   
+                </div>
+              </div>
+            </div>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content">
+        <section class="section__header">
+          <h1>Minify Drawer</h1>
+          <p>The minified side menu only shows the icons of buttons and links. <br>Toggle the &nbsp;<i class="fas fa-bars"></i> MENU &nbsp;on the left to minify.</p>
+          <p>Add the class <code>.minify</code> to your <code>&lt;nav&gt;</code> with the <code>.nav__drawer</code> class to enable minifying your sidemenu.</p>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Customizing Width</h2>
+        </section>
+        <section class="section__body">
+          <p>By default, the width of the minified side menu is 70px. <br> If you need to change this:</p>
+          <h3>SCSS</h3>
+          <p>On the <code>_menu.scss</code>, search for the <code>.minified</code> class and change its <code>max-width</code></p>
+          <h3>JS</h3>
+          <p>On the <code>app.js</code> line 79, change the value of <code>main</code>'s <code>margin-left</code> to the new width.</p>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2></h2>
+        </section>
+        <section class="section__body">
+
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

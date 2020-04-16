@@ -1,0 +1,8 @@
+/* FUNCTIONS */
+
+@function map-fetch($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

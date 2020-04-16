@@ -1,0 +1,99 @@
+@import '../base/tokens';
+
+/* Labels and Badges */
+
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: ($halfSpace / 4) ($halfSpace / 2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 10px;
+  // line-height: 1.25;
+  font-weight: 600;
+}
+.square {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0
+}
+
+.label {
+  display: inline;
+  padding: ($halfSpace / 4);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  font-weight: 600;
+
+
+  &--sm {
+    font-size: 0.55rem;
+  }
+
+  &--md {
+    font-size: 0.75rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  &--lg {
+    font-size: 1rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+
+  }
+}
+
+.badge,
+.label{
+  background: $brandColor;
+  color: #FFF;
+}
+
+.badge.danger,
+.label.danger {
+  background: $dangerColor;
+}
+
+.badge.warning,
+.label.warning {
+  background: $warningColor;
+}
+
+.badge.success,
+.label.success {
+  background: $successColor;
+}
+
+.badge.info,
+.label.info {
+  background: $infoColor;
+}
+
+.badge.light,
+.label.light {
+  background: $lightBg;
+  color: $gray-05;
+}
+
+.badge.dark,
+.label.dark {
+  background: $darkBg;
+}
+
+.badge.muted,
+.label.muted {
+  background: $gray-01;
+  color: $gray-04;
+}

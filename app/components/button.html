@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Buttons</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all" />
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)" />
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)" />
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)" />
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="index.html">MNEMONIC &bull; Components</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Components</a>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted is-expanded">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li class="active">
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li>
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li>
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li>
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li>
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Buttons</h1>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Components</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="button.html">Buttons</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Primary <small>(<code>.button--primary</code>)</small></h2>
+          <p>Buttons with solid background</p>
+        </section>
+        <section class="section__body">
+          <section class="button-primary-default">
+            <ul class="grid grid--col-4 has-code-classes">
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary">Default</a>
+                  <br>
+                  <small>No additional class</small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary success">Success</a>
+                  <br>
+                  <small><code>.success</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary info">Info</a>
+                  <br>
+                  <small><code>.info</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary warning">Warning</a>
+                  <br>
+                  <small><code>.warning</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary danger">Danger</a>
+                  <br>
+                  <small><code>.danger</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary light">Light</a>
+                  <br>
+                  <small><code>.light</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary dark">Dark</a>
+                  <br>
+                  <small><code>.dark</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary disabled">Disabled</a>
+                  <br>
+                  <small><code>.disabled</code></small>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Secondary <small>(<code>.button--secondary</code>)</small></h2>
+          <p>Buttons with border outline</p>
+        </section>
+        <section class="section__body">
+          <section class="button-primary-default">
+            <ul class="grid grid--col-4">
+              <li>
+                <a href="javascript:;" class="button--secondary">Default</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary success">Success</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary info">Info</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary warning">Warning</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary danger">Danger</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary dark">Dark</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary disabled">Disabled</a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Secondary (Inversed)</h2>
+          <p>Buttons with border outline on dark background</p>
+        </section>
+        <section class="section__body">
+          <section class="button-primary-default">
+            <ul class="grid grid--col-4 bg--dark">
+              <li>
+                <a href="javascript:;" class="button--secondary">Default</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary success">Success</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary info">Info</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary warning">Warning</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary danger">Danger</a>
+              </li>
+              <li class="bg--dark">
+                <a href="javascript:;" class="button--secondary light">Light</a>
+              </li>
+              <li>
+                <a href="javascript:;" class="button--secondary disabled">Disabled</a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Sizes</h2>
+        </section>
+        <section class="section__body">
+          <section class="button-primary-default">
+            <ul class="grid--col-2">
+              <li>
+                <div class="card card--full-width">
+                  <div class="card__body">
+                    <ul class="grid">
+                      <li>
+                        <a href="javascript:;" class="button--primary">Default</a>
+                      </li>
+                      <li>
+                        <div class="text--center width--full">
+                          <a href="javascript:;" class="button--primary button--full">Full Width</a>
+                          <small><code>.button--full</code></small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text--center width--full">
+                          <a href="javascript:;" class="button--primary button--half">Half Width</a>
+                          <small><code>.button--half</code></small>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="card">
+                  <div class="card__body">
+                    <ul class="grid">
+                      <li>
+                        <div class="text--center">
+                          <a href="javascript:;" class="button--primary button--sm">Small</a>
+                          <br>
+                          <small><code>.button--sm</code></small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text--center">
+                          <a href="javascript:;" class="button--primary button--md">Medium</a>
+                          <br>
+                          <small><code>.button--md</code></small>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="text--center">
+                          <a href="javascript:;" class="button--primary button--lg">Large</a>
+                          <br>
+                          <small><code>.button--lg</code></small>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Alignment</h2>
+          <p>Applies to all buttons except <code>.button--full</code></p>
+        </section>
+        <section class="section__body">
+          <section class="button-primary-default">
+            <div class="card card--full-width max--half">
+              <div class="card__body">
+                <ul class="grid">
+                  <li>
+                    <div class="text--center width--full">
+                      <a href="javascript:;" class="button--primary button--half center">Center Button</a>
+                      <small>No additional class needed</small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="text--center width--full">
+                      <a href="javascript:;" class="button--primary button--half left">Left Button</a>
+                      <small><code>.left</code></small>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="text--center width--full">
+                      <a href="javascript:;" class="button--primary button--half right">Right Button</a>
+                      <small><code>.right</code></small>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Buttons with Icons</h2>
+        </section>
+        <section class="section__body">
+          <section class="button-primary-default">
+            <p>Default</p>
+            <ul class="grid grid--col-4 has-code-classes">
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary"><i class="fas fa-user fa-2x "></i>&nbsp; Default</a>
+                  <br>
+                  <small>No additional class</small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--secondary success"><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Success</a>
+                  <br>
+                  <small><code>.success</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary info"><i class="fab fa-facebook-square fa-2x m-r--sm"></i>&nbsp; Info</a>
+                  <br>
+                  <small><code>.info</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary warning"><i class="fab fa-viber fa-2x"></i>&nbsp; Warning</a>
+                  <br>
+                  <small><code>.warning</code></small>
+                </div>
+              </li>
+            </ul>
+            <p>Small</p>
+            <ul class="grid grid--col-4 has-code-classes">
+              
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--sm"><i class="fas fa-user fa-2x "></i> &nbsp; Default</a>
+                  <br>
+                  <small>No additional class</small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--secondary button--sm success"><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Success</a>
+                  <br>
+                  <small><code>.success</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--sm info"><i class="fab fa-facebook-square fa-2x m-r--sm"></i>Info</a>
+                  <br>
+                  <small><code>.info</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--sm warning"><i class="fab fa-viber fa-2x"></i>&nbsp; Warning</a>
+                  <br>
+                  <small><code>.warning</code></small>
+                </div>
+              </li>
+            </ul>
+
+            <p>Medium</p>
+            <ul class="grid grid--col-4 has-code-classes">
+              
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--md"><i class="fas fa-user fa-2x "></i> &nbsp; Default</a>
+                  <br>
+                  <small>No additional class</small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--secondary button--md success"><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Success</a>
+                  <br>
+                  <small><code>.success</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--md info"><i class="fab fa-facebook-square fa-2x m-r--sm"></i>&nbsp; Info</a>
+                  <br>
+                  <small><code>.info</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--md warning"><i class="fab fa-viber fa-2x"></i>&nbsp; Warning</a>
+                  <br>
+                  <small><code>.warning</code></small>
+                </div>
+              </li>
+            </ul>
+
+            <p>Large</p>
+            <ul class="grid grid--col-4 has-code-classes">
+              
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--lg"><i class="fas fa-user fa-2x "></i> Default</a>
+                  <br>
+                  <small>No additional class</small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--secondary button--lg success"><i class="fas fa-map-marker-alt fa-2x"></i>&nbsp; Success</a>
+                  <br>
+                  <small><code>.success</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--lg info"><i class="fab fa-facebook-square fa-2x m-r--sm"></i>&nbsp; Info</a>
+                  <br>
+                  <small><code>.info</code></small>
+                </div>
+              </li>
+              <li>
+                <div class="text--center">
+                  <a href="javascript:;" class="button--primary button--lg warning"><i class="fab fa-viber fa-2x"></i>&nbsp; Warning</a>
+                  <br>
+                  <small><code>.warning</code></small>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script>
+  $(document).ready(function() {
+    App.init();
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import '../base/tokens';
+
+/* ALERTS */
+
+/* Bootstrap alert */
+
+.alert {
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  
+  .alert-icon{
+    position: absolute;
+    right: 20px;
+    font-size: 10rem;
+  }
+
+  p{
+    padding-bottom: 0;
+  }
+}
+
+.alert h4 {
+  margin-top: 0;
+  color: inherit
+}
+
+.alert .alert-link {
+  font-weight: 700
+}
+
+.alert>p,
+.alert>ul {
+  margin-bottom: 0
+}
+
+.alert>p+p {
+  margin-top: 5px
+}
+
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px
+}
+
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  color: inherit;
+  background: transparent;
+  padding: 10px;
+}
+
+.alert-success {
+  color: $green-tx;
+  background-color: $green-bg;
+  border-color: $green;
+  p, .close i {
+    color: $green-tx;
+  }
+  .alert-icon{
+    color: #c0dabd;
+  }
+}
+
+.alert-success hr {
+  border-top-color: #c9e2b3
+}
+
+.alert-success .alert-link {
+  color: #2b542c
+}
+
+.alert-info {
+  color: $blue-tx;
+  background-color: $blue-bg;
+  border-color: $blue;
+  p, .close i {
+    color: $blue-tx;
+  }
+  .alert-icon{
+    color: #bdd2da;
+    right: 20px;
+    top: -25px;
+  }
+}
+
+.alert-info hr {
+  border-top-color: #a6e1ec
+}
+
+.alert-info .alert-link {
+  color: #245269
+}
+
+.alert-warning {
+  color: $yellow-tx;
+  background-color: $yellow-bg;
+  border-color: $yellow;
+  p, .close i {
+    color: $yellow-tx;
+  }
+  .alert-icon{
+    color: #ead194;
+    top: -15px;
+    font-size: 10rem;
+  }
+}
+
+.alert-warning hr {
+  border-top-color: #f7e1b5
+}
+
+.alert-warning .alert-link {
+  color: #66512c
+}
+
+.alert-danger {
+  color: $red-tx;
+  background-color: $red-bg;
+  border-color: $red;
+  p, .close i {
+    color: $red-tx;
+  }
+  .alert-icon{
+    color: #f1afaf;
+    top: -15px;
+    right: 45px;
+    font-size: 11rem;
+  }
+}
+
+.alert-danger hr {
+  border-top-color: #e4b9c0
+}
+
+.tooltip.top .tooltip-arrow,
+.tooltip.top-left .tooltip-arrow,
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  border-width: 5px 5px 0;
+  border-top-color: #000
+}
+
+.alert-danger .alert-link {
+  color: #843534
+}

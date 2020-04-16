@@ -1,0 +1,137 @@
+@import '../base/tokens';
+// @import '../base/mixins';
+
+/* TABLES */
+
+/* Visibility */ 
+table { display: table; }
+caption { display: table-caption; }
+colgroup, colgroup[hidden] { display: table-column-group; }
+col, col[hidden] { display: table-column; }
+thead, thead[hidden] { display: table-header-group; }
+tbody, tbody[hidden] { display: table-row-group; }
+tfoot, tfoot[hidden] { display: table-footer-group; }
+tr, tr[hidden] { display: table-row; }
+td, th, td[hidden], th[hidden] { display: table-cell; }
+
+colgroup[hidden], col[hidden], thead[hidden], tbody[hidden],
+tfoot[hidden], tr[hidden], td[hidden], th[hidden] {
+  visibility: collapse;
+}
+
+/* Typography */
+table {
+  text-indent: initial;
+  width: 100%;
+  
+  p{
+  	padding-bottom: 0;
+  }
+}
+th { 
+	font-weight: bold; 
+}
+caption{
+	font-size: 0.8rem;
+}
+th, td{
+  font-size: 1rem;
+}
+
+/* Position */
+table{
+	margin: 0 auto;
+	text-align: center; 
+}
+thead, tbody, tfoot, table > tr { 
+	vertical-align: middle; 
+}
+tr, td, th { 
+	vertical-align: inherit; 
+}
+caption { 
+	text-align: center; 
+}
+
+/* Spacing */
+table{
+	// margin-block-start: $wholeSpace; 
+	// margin-block-end: $wholeSpace; 
+}
+
+td, th, caption { 
+	padding: $halfSpace $wholeSpace; 
+}
+
+.table--compact{
+	td, th, caption { 
+		padding: ($halfSpace / 2) ($halfSpace);
+		font-size: 0.875rem;
+	}
+}
+
+.table--mini{
+	td, th, caption { 
+		padding: ($halfSpace / 3) ($halfSpace);
+		font-size: 0.75rem;
+	}
+}
+
+/* Borders */
+tbody{
+	border-top: 2px solid $gray-02;
+}
+tr:not(:last-child){
+	border-bottom: 1px solid $gray-02;
+}
+table{
+	border-radius: 5px;
+}
+
+/* Highlight */
+
+.table__highlight-row{
+	tbody{
+		tr:nth-child(even) td{
+			background: $gray-02
+		}
+		tr:nth-child(odd) td{
+			background: #FFF
+		}
+	}
+}
+
+.table__highlight-col{
+	tbody{
+		td:nth-child(even) {
+			background: $gray-02
+		}
+		td:nth-child(odd) {
+			background: #FFF
+		}
+	}
+}
+
+/* Borders */
+
+.table--columns{
+	table, th,td{
+		border: none;
+	}
+}
+
+.table--rows{
+	td{
+		border-bottom: none;
+	}
+}
+
+.table--column-row{
+	thead tr td{
+
+	}
+}
+
+.caption--bottom{
+	caption-side: bottom;
+}

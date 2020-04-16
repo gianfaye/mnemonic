@@ -1,0 +1,39 @@
+/* STICKY */
+
+$navbarHeight: map-fetch($dimensions, navbar, height);
+$drawerWidth:  map-fetch($dimensions, drawer, width);
+
+.sticked{
+  position: fixed;
+  background: #FFF;
+  height: $navbarHeight;
+  padding-top: $halfSpace / 2;
+  padding-bottom: $halfSpace / 2;
+  width: 100vw;
+  @media (min-width: 1024px){
+    width: calc(100vw - #{$drawerWidth});
+  }
+  top: $navbarHeight;
+  z-index: 1000;
+
+  p{
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+    margin: 0;
+  }
+
+  h1{
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  & + .section__content{
+    margin-top: $navbarHeight
+  }
+
+  &.expanded-more {
+    width: calc(100vw - 70px - #{$drawerWidth});
+  }
+}

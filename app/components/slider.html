@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Slider</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="../js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="index.html">MNEMONIC &bull; Components</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Components</a>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted is-expanded">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li class="active">
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li>
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li>
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li>
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="grid--col-2">
+            <div>
+              <h1>Slider</h1>
+              <p>A slider is a UI element that lets a user select a point between a predefined range.</p>
+              <p>Mnemonic uses the <strong>Powerange</strong> <a href="https://abpetkov.github.io/powerange/" target="_blank"><i class="fas fa-external-link-alt"></i></a> slider. </p>
+            </div>
+            <div class="flex h--end v--center">
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb arrow list--inline">
+                  <li class="breadcrumb-item">
+                    <a href="../index.html">Home</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a href="index.html">Components</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="slider.html">Slider</a>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Style</h2>
+        </section>
+        <section class="section__body">
+          <section class="text-input-label-top">
+            <div class="card">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-2">
+                          <small class="text--uppercase">Value: </small>
+                          <!--input id="sliderDefault" type="text" name="sliderDefault" class="slider__value display-box"-->
+                          <span id="sliderDefault" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-10">
+                          <input type="text" class="slider slider-default" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper green">
+                        <div class="col-md-2 no-gutter">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultGreen" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-10">
+                          <input type="text" class="slider slider-default-green" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper yellow">
+                        <div class="col-md-2 no-gutter">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultYellow" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-10">
+                          <input type="text" class="slider slider-default-yellow" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <br>
+            <div class="card">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper orange">
+                        <div class="col-md-2 no-gutter">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultOrange" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-10">
+                          <input type="text" class="slider slider-default-orange" />
+                        </div>
+                      </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Sizes</h2>
+          <p>Add the following classes to your <code>&lt;form&gt;</code> tag to set the size.</p>
+        </section>
+        <section class="section__body">
+          <section class="text-input-label-top">
+            <h3>Small <small><code>.form--sm</code></small></h3>
+            <div class="card max--half">
+              <div class="card__body">
+                <form class="label--top form--sm">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-4">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultSm" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" class="slider slider-default-sm" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <hr class="gradient">
+          <section class="text-input-label-top">
+            <h3>Medium <small><code>.form--md</code></small></h3>
+            <div class="card max--half">
+              <div class="card__body">
+                <form class="label--top form--md">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-4">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultMd" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" class="slider slider-default-md" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <hr class="gradient">
+          <section class="text-input-label-top">
+            <h3>Large <small><code>.form--lg</code></small></h3>
+            <div class="card max--half">
+              <div class="card__body">
+                <form class="label--top form--lg">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-4">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultLg" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" class="slider slider-default-lg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Values</h2>
+        </section>
+        <section class="section__body">
+          <section class="text-input-label-top">
+            <h3>Steps</h3>
+            <p>You can customize the gap value between each slide</p>
+            <div class="card">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-2">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultSteps" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-10">
+                          <input type="text" class="slider slider-default-steps" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <hr class="gradient">
+          <section class="text-input-label-top">
+            <h3>Min and Max</h3>
+            <p>You can customize the minimum and the maximum values of the slider range.</p>
+            <div class="card">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-2">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultMinmax" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-10">
+                          <input type="text" class="slider slider-default-minmax" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+      <section class="section__content">
+        <section class="section__header">
+          <h2>Disabled</h2>
+        </section>
+        <section class="section__body">
+          <section class="text-input-label-top">
+            <div class="card max--half">
+              <div class="card__body">
+                <form class="label--top">
+                  <div class="flex--auto">
+                    <div class="form__group">
+                      <div class="slider__wrapper">
+                        <div class="col-md-4">
+                          <small class="text--uppercase">Value: </small>
+                          <span id="sliderDefaultDisabled" class="slider__value display-box"></span>
+                        </div>
+                        <div class="col-md-8">
+                          <input type="text" class="slider slider-default-disabled" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+   
+  <!-- Powerange JS file -->
+  <script src="../plugins/powerange/powerange.min.js"></script> 
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      setTimeout(function() { 
+        // Default
+        var sliderDefault = document.querySelector('.slider-default');
+        // Custom Colors
+        var sliderDefaultGreen = document.querySelector('.slider-default-green');
+        var sliderDefaultYellow = document.querySelector('.slider-default-yellow');
+        var sliderDefaultOrange = document.querySelector('.slider-default-orange');
+        // Sizes
+        var sliderDefaultSm = document.querySelector('.slider-default-sm');
+        var sliderDefaultMd = document.querySelector('.slider-default-md');
+        var sliderDefaultLg = document.querySelector('.slider-default-lg');
+        // Steps
+        var sliderDefaultSteps = document.querySelector('.slider-default-steps');
+        // Min and Max
+        var sliderDefaultMinmax = document.querySelector('.slider-default-minmax');
+        // Disabled
+        var sliderDefaultDisabled = document.querySelector('.slider-default-disabled');
+
+        // Default
+        var initDefault = new Powerange(sliderDefault, { 
+          start: 20,
+          callback: displayDecimalValue
+        });
+        // Custom Colors
+        var initDefaultGreen = new Powerange(sliderDefaultGreen, { 
+          start: 40,
+          callback: displayDecimalValueGreen
+        });
+        var initDefaultYellow = new Powerange(sliderDefaultYellow, { 
+          start: 60,
+          callback: displayDecimalValueYellow
+        });
+        var initDefaultOrange = new Powerange(sliderDefaultOrange, { 
+          start: 80,
+          callback: displayDecimalValueOrange
+        });
+        // Sizes
+        var initDefaultSm = new Powerange(sliderDefaultSm, { 
+          start: 50,
+          callback: displayDecimalValueSm
+        });
+        var initDefaultMd = new Powerange(sliderDefaultMd, { 
+          start: 50,
+          callback: displayDecimalValueMd
+        });
+        var initDefaultLg = new Powerange(sliderDefaultLg, { 
+          start: 50,
+          callback: displayDecimalValueLg
+        });
+        // Steps
+        var initDefaultSteps = new Powerange(sliderDefaultSteps, { 
+          start: 0,
+          step: 10,
+          callback: displayDecimalValueSteps
+        });
+        // Min and Max
+        var initDefaultMinmax = new Powerange(sliderDefaultMinmax, { 
+          start: 32,
+          min: 16,
+          max: 64,
+          callback: displayDecimalValueMinmax
+        });
+        // Disabled
+        var initDefaultDisabled = new Powerange(sliderDefaultDisabled, { 
+          start: 50,
+          disable: true, 
+          disabledOpacity: 0.5,
+          callback: displayDecimalValueDisabled
+        });
+
+        // Default
+        function displayDecimalValue() {
+          document.getElementById('sliderDefault').innerHTML = sliderDefault.value;
+        }
+        // Custom Colors
+        function displayDecimalValueGreen() {
+          document.getElementById('sliderDefaultGreen').innerHTML = sliderDefaultGreen.value;
+        }
+        function displayDecimalValueYellow() {
+          document.getElementById('sliderDefaultYellow').innerHTML = sliderDefaultYellow.value;
+        }
+        function displayDecimalValueOrange() {
+          document.getElementById('sliderDefaultOrange').innerHTML = sliderDefaultOrange.value;
+        }
+        // Sizes
+        function displayDecimalValueSm() {
+          document.getElementById('sliderDefaultSm').innerHTML = sliderDefaultSm.value;
+        }
+        function displayDecimalValueMd() {
+          document.getElementById('sliderDefaultMd').innerHTML = sliderDefaultMd.value;
+        }
+        function displayDecimalValueLg() {
+          document.getElementById('sliderDefaultLg').innerHTML = sliderDefaultLg.value;
+        }
+        // Steps
+        function displayDecimalValueSteps() {
+          document.getElementById('sliderDefaultSteps').innerHTML = sliderDefaultSteps.value;
+        }
+        // Min and Max
+        function displayDecimalValueMinmax() {
+          document.getElementById('sliderDefaultMinmax').innerHTML = sliderDefaultMinmax.value;
+        }
+        // Disabled
+        function displayDecimalValueDisabled() {
+          document.getElementById('sliderDefaultDisabled').innerHTML = sliderDefaultDisabled.value;
+        }
+
+      }, 500);
+      /* Timeout for demo purposes only,
+         Slider considers the width of the container and it should execute after the side nav loads */
+    });
+  </script>
+ 
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

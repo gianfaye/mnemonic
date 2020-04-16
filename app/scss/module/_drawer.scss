@@ -1,0 +1,671 @@
+/* 
+  Drawer (.drawer) - is a section that can be toggled to show and hide menu items and usually slides from the left or right
+ */
+
+/* Nav Toggle Icon */
+
+.drawer-icon-container{
+  display     : block;
+  overflow    : hidden;
+  max-height  : $navbarHeight;
+  text-align: right;
+  // margin-left : -($halfSpace);
+}
+
+.drawer__icon{
+  min-width     : $drawerMiniWidthCollapsed;
+  // border-width  : $navIconBorderWidth;
+  // border-style  : $navIconBorderStyle;
+  // border-color  : $navIconBorderColor;
+  position: absolute;
+
+  bottom: 50px;
+  right: 0;
+  height: 15px;
+
+  &.expanded{
+    flex        : 0 0 calc(#{$drawerWidth} - #{$halfSpace});
+    margin-left : -($halfSpace);
+    bottom: 10px;
+    right: 0;
+  }
+
+  &.collapsed{
+    flex: 0 0 $navIconWidthCollapsed;
+    bottom: 50px;
+    height: 15px;
+    right: 0;
+  }
+
+  &.minify{
+    flex: 0 0 calc(#{$drawerMiniWidthExpanded} - #{$halfSpace});
+  }
+  &.minified{
+    max-width: min-content;
+
+    .drawer-icon-container{
+      .drawer-icon{
+        position    : absolute;
+        width       : $drawerMiniWidthCollapsed;
+        left        : 0;
+        margin-left : 0;
+        text-align  : center;
+      }
+      .drawer-text{
+        display: none;
+      }
+    }
+  }
+}
+
+.drawer-icon {
+  display: block;
+  // background  : $navIconBackground;
+
+  .icon-bar {
+    display: block;
+    width         : $navIconWidth;
+    height        : $navIconThickness;
+    margin-top    : $navIconLineGap;
+    background    : $navIconColor;
+    border-radius : $borderRadius;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.drawer-icons{
+  @include transform(rotate(90deg));
+}
+
+// Drawer Toggle Icon
+.drawer-toggle{
+  display: block;
+  position: relative;
+  //padding-left: $wholeSpace !important; 
+
+  &:hover, &:focus{
+    opacity: 0.9;
+    cursor: pointer;
+  }
+
+  & > div{
+    display: inline-block;
+  }
+
+  // &.opened {
+  //   // Transform to a close icon when opened
+  //   .icon-bar{
+  //     width: 10px;
+  //     &:first-child{
+  //       @include transform(rotate(45deg));
+  //       // margin-top: -($navIconLineGap * 2);
+  //       margin-right: 15px;
+  //     }
+  //     &:nth-child(2n){
+  //       display: none;
+  //     }
+  //     &:last-child{
+  //       @include transform(rotate(-45deg));
+  //       margin-top: -($navIconThickness);
+  //       margin-left: 7px;
+  //     }
+  //   }
+  // }
+
+  &.opened {
+    //padding-left: $halfSpace !important; 
+    // Transform to a close icon when opened
+    .icon-bar{
+      &:first-child{
+        @include transform(rotate(45deg));
+        //margin-top: -($navIconLineGap * 2);
+      }
+      &:nth-child(2n){
+        display: none;
+      }
+      &:last-child{
+        @include transform(rotate(-45deg));
+        margin-top: -($navIconThickness);
+      }
+    }
+  }
+}
+
+.drawer-toggle[data-toggle="minify"]{
+  .drawer-icons{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+
+    //margin-right: 7px;
+
+    .minify-bar{
+      display: block;
+      width: 15px;
+      height: 1px;
+      margin-top: 3px;
+      background: #767676;
+      border-radius: 3px;
+    }
+  }
+}
+
+// Drawer Toggle Text
+.drawer-text{
+  margin-left: ($halfSpace / 2);
+
+  span{
+    font-size    : $navIconFontSize;
+    font-weight  : $navIconFontWeight;
+  }
+}
+
+/* Drawer */ 
+
+.drawer__container{
+  display: block;
+  position: relative;
+  height: 100vh; 
+}
+
+.drawer {
+  z-index: 1;
+  position: relative;
+  width: $drawerWidth;
+  overflow: hidden;
+  //margin-top: $navbarHeight;
+
+  @include transition(all 0.5s ease-out);
+
+  // @if ($drawerSlideFrom == left){
+  //   top: 0;
+
+  //   &.collapsed{
+  //     left: -100%;
+  //     width: 0;
+  //   }
+  //   &.expanded{
+  //     left: 0;
+  //   }
+  // } @else if ($drawerSlideFrom == top){
+  //   top: -1000%;
+  //   left: 0;
+  //   right: 0;
+
+  //   &.collapsed{
+  //     top: -1000%;
+  //   }
+  //   &.expanded{
+  //     top: 0;
+  //   }
+  // } @else if ($drawerSlideFrom == right){
+  //   top: 0;
+  //   right: -100%;
+
+  //   &.collapsed{
+  //     right: -100%;
+  //   }
+  //   &.expanded{
+  //     right: 0;
+  //   }
+  // }
+
+  display: none;
+  width: $drawerWidth;
+  height: calc(100vh - #{$navbarHeight});
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: $drawerBackground;
+
+  @include transition(all 0.5s ease-out);
+
+  &.left{
+    float: left;
+
+    &.collapsed{
+      left: -100%;
+      //width: 0;
+    }
+    &.expanded{
+      left: 0;
+      display: block;
+    }
+  }
+  &.right{
+    overflow: unset;
+    position: absolute;
+    left: auto;
+    width: 500px;
+    top: 0;
+    margin-top: 0;
+    background: $white;
+    border-left: 5px solid #DDD;
+
+    &.collapsed{
+      right: -100%;
+      width: 0;
+    }
+    &.expanded{
+      right: 0;
+    }
+  }
+  
+  & > ul {
+    display: block;
+    margin: 0;
+  }
+
+  li{
+    // display: block;
+  }
+  a {
+    display: block;
+    margin-bottom   : $drawerLinkGap;
+    padding         : $halfSpace;
+    white-space: nowrap;
+
+    background      : $drawerLinkBackground;
+    color           : $drawerLinkColor;
+    //font-weight     : $drawerFontWeight;
+    line-height: 1;
+    
+    span{
+      color: $drawerLinkColor;
+      font-weight: 600;
+      //font-size: 1rem;
+    }
+    &.active, &:hover, &:focus {
+      cursor: pointer;
+      background-color: $drawerLinkHoverBackground;
+      color           : $drawerLinkHoverColor;
+    }
+    // &.active, &:hover, &:focus,
+    // &.active span, &:hover span, &:focus span {
+    //   cursor: pointer;
+    //   // background-color: $drawerLinkHoverBackground;
+    //   // color           : $drawerLinkHoverColor;
+    // }
+  }
+  li.active a{
+    background-color: $drawerLinkActiveBackground;
+    color           : $drawerLinkActiveColor;
+  }
+
+  // For Drawer Minify
+  &.minify{
+    // max-width: 250px;
+    max-width: $drawerMiniWidthExpanded !important;
+    a span{
+      display: inline;
+    }
+    a:not(.button--primary) span{
+      position: absolute;
+    }
+  }
+  &.minified{
+    max-width: $drawerMiniWidthCollapsed !important;
+    //max-width: 150px;
+    left: 0;
+
+    .button--primary, 
+    .button--secondary{
+      min-width: 0;
+    }
+
+    a{
+      text-align: center;
+    }
+
+    // Hide toggle label, button names when minified
+    button span,
+    a span{
+      right: -200%;
+      position: absolute;
+    }
+    button.button--primary span,
+    a.button--primary span{
+      display: none;
+    }
+  }
+
+  &-parent{
+    margin: 0;
+    a{
+      padding-left: $halfSpace;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      &.has-caret:before{
+        right: 30px;
+      }
+    }
+  }
+  &-children{
+    margin: 0;
+    margin-left: 10px;
+    a{
+      padding: $halfSpace;
+      padding-left: $halfSpace + ($halfSpace / 2) !important;
+      font-size: 0.875rem;
+      border-bottom: none;
+      text-transform: none;
+    }
+  }
+
+  // &-parent{
+  //   margin: 0;
+  //   a{
+  //     padding-left: $halfSpace;
+  //     font-size: 0.875rem;
+  //     font-weight: 600;
+  //     text-transform: uppercase;
+  //     margin-bottom: 5px;
+  //     &.has-caret:before{
+  //       right: 30px;
+  //     }
+  //   }
+  // }
+  // &-children{
+  //   margin: 0;
+  //   margin-left: 10px;
+  //   a{
+  //     padding: $halfSpace;
+  //     padding-left: $wholeSpace + ($halfSpace / 2);
+  //     font-size: 0.875rem;
+  //     border-bottom: none;
+  //     text-transform: none;
+  //   }
+  // }
+}
+
+/* Nav Toggle Icon */
+
+.drawer-icon-container{
+  display     : block;
+  overflow    : hidden;
+  max-height  : $navbarHeight;
+  text-align: right;
+  // margin-left : -($halfSpace);
+}
+
+.nav__icon{
+  min-width     : $navIconMinWidth;
+  // border-width  : $navIconBorderWidth;
+  // border-style  : $navIconBorderStyle;
+  // border-color  : $navIconBorderColor;
+  //position: absolute;
+
+  &.expanded{
+    //flex        : 0 0 $drawerWidth;
+    // margin-left : -($halfSpace);
+    // bottom: 10px;
+    // right: 0;
+  }
+
+  &.collapsed{
+    flex: 0 0 $navIconWidthCollapsed;
+    bottom: 50px;
+    height: 15px;
+  }
+
+  &.minify{
+    flex: 0 0 calc(#{$drawerMiniWidthExpanded} - #{$halfSpace});
+  }
+  &.minified{
+    max-width: min-content;
+
+    .drawer-icon-container{
+      .nav__drawer-icon{
+        position    : absolute;
+        width       : $drawerMiniWidthCollapsed;
+        left        : 0;
+        margin-left : 0;
+        text-align  : center;
+      }
+      .nav__drawer-text{
+        display: none;
+      }
+    }
+  }
+}
+
+// .nav__drawer-icon {
+//   display: block;
+//   background  : $navIconBackground;
+//   padding     : $halfSpace;
+//   width: $drawerMiniWidthCollapsed;
+
+//   .icon-bar {
+//     display: block;
+//     width         : $navIconWidth;
+//     height        : $navIconThickness;
+//     margin-top    : $navIconLineGap;
+//     background    : $navIconColor;
+//     border-radius : $borderRadius;
+
+//     &:first-child {
+//       margin-top: 0;
+//     }
+//   }
+// }
+
+// .nav__drawer-icons{
+//   @include transform(rotate(90deg));
+// }
+
+// Drawer Toggle Icon
+.nav__drawer-toggle{
+  & > div{
+    display: inline-block;
+  }
+
+  &.opened {
+    // Transform to a close icon when opened
+    .icon-bar{
+      width: 10px;
+      &:first-child{
+        @include transform(rotate(45deg));
+        // margin-top: -($navIconLineGap * 2);
+        margin-right: 15px;
+      }
+      &:nth-child(2n){
+        display: none;
+      }
+      &:last-child{
+        @include transform(rotate(-45deg));
+        margin-top: -($navIconThickness);
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+// Drawer Toggle Text
+.nav__drawer-text{
+  margin-left: ($halfSpace / 2);
+
+  span{
+    font-size    : $navIconFontSize;
+    font-weight  : $navIconFontWeight;
+  }
+}
+
+nav.drawer {
+  z-index: 1000;
+  height: calc(100vh - #{$navbarHeight});
+  // margin-bottom: -$navbarHeight;
+
+  background: $drawerBackground;
+
+  @include transition(all 0.5s ease-out);
+  
+  ul {
+    display: block;
+    margin: 0;
+  }
+  li{
+    display: block;
+  }
+  a {
+    // display: block;
+    // margin-bottom   : $drawerLinkGap;
+    // padding         : $halfSpace;
+    // white-space: nowrap;
+    // text-transform: uppercase;
+
+    // background      : $drawerLinkBackground;
+    // color           : $drawerLinkColor;
+    // font-weight     : $drawerFontWeight;
+    // line-height: 1;
+    
+    span{
+      color: $drawerLinkColor;
+      // font-weight: 600;
+    }
+    &.active, &:hover, &:focus {
+      cursor: pointer;
+      background-color: $drawerLinkHoverBackground;
+      color           : $drawerLinkHoverColor;
+    }
+  }
+  li.active a,
+  li.active span{
+      background-color: $drawerLinkActiveBackground;
+      color           : $drawerLinkActiveColor;
+  }
+
+  // For Drawer Minify
+  &.minify{
+    max-width: $drawerMiniWidthExpanded !important;
+    a span{
+      display: inline;
+    }
+    a:not(.button--primary) span{
+      position: absolute;
+    }
+  }
+  &.minified{
+    max-width: $drawerMiniWidthCollapsed !important;
+    left: 0;
+    .button--primary, 
+    .button--secondary{
+      min-width: 0;
+    }
+    a{
+      text-align: center;
+    }
+    // Hide toggle label, button names when minified
+    button span,
+    a span{
+      right: -200%;
+    }
+    button.button--primary span,
+    a.button--primary span{
+      display: none;
+    }
+  }
+
+  &-parent{
+    margin: 0;
+    a{
+      padding-left: $halfSpace;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      &.has-caret:before{
+        right: 30px;
+      }
+    }
+  }
+  &-children{
+    margin: 0;
+    margin-left: 10px;
+    a{
+      padding: $halfSpace;
+      padding-left: $wholeSpace + ($halfSpace / 2);
+      font-size: 1rem;
+      border-bottom: none;
+      text-transform: none;
+    }
+  }
+}
+
+aside.drawer{
+  background: $gray-01;
+  margin-top: 0;
+
+  width: 250px;
+  left: -100%;
+
+  li{
+    display: block;
+  }
+}
+
+nav.drawer,
+aside.drawer{
+  .drawer-toggle{
+    padding: $halfSpace;
+  }
+}
+
+div.drawer{
+  .drawer__icon-container{
+    max-height: unset;
+    width: 20px;
+    margin: 0 auto;
+  }
+  .drawer__icon{
+    top: 0;
+    left: -60px;
+    right: auto;
+    background: #DDD;
+    height: 60px;
+    width: 60px;
+    padding: 20px;
+  }
+  .drawer-toggle{
+    .icon-bar{
+      color: $black;
+      width: 30px;
+      &:first-child{
+        @include transform(rotate(45deg));
+        margin-top: 8px;
+        margin-right: 0px;
+      }
+      &:nth-child(2n){
+        display: none;
+      }
+      &:last-child{
+        @include transform(rotate(-45deg));
+        margin-top: -4px;
+        margin-left: 1px;
+      }
+    }
+  }
+  &.expand{
+    width: 850px;
+  }
+}
+
+$halfNavbarHeight: ($navbarHeight / 4);
+
+.drawer__header{
+  padding: calc(#{$halfNavbarHeight} - 2px) $halfSpace;
+  border-bottom: 1px solid $gray-02;
+  h2{
+    margin: 0;
+  }
+}
+
+.drawer__content{
+  height: 100%;
+}

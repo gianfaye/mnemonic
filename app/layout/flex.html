@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>MNEMONIC | Flexbox</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+	<!-- Mnemonic CSS -->
+	<link rel="stylesheet" href="../css/master.css" media="all"/>
+	<link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+	<link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+	<link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+	<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+	<script src="../js/html5.js"></script>
+</head>
+<body>
+	<div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="/">MNEMONIC &bull; Design System</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="../components/index.html">Components &nbsp; <span class="badge">22</span></a>
+              </li>
+              <li>
+                <a href="../modules/index.html">Modules &nbsp; <span class="badge">10</span></a>
+              </li>
+              <li>
+                <a href="../templates/index.html">Templates &nbsp; <span class="badge">8</span></a>
+              </li>
+              <li>
+                <a href="#menuTheme" class="accordion has-caret inverted">Theme</a>
+                <div id="menuTheme" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../theme/color.html"><i class="fas fa-palette"></i> &nbsp; Colors</a>
+                    </li>
+                    <li>
+                      <a href="../theme/typography.html"><i class="fas fa-font"></i> &nbsp; Typography</a>
+                    </li>
+                    <li>
+                      <a href="../theme/icon.html"><i class="fas fa-icons"></i> &nbsp; Icons</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuLayout" class="accordion has-caret inverted is-expanded">Layout</a>
+                <div id="menuLayout" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="grid.html"><i class="fas fa-th"></i> &nbsp; Grid</a>
+                    </li>
+                    <li class="active">
+                      <a href="flex.html"><i class="fas fa-grip-horizontal"></i> &nbsp; Flex</a>
+                    </li>
+                    <li>
+                      <a href="spacing.html"><i class="fas fa-grip-lines"></i> &nbsp; Spacing</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuState" class="accordion has-caret inverted"> State</a>
+                <div id="menuState" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="../state/animate.html"><i class="fas fa-quidditch"></i> &nbsp; Animate</a>
+                    </li>
+                    <li>
+                      <a href="../state/preloader.html"><i class="fas fa-border-none"></i> &nbsp; Preloader</a>
+                    </li>
+                    <li>
+                      <a href="../state/lazyload.html"><i class="fas fa-tasks"></i> &nbsp; Lazyload</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+		<main role="main">
+			<section class="section__content">
+				<section class="section__header">
+					<h1>Flexbox</h1>
+					<p>
+						For content-based layouts
+					</p>
+				</section>
+			</section>
+			<section class="section__content">
+				<section class="section__header">
+					<h2>Masonry</h2>
+				</section>
+				<section class="section__body">
+					<section class="flex-masonry-left-to-right">
+						<h3>Left to Right <small>( <code>.mason--ltr</code> )</small></h3>
+						<ul class="masonry--third masonry--ltr">
+							<li>
+								<h4>1. First Item</h4>
+								<p>Dissident otaku network Chiba singularity lights neon-space alcohol render-farm spook. Receding tattoo faded lights vinyl j-pop drugs man tank-traps tiger-team euro-pop crypto-Tokyo modem carbon. DIY Chiba human smart-construct voodoo god convenience store sprawl futurity Kowloon urban tower savant.</p>
+							</li>
+							<li>
+								<h4>2. Second Item</h4>
+								<p>BASE jump sunglasses into DIY modem grenade tank-traps dead faded. Katana spook-ware chrome vinyl digital knife beef noodles free-market sentient corrupted saturation point. Shanty town ablative warehouse systemic futurity Legba carbon gang artisanal hotdog meta-media 3D-printed RAF soul-delay free-market rebar. Disposable uplink singularity drugs realism nano-table. Sidebar</p>
+							</li>
+							<li>
+								<h4>3. Third Item</h4>
+								<p>3. Sub-orbital monofilament grenade tiger-team futurity claymore mine vinyl San Francisco. Dead sprawl nodal point beef noodles bridge soul-delay assault jeans papier-mache. </p>
+							</li>
+							<li>
+								<h4>4. Fourth Item</h4>
+								<p>Rebar receding drone human hotdog fluidity bicycle computer faded euro-pop sub-orbital. Sub-orbital j-pop physical hacker bicycle Kowloon uplink neon. </p>
+							</li>
+							<li>
+								<h4>5. Fifth Item</h4>
+								<p>5. Weathered-space long-chain hydrocarbons pen fetishism. Dolphin drone modem chrome marketing courier gang render-farm monofilament. </p>
+							</li>
+							<li>
+								<h4>6. Sixth Item</h4>
+								<p>Fluidity voodoo god woman geodesic otaku crypto-dead receding weathered faded DIY cardboard beef noodles. </p>
+							</li>
+							<li>
+								<h4>7. Seventh Item</h4>
+								<p>Denim wonton soup lights. Weathered katana narrative industrial grade pistol augmented reality man towards range-rover. </p>
+							</li>
+							<li>
+								<h4>8. Eight Item</h4>
+								<p>Shibuya vinyl hotdog pistol cartel franchise 3D-printed market RAF advert sentient denim narrative rain cardboard receding. Tower stimulate city tank-traps sentient digital semiotics woman plastic fetishism sign motion uplink bomb vehicle bicycle. Vinyl long-chain hydrocarbons dissident sign geodesic decay systema render-farm marketing. </p>
+							</li>
+							<li>
+								<h4>9. Ninth Item</h4>
+								<p>Weathered-space long-chain hydrocarbons pen fetishism. Dolphin drone modem chrome marketing courier gang render-farm monofilament. </p>
+							</li>
+						</ul>
+					</section>
+          <hr class="gradient">
+					<section class="flex-masonry-top-to-bottom">
+						<h3>Top to Bottom <small>( <code>.mason--ttb</code> )</small></h3>
+						<ul class="masonry--third masonry--ttb">
+							<li>
+								<h4>1. First Item</h4>
+								<p>Dissident otaku network Chiba singularity lights neon-space alcohol render-farm spook. Receding tattoo faded lights vinyl j-pop drugs man tank-traps tiger-team euro-pop crypto-Tokyo modem carbon. DIY Chiba human smart-construct voodoo god convenience store sprawl futurity Kowloon urban tower savant.</p>
+							</li>
+							<li>
+								<h4>2. Second Item</h4>
+								<p>BASE jump sunglasses into DIY modem grenade tank-traps dead faded. Katana spook-ware chrome vinyl digital knife beef noodles free-market sentient corrupted saturation point. Shanty town ablative warehouse systemic futurity Legba carbon gang artisanal hotdog meta-media 3D-printed RAF soul-delay free-market rebar. Disposable uplink singularity drugs realism nano-table. Sidebar</p>
+							</li>
+							<li>
+								<h4>3. Third Item</h4>
+								<p>3. Sub-orbital monofilament grenade tiger-team futurity claymore mine vinyl San Francisco. Dead sprawl nodal point beef noodles bridge soul-delay assault jeans papier-mache. </p>
+							</li>
+							<li>
+								<h4>4. Fourth Item</h4>
+								<p>Rebar receding drone human hotdog fluidity bicycle computer faded euro-pop sub-orbital. Sub-orbital j-pop physical hacker bicycle Kowloon uplink neon. </p>
+							</li>
+							<li>
+								<h4>5. Fifth Item</h4>
+								<p>5. Weathered-space long-chain hydrocarbons pen fetishism. Dolphin drone modem chrome marketing courier gang render-farm monofilament. </p>
+							</li>
+							<li>
+								<h4>6. Sixth Item</h4>
+								<p>Fluidity voodoo god woman geodesic otaku crypto-dead receding weathered faded DIY cardboard beef noodles. </p>
+							</li>
+							<li>
+								<h4>7. Seventh Item</h4>
+								<p>Denim wonton soup lights. Weathered katana narrative industrial grade pistol augmented reality man towards range-rover. </p>
+							</li>
+							<li>
+								<h4>8. Eight Item</h4>
+								<p>Shibuya vinyl hotdog pistol cartel franchise 3D-printed market RAF advert sentient denim narrative rain cardboard receding. Tower stimulate city tank-traps sentient digital semiotics woman plastic fetishism sign motion uplink bomb vehicle bicycle. Vinyl long-chain hydrocarbons dissident sign geodesic decay systema render-farm marketing. </p>
+							</li>
+							<li>
+								<h4>9. Ninth Item</h4>
+								<p>Weathered-space long-chain hydrocarbons pen fetishism. Dolphin drone modem chrome marketing courier gang render-farm monofilament. </p>
+							</li>
+						</ul>
+					</section>
+				</section>
+			</section>
+		</main>
+		<footer></footer>
+	</div>
+
+	<!-- jQuery & Lazyload -->
+	<script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+	<script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

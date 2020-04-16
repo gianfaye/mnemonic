@@ -1,0 +1,280 @@
+/* SPACING */
+
+// Helper classes
+
+// Margins
+.m--0{
+	margin: 0 !important;
+}
+.m-t--0{
+	margin-top: 0 !important;
+}
+.m-r--0{
+	margin-right: 0 !important;
+}
+.m-b--0{
+	margin-bottom: 0 !important;
+}
+.m-l--0{
+	margin-left: 0 !important;
+}
+.m--auto{
+	margin: 0 auto !important;
+}
+
+// Padding
+.p--0{
+	padding: 0 !important;
+}
+.p-t--0{
+	padding-top: 0 !important;
+}
+.p-r--0{
+	padding-right: 0 !important;
+}
+.p-b--0{
+	padding-bottom: 0 !important;
+}
+.p-l--0{
+	padding-left: 0 !important;
+}
+
+@media (min-width: 1024px){
+
+	/* MARGIN */
+
+	.m--sm{
+		margin: $halfSpace / 2 !important;
+	}
+	.m--md{
+		margin: $baseSpace / 2 !important;
+	}
+	.m--lg{
+		margin: $halfSpace * 3 !important;
+	}
+	.m--xl{
+		margin: $baseSpace * 2 !important;
+	}
+
+	.m-t--sm{
+		margin-top: $halfSpace / 2 !important;
+	}
+	.m-r--sm{
+		margin-right: $halfSpace / 2 !important;
+	}
+	.m-b--sm{
+		margin-bottom: $halfSpace / 2 !important;
+	}
+	.m-l--sm{
+		margin-left: $halfSpace / 2 !important;
+	}
+
+	.m-t--md{
+		margin-top: $baseSpace / 2 !important;
+	}
+	.m-r--md{
+		margin-right: $baseSpace / 2 !important;
+	}
+	.m-b--md{
+		margin-bottom: $baseSpace / 2 !important;
+	}
+	.m-l--md{
+		margin-left: $baseSpace / 2 !important;
+	}
+
+	.m-t--lg{
+		margin-top: $halfSpace * 3 !important;
+	}
+	.m-r--lg{
+		margin-right: $halfSpace * 3 !important;
+	}
+	.m-b--lg{
+		margin-bottom: $halfSpace * 3 !important;
+	}
+	.m-l--lg{
+		margin-left: $halfSpace * 3 !important;
+	}
+
+	.m-t--lg{
+		margin-top: $baseSpace * 2 !important;
+	}
+	.m-r--lg{
+		margin-right: $baseSpace * 2 !important;
+	}
+	.m-b--lg{
+		margin-bottom: $baseSpace * 2 !important;
+	}
+	.m-l--lg{
+		margin-left: $baseSpace * 2 !important;
+	}
+
+	/* PADDING */
+
+	.p--sm{
+		padding: $halfSpace / 2 !important;
+	}
+	.p--md{
+		padding: $baseSpace / 2 !important;
+	}
+	.p--lg{
+		padding: $baseSpace * 2 !important;
+	}
+	.p--xl{
+		padding: $halfSpace * 3 !important;
+	}
+
+	.p-t--sm{
+		padding-top: $halfSpace / 2 !important;
+	}
+	.p-r--sm{
+		padding-right: $halfSpace / 2 !important;
+	}
+	.p-b--sm{
+		padding-bottom: $halfSpace / 2 !important;
+	}
+	.p-l--sm{
+		padding-left: $halfSpace / 2 !important;
+	}
+
+	.p-t--md{
+		padding-top: $baseSpace / 2 !important;
+	}
+	.p-r--md{
+		padding-right: $baseSpace / 2 !important;
+	}
+	.p-b--md{
+		padding-bottom: $baseSpace / 2 !important;
+	}
+	.p-l--md{
+		padding-left: $baseSpace / 2 !important;
+	}
+
+	.p-t--lg{
+		padding-top: $halfSpace * 3 !important;
+	}
+	.p-r--lg{
+		padding-right: $halfSpace * 3 !important;
+	}
+	.p-b--lg{
+		padding-bottom: $halfSpace * 3 !important;
+	}
+	.p-l--lg{
+		padding-left: $halfSpace * 3 !important;
+	}
+
+	.p-t--xl{
+		padding-top: $baseSpace * 2 !important;
+	}
+	.p-r--xl{
+		padding-right: $baseSpace * 2 !important;
+	}
+	.p-b--xl{
+		padding-bottom: $baseSpace * 2 !important;
+	}
+	.p-l--xl{
+		padding-left: $baseSpace * 2 !important;
+	}
+
+
+	// If you want to add max widths
+	.max--third{
+	  max-width: 33.33%;
+	}
+
+	.max--half{
+	  max-width: 50%;
+	}
+
+	.max--full {
+		max-width: 100%;
+	}
+
+	.max--three-quarter {
+		max-width: 75%;
+	}
+
+}
+
+
+
+// @mixin spacing($spaceSelected){
+// 	@if $spaceSelected = "compact"{
+// 		$lineHeight: 12px;
+// 		$baseSpacing: $lineHeight;
+// 		$halfSpacing: $baseSpacing / 2;
+// 		h1, h2, h3, h4, h5, h6, p{
+// 			line-height: ($lineHeight);
+// 		}
+// 		h1,h2,h3,h4,h5,h6,hgroup,
+// 		ul,ol,dl,
+// 		blockquote,p,address,
+// 		table,
+// 		fieldset,figure,
+// 		pre,
+// 		hr {
+// 		  margin-bottom: ($baseSpacing);
+// 		}
+// 		ul,ol,dd {
+// 		  margin-left: ($baseSpacing);
+// 		}
+// 	}
+// 	@else if $spaceSelected = "comfortable"{
+// 		$lineHeight: 48px;
+// 		$baseSpacing: $lineHeight;
+// 		$halfSpacing: $baseSpacing / 2;
+// 	}
+// 	@else {
+// 		$lineHeight: 24px;
+// 		$baseSpacing: $lineHeight;
+// 		$halfSpacing: $baseSpacing / 2;
+// 	}
+// }
+
+// compact
+// comfortable
+// whitespace
+// custom
+
+/* Default Spacing */
+// h1, h2, h3, h4, h5, h6, p{
+// 	line-height: $lineHeight;
+// }
+// h1,h2,h3,h4,h5,h6,hgroup,
+// ul,ol,dl,
+// blockquote,p,address,
+// table,
+// fieldset,figure,
+// pre,
+// hr {
+//   margin-bottom: $baseSpacing;
+// }
+// ul,ol,dd {
+//   margin-left: $baseSpacing;
+// }
+
+/* Helper Classes  */
+
+// .space--compact{
+// 	@include spacing("compact");
+// }
+
+// .space--comfortable{
+
+// 	@include spacing("comfortable");
+// 	h1, h2, h3, h4, h5, h6, p{
+// 		line-height: ($lineHeight);
+// 	}
+// 	h1,h2,h3,h4,h5,h6,hgroup,
+// 	ul,ol,dl,
+// 	blockquote,p,address,
+// 	table,
+// 	fieldset,figure,
+// 	pre,
+// 	hr {
+// 	  margin-bottom: ($baseSpacing);
+// 	}
+// 	ul,ol,dd {
+// 	  margin-left: ($baseSpacing);
+// 	}
+// }
+

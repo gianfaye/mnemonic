@@ -1,0 +1,122 @@
+@import '../base/tokens';
+
+/* TABS */
+
+.tab{
+  position: relative;
+  display: block;
+  &__toggle{
+    margin-top: -20px;
+    li{
+      display: inline-block;
+      position: relative;
+      a{
+        display: block;
+        color: $gray-06;
+        padding: 20px 20px 20px 0;
+        &:hover{
+          opacity: 0.7;
+        }
+        &:focus{
+          opacity: 1;
+        }
+      }
+      &.active a{
+        font-weight: bold;
+      }
+    }
+    &.lined{
+      padding: 10px 0;
+      li{
+        a{
+          padding: 10px;
+        }
+        &.active a{
+          border-bottom: 3px solid $brandColor;
+        }
+      }
+    }
+    &.boxed{
+      margin: -20px -20px 0 -20px;
+      li{
+        margin-right: -3px;
+        a{
+          padding: 20px;
+          background: $gray-02;
+          margin-right: -2px;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+        &.active a{
+          background-color: #FFF;
+        }
+      }
+      & ~ .tab__contents{
+        padding-top: 20px;
+      }
+    }
+  }
+  &__content{
+    display: none;
+  }
+  &__content.active{
+    display: block;
+  }
+  &__container{
+    &.bottom{
+      .tab__toggle.boxed{
+        margin: -20px;
+      }
+      .tab__content{
+        padding-top: 0;
+        padding-bottom: 30px;
+      }
+    }
+    &.left,
+    &.right{
+      display: flex;
+      .tab__toggle{
+        flex: 1 1 30%;
+        margin: -20px;
+        li{
+          width: 100%;
+        }
+      } 
+      .tab__contents{
+        flex: 1 1 70%;
+        margin: -20px;    
+        padding: 20px;
+      }
+    }
+    &.left{
+      .tab__contents{
+        margin-left: 20px;
+      }
+    }
+    &.right{
+      .tab__contents{
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1024px){
+  // .tab-container{
+  //   &--expanded{
+  //     .tab__content{
+  //       display: block;
+  //       &:first-child{
+  //         display: block;
+  //       }
+  //     }
+  //   }
+  //   &--collapsed{
+  //     .tab__content{
+  //       display: none;
+  //     }
+  //   }
+  // }
+}

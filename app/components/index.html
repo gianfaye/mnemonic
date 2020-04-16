@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Components</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <!-- Mnemonic CSS -->
+  <link rel="stylesheet" href="../css/master.css" media="all"/>
+  <link rel="stylesheet" href="../css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="../css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="../css/desktop.css" media="(min-width: 1025px)"/>
+
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="js/html5.js"></script>
+</head>
+<body>
+  <div class="body-wrapper">
+    <header>
+      <section class="navbar navbar--fixed-top">
+        <nav class="nav__toolbar">
+          <ul class="flex--auto">
+              <li class="nav__icon expanded">
+                <div class="drawer-icon-container">
+                  <div class="nav__drawer-icon">
+                    <div class="drawer-toggle">
+                    <a href="javascript:;" class="drawer-toggle" data-target="drawerNav" data-toggle="show">
+                      <div class="nav__drawer-icons">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </div>
+                      <div class="nav__drawer-text">
+                        <span>MENU</span>
+                      </div>
+                    </a>
+                  </div>   
+                  </div>
+                </div>
+              </li>
+              <li class="nav__brand">
+                <!--div class="nav__brand-logo">
+                  <a href="#">
+                    <picture>
+                      <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
+                      <img src="images/page_template/logo.png" alt="Logo">
+                    </picture>
+                  </a>
+                </div-->
+                <div class="nav__brand-text">
+                  <a href="../index.html">MNEMONIC &bull; Components</a>
+                </div>
+              </li>
+              <li class="nav__toolbar--left">
+                <ul>
+                  <li class="dropdown dropdown--vertical" data-target="verticalMenu">
+                    <a href="#" class="dropdown__button">Vertical</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Apple</a>
+                        </li>
+                        <li>
+                          <a href="#">Banana</a>
+                        </li>
+                        <li>
+                          <a href="#">Orange</a>
+                        </li>
+                        <li>
+                          <a href="#">Grapes</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="dropdown dropdown--horizontal" data-target="horizontalMenu">
+                    <a href="#" class="dropdown__button">Horizontal</a>
+                    <div class="dropdown__content">
+                      <ul>
+                        <li>
+                          <a href="#">Asparagus</a>
+                        </li>
+                        <li>
+                          <a href="#">Broccoli</a>
+                        </li>
+                        <li>
+                          <a href="#">Carrots</a>
+                        </li>
+                        <li>
+                          <a href="#">Squash</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__toolbar--right">
+                <ul>
+                  <li class="hidden-xs">
+                    <a href="../about.html">About</a>
+                  </li>
+                  <li class="hidden-xs">
+                    <a href="../status.html">Status</a>
+                  </li>
+                  <li>
+                    <a href="#search">
+                      <i class="fas fa-search"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#login">
+                      <i class="fas fa-user"></i>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+          <div class="list-group"> 
+            <ul class="drawer-parent accordion-container singleview">
+              <li>
+                <a href="../index.html" class="text--unset bg--none"><i class="fas fa-chevron-left"></i> &nbsp; Back to Home</a>
+              </li>
+              <li>
+                <a href="#menuForms" class="accordion has-caret inverted">Form Elements</a>
+                <div id="menuForms" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="button.html"><i class="fas fa-compress-arrows-alt"></i> &nbsp; Buttons</a>
+                    </li>
+                    <li>
+                      <a href="text-input.html"><i class="fas fa-text-width"></i> &nbsp; Text Input</a>
+                    </li>
+                    <li>
+                      <a href="textarea.html"><i class="fas fa-text-height"></i> &nbsp; Textarea</a>
+                    </li>
+                    <li>
+                      <a href="select.html"><i class="fas fa-chevron-down"></i> &nbsp; Select</a>
+                    </li>
+                    <li>
+                      <a href="checkbox.html"><i class="far fa-check-square"></i> &nbsp; Checkbox</a>
+                    </li>
+                    <li>
+                      <a href="radio-button.html"><i class="far fa-dot-circle"></i> &nbsp; Radio Button</a>
+                    </li>
+                    <li>
+                      <a href="switch.html"><i class="fas fa-toggle-on"></i> &nbsp; Switch</a>
+                    </li>
+                    <li>
+                      <a href="slider.html"><i class="fas fa-sliders-h"></i> &nbsp; Slider</a>
+                    </li>
+                    <li>
+                      <a href="datepicker.html"><i class="far fa-calendar-alt"></i> &nbsp; Datepicker</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuGrouping" class="accordion has-caret inverted">Content Grouping</a>
+                <div id="menuGrouping" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="card.html"><i class="fas fa-th-large"></i> &nbsp; Cards</a>
+                    </li>
+                    <li>
+                      <a href="table.html"><i class="fas fa-table"></i> &nbsp; Tables</a>
+                    </li>
+                    <li>
+                      <a href="list.html"><i class="far fa-list-alt"></i> &nbsp; Lists</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuDisplay" class="accordion has-caret inverted">Content Display</a>
+                <div id="menuDisplay" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="tabs.html"><i class="fas fa-layer-group"></i> &nbsp; Tabs</a>
+                    </li>
+                    <li>
+                      <a href="accordion.html"><i class="far fa-minus-square"></i> &nbsp; Accordion</a>
+                    </li>
+                    <li>
+                      <a href="modal.html"><i class="far fa-sticky-note"></i> &nbsp; Modal</a>
+                    </li>
+                    <li>
+                      <a href="popover.html"><i class="far fa-comment-alt"></i> &nbsp; Popover</a>
+                    </li>
+                    <li>
+                      <a href="tooltip.html"><i class="fas fa-info-circle"></i> &nbsp; Tooltip</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a href="#menuStatus" class="accordion has-caret inverted"> Status Visibility</a>
+                <div id="menuStatus" class="accordion__content">
+                  <ul class="drawer-children">
+                    <li>
+                      <a href="alerts.html"><i class="fas fa-exclamation-triangle"></i> &nbsp; Alerts</a>
+                    </li>
+                    <li>
+                      <a href="badge.html"><i class="fas fa-tags"></i> &nbsp; Badge</a>
+                    </li>
+                    <li>
+                      <a href="progress.html"><i class="fas fa-signal"></i> &nbsp; Progress</a>
+                    </li>
+                    <li>
+                      <a href="spinner.html"><i class="fas fa-spinner"></i> &nbsp; Spinners</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>    
+        </nav>
+      </section>
+    </header>
+    <main role="main">
+      <section class="section__content sticky">
+        <section class="section__header">
+          <div class="flex--third">
+            <div class="p--0">
+              <h1>Components</h1>
+              <p>Here are all the Mnemonic components <br> grouped by functionality:</p>
+            </div>
+            <div class="flex--two-third flex h--end v--center p--0">
+              <ul class="list--inline menu--anchor">
+                <li class="p--sm">
+                  <a href="#formElements" class="anchor-link">Form Elements</a>
+                </li>
+                <li class="p--sm">
+                  <a href="#contentGrouping" class="anchor-link">Content Grouping</a>
+                </li>
+                <li class="p--sm">
+                  <a href="#contentDisplay" class="anchor-link">Content Display</a>
+                </li>
+                <li class="p--sm">
+                  <a href="#status" class="anchor-link">Status Visibility</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="formElements" class="section__content mnemonic-overview">
+        <section class="section__body">
+          <section class="mnemonic-form-elements">
+            <h3>Form Elements</h3>
+            <ul class="mnemonic-items flex--quarter">
+              <li>
+                <a href="button.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-compress-arrows-alt fa-2x"></i>
+                      <h6 class="p-t--sm">Buttons</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="text-input.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-text-width fa-2x"></i>
+                      <h6 class="p-t--sm">Text Input</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="textarea.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-text-height fa-2x"></i>
+                      <h6 class="p-t--sm">Textarea</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="select.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-chevron-down fa-2x"></i>
+                      <h6 class="p-t--sm">Select</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="checkbox.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-check-square fa-2x"></i>
+                      <h6 class="p-t--sm">Checkbox</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="radio-button.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-dot-circle fa-2x"></i>
+                      <h6 class="p-t--sm">Radio Button</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="switch.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-toggle-on fa-2x"></i>
+                      <h6 class="p-t--sm">Switch</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="slider.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-sliders-h fa-2x"></i>
+                      <h6 class="p-t--sm">Slider</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="search.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-search fa-2x"></i>
+                      <h6 class="p-t--sm">Search Bar</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="datepicker.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="far fa-calendar-alt fa-2x"></i>
+                      <h6 class="p-t--sm">Datepicker</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section id="contentGrouping" class="section__content mnemonic-overview">
+        <section class="section__body">
+          <section class="mnemonic-grouping">
+            <h3>Content Grouping</h3>
+            <ul class="mnemonic-items flex--quarter">
+              <li>
+                <a href="list.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-list-alt fa-2x"></i>
+                      <h6 class="p-t--sm">Lists</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="table.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-table fa-2x"></i>
+                      <h6 class="p-t--sm">Tables</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="card.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-th-large fa-2x"></i>
+                      <h6 class="p-t--sm">Cards</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section id="contentDisplay" class="section__content mnemonic-overview">
+        <section class="section__body">
+          <section class="mnemonic-display">
+            <h3>Content Display</h3>
+            <ul class="mnemonic-items flex--quarter">
+              <li>
+                <a href="tab.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-layer-group fa-2x"></i>
+                      <h6 class="p-t--sm">Tabs</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="accordion.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-minus-square fa-2x"></i>
+                      <h6 class="p-t--sm">Accordion</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="modal.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-sticky-note fa-2x"></i>
+                      <h6 class="p-t--sm">Modal</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="popover.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-comment-alt fa-2x"></i>
+                      <h6 class="p-t--sm">Popover</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="tooltip.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-info-circle fa-2x"></i>
+                      <h6 class="p-t--sm">Tooltip</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+      <section id="status" class="section__content mnemonic-overview">
+        <section class="section__body">
+          <section class="mnemonic-visibility">
+            <h3>Status Visibility</h3>
+            <ul class="mnemonic-items flex--quarter">
+              <li>
+                <a href="alert.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-exclamation-triangle fa-2x"></i>
+                      <h6 class="p-t--sm">Alerts</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="badge.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-tags fa-2x"></i>
+                      <h6 class="p-t--sm">Badge</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="progress.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-signal fa-2x"></i>
+                      <h6 class="p-t--sm">Progress</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="spinner.html">
+                  <div class="card with-link">
+                    <div class="card__body">
+                      <div class="text--center m--auto p-t--md p-b--md">
+                        <i class="fas fa-spinner fa-2x"></i>
+                      <h6 class="p-t--sm">Spinners</h6>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+    </main>
+  </div>
+  <footer></footer>
+
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="../plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="../plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery/jquery.appear.js"></script>
+  
+  <!-- Mnemonic JS -->
+  <script type="text/javascript" src="../js/app.js"></script>  
+  <script>
+    $(document).ready(function() {
+      App.init();
+    });
+  </script>
+</body>
+</html>

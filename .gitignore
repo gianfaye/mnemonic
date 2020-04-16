@@ -1,0 +1,10 @@
+README.md
+LICENSE
+
+# Local File Ignore #
+###################
+
+.sass-cache
+.DS_Store
+.DS_Store?
+._*

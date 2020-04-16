@@ -1,0 +1,75 @@
+/* VARIABLES - DO NOT EDIT */
+
+// Navbar
+$navbarHeight: map-fetch($dimensions, navbar, height);
+$navbarPadding: map-fetch($spacing, navbar, padding);
+$navbarBackground: map-fetch($cosmetics, navbar, background);
+$navbarBorderBottom: map-fetch($cosmetics, navbar, border-bottom);
+$navbarFontSize: map-fetch($cosmetics, navbar, font-size);
+$navbarFontWeight: map-fetch($cosmetics, navbar, font-weight);
+$navbarLineHeight: map-fetch($cosmetics, navbar, line-height);
+
+// Navbar (Scrolled)
+$navbarScrolledBackground: map-fetch($cosmetics, navbar-scrolled, background);
+$navbarScrolledColor: map-fetch($cosmetics, navbar-scrolled, background);
+
+// Nav Icon
+$navIconWidth: map-fetch($dimensions, nav-icon, icon-width);
+$navIconThickness: map-fetch($dimensions, nav-icon, icon-thickness);
+$navIconLineGap: map-fetch($dimensions, nav-icon, icon-line-gap);
+$navIconMinWidth: map-fetch($dimensions, nav-icon, min-width);
+$navIconWidthCollapsed: map-fetch($dimensions, nav-icon, width-collapsed);
+$navIconBackground: map-fetch($cosmetics, nav-icon, background);
+$navIconColor: map-fetch($cosmetics, nav-icon, color);
+$navIconBorderWidth: map-fetch($cosmetics, nav-icon, border-width);
+$navIconBorderStyle: map-fetch($cosmetics, nav-icon, border-style);
+$navIconBorderColor: map-fetch($cosmetics, nav-icon, border-color);
+$navIconFontSize: map-fetch($cosmetics, nav-icon-text, font-size);
+$navIconFontWeight: map-fetch($cosmetics, nav-icon-text, font-weight);
+
+// Drawer
+$drawerSlideFrom: map-fetch($config, drawer, slide-from);
+$drawerWidth: map-fetch($dimensions, drawer, width);
+$drawerMiniWidthExpanded: map-fetch($dimensions, drawer-mini, width-expanded);
+$drawerMiniWidthCollapsed: map-fetch($dimensions, drawer-mini, width-collapsed);
+
+$drawerLinkGap: map-fetch($spacing, drawer, link-gap);
+$drawerBackground: map-fetch($cosmetics, drawer, background);
+$drawerColor: map-fetch($cosmetics, drawer, color);
+$drawerFontWeight: map-fetch($cosmetics, drawer, font-weight);
+
+// Drawer Links
+$drawerLinkBackground: map-fetch($cosmetics, drawer-link, background);
+$drawerLinkColor: map-fetch($cosmetics, drawer-link, color);
+$drawerLinkHoverBackground: map-fetch($cosmetics, drawer-link, hover-background);
+$drawerLinkHoverColor: map-fetch($cosmetics, drawer-link, hover-color);
+$drawerLinkActiveBackground: map-fetch($cosmetics, drawer-link, active-background);
+$drawerLinkActiveColor: map-fetch($cosmetics, drawer-link, active-color);
+
+
+// Dropdown
+$dropdownArrowSize: map-fetch($dimensions, dropdown, arrow-size);
+
+// Dropdown Vertical
+$dropdownVerticalWidth: map-fetch($dimensions, dropdown-vertical, width);
+$dropdownVerticalBackground: map-fetch($cosmetics, dropdown-vertical, background);
+$dropdownVerticalBorder: map-fetch($cosmetics, dropdown-vertical, border);
+$dropdownVerticalBorderRadius: map-fetch($cosmetics, dropdown-vertical, border-radius);
+$dropdownVerticalSeparator: map-fetch($cosmetics, dropdown-vertical, separator);
+$dropdownVerticalActiveBackground: map-fetch($cosmetics, dropdown-vertical, active-background);
+$dropdownVerticalActiveColor: map-fetch($cosmetics, dropdown-vertical, active-color);
+
+// Dropdown Horizontal
+$dropdownHorizontalHeight: map-fetch($dimensions, dropdown-horizontal, height);
+$dropdownHorizontalBackground: map-fetch($cosmetics, dropdown-horizontal, background);
+$dropdownHorizontalBorderBottom: map-fetch($cosmetics, dropdown-horizontal, border-bottom);
+$dropdownHorizontalActiveBorder: map-fetch($cosmetics, dropdown-horizontal, active-border);
+$dropdownHorizontalLineThickness: map-fetch($cosmetics, dropdown-horizontal, line-thickness);
+$dropdownHorizontalLineStyle: map-fetch($cosmetics, dropdown-horizontal, line-style);
+$dropdownHorizontalLineColor: map-fetch($cosmetics, dropdown-horizontal, line-color);
+$dropdownHorizontalActiveBackground: map-fetch($cosmetics, dropdown-horizontal, active-background);
+$dropdownHorizontalActiveColor: map-fetch($cosmetics, dropdown-horizontal, active-color);
+
+// Mega Menu
+$megaBackgroundColor: map-fetch($cosmetics, mega-menu, background-color);
+

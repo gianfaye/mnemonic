@@ -1,0 +1,45 @@
+/* COLORS */
+
+/* Helper Classes  */
+
+.color--primary{
+	color: $primaryColor;
+}
+.color--secondary{
+	color: $secondaryColor;
+}
+.color--success{
+	color: $successColor;
+}
+.color--info{
+	color: $infoColor;
+}
+.color--warning{
+	color: $warningColor;
+}
+.color--danger{
+	color: $dangerColor;
+}
+
+.bg--primary{
+	background: $primaryColor;
+}
+.bg--secondary{
+	background: $secondaryColor;
+}
+.bg--success{
+	background: $successColor;
+}
+.bg--info{
+	background: $infoColor;
+}
+.bg--warning{
+	background: $warningColor;
+}
+.bg--danger{
+	background: $dangerColor;
+}
+
+.bg--none{
+  background: none !important;
+}
