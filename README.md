@@ -4,7 +4,7 @@ A design system.
 
 ## Guide
 
-* All markup, css, js, fonts, images, and other assets should be under the `app` directory.
+* All markup, css, js, fonts, images, and other assets should be under the `docs` directory.
 
 - - -
 
@@ -70,12 +70,6 @@ Read: [SASS: The Inception Rule](http://thesassway.com/beginner/the-inception-ru
 > Read: [Git commit Best Practices](https://github.com/trein/dev-best-practices/wiki/Git-Commit-Best-Practices)
 
 - - -
-
-### Deployment
-
-* The `Procfile` is needed for Heroku deployment.
-
-- - - 
 
 If you have any additional suggestions or see points of improvement, feel free to update this guide.
 
