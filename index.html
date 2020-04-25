@@ -1,30 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="no-js" lang="en-us">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-	<title>MNEMONIC | Home</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>MNEMONIC | Home</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
-	<link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
-	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/master.css" media="all"/>
-	<link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)"/>
-	<link rel="stylesheet" href="css/tablet.css" media="(max-width: 1024px)"/>
-	<link rel="stylesheet" href="css/desktop.css" media="(min-width: 1025px)"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/master.css" media="all"/>
+  <link rel="stylesheet" href="css/landing.css" media="all"/>
+  <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)"/>
+  <link rel="stylesheet" href="css/tablet.css" media="(max-width: 1024px)"/>
+  <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1025px)"/>
 
-	<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
-	<script src="js/html5.js"></script>
+  <!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+  <script src="js/html5.js"></script>
 </head>
-<body>
-	<div class="body-wrapper">
+<body id="landing">
+  <div class="body-wrapper">
     <header>
-      <section class="navbar navbar--fixed-top">
+      <section class="navbar navbar--fixed-top sticky">
         <nav class="nav__toolbar">
           <ul class="flex--auto">
-            <li class="nav__icon expanded">
+            <!-- <li class="nav__icon collapsed">
               <div class="drawer-icon-container">
                 <div class="nav__drawer-icon">
                   <div class="drawer-toggle">
@@ -41,21 +42,22 @@
                   </div>   
                 </div>
               </div>
-            </li>
+            </li> -->
             <li class="nav__brand">
-              <!--div class="nav__brand-logo">
+              <div class="nav__brand-logo">
                 <a href="#">
                   <picture>
-                    <source srcset="images/page_template/logo-rcbc.png" type="img" media="all">
-                    <img src="images/page_template/logo.png" alt="Logo">
+                    <source srcset="images/logomark.svg" type="img" media="all">
+                    <img src="images/logomark.svg" alt="Logo">
                   </picture>
+                  MNEMONIC <span class="dot">&bull;</span> <span class="hidden-xs">&nbsp; Design System</span>
                 </a>
-              </div-->
+              </div>
               <div class="nav__brand-text">
-                <a href="/">MNEMONIC <span class="hidden-xs">&nbsp;&bull; Design System</span></a>
+                <a href="/"></a>
               </div>
             </li>
-            <li class="nav__toolbar--left">
+            <!-- <li class="nav__toolbar--left">
               <ul>
                 <li class="dropdown dropdown--vertical" data-target="verticalMenu">
                   <a href="#" class="dropdown__button">Vertical</a>
@@ -96,16 +98,23 @@
                   </div>
                 </li>
               </ul>
-            </li>
+            </li> -->
             <li class="nav__toolbar--right">
               <ul>
                 <li class="hidden-xs">
-                  <a href="about.html">About</a>
+                  <a href="components/index.html"><span class="dot green"></span>Components</a>
                 </li>
                 <li class="hidden-xs">
-                  <a href="status.html">Status</a>
+                  <a href="modules/index.html"><span class="dot yellow"></span>Modules</a>
                 </li>
-                <li>
+                <li class="hidden-xs">
+                  <a href="modules/index.html"><span class="dot orange"></span>Templates</a>
+                </li>
+
+                <!-- <li class="hidden-xs">
+                  <a href="status.html">Status</a>
+                </li> -->
+               <!--  <li>
                   <a href="#search">
                     <i class="fas fa-search"></i>
                   </a>
@@ -114,16 +123,16 @@
                   <a href="#login">
                     <i class="fas fa-user"></i>
                   </a>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>
         </nav>
-        <nav id="drawerNav" class="drawer left" data-state="expanded" data-action="push">
+        <nav id="drawerNav" class="drawer left" data-state="collapsed" data-action="push">
           <div class="list-group"> 
             <ul class="drawer-parent accordion-container singleview">
               <li>
-                <a href="components/index.html">Components &nbsp; <span class="badge">22</span></a>
+                <a href="components/index.html">&nbsp; Components &nbsp; <span class="badge">22</span></a>
               </li>
               <li>
                 <a href="modules/index.html">Modules &nbsp; <span class="badge">12</span></a>
@@ -184,17 +193,119 @@
         </nav>
       </section>
     </header>
-		<main role="main">
-      <section class="section__content">
-        <section class="section__header">
-          <h1>Mnemonic</h1>
-          <p>Design systems aim to streamline the design and development process <br>by providing pre-built components and modules that are <br> <strong>modular</strong>, <strong>reusable</strong>, <strong>consistent</strong>, <strong>customizable</strong>, and <strong>relevant</strong>.</p>
+    <main role="main">
+      <section class="section__content text--center">
+        <section class="grid-1-column">
+          <ul class="grid grid--col-1 hero">
+            <li>
+             <section class="section__header main-header">
+                <div class="jumbo__header header--1">MNEMONIC <span class="dot">&bull;</span></div>
+                <div class="jumbo__header header--2">Design System</div>
+                <!-- <div class="jumbo__header header--3">the <span>DESIGN &amp; DEVELOPMENT</span> process</div>
+                <div class="jumbo__header header--4">
+                  by providing <span>PRE-BUILT</span>
+                </div>
+                <div class="jumbo__header header--5">
+                  <a href="">components</a>, <a href="">modules</a>, and <a href="">templates</a>
+                </div>
+                <div class="jumbo__header header--6">
+                  that are <span>_______________</span>.
+                </div> -->
+              </section>
+
+              <div class="svg-container">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 400 400" enable-background="new 0 0 400 400" xml:space="preserve">
+                <!-- <circle fill="#FEFEFE" cx="200" cy="200" r="139"/> -->
+                <path class="atom-1" fill="none" stroke="#e5e6e6" stroke-width="1" stroke-miterlimit="10" d="M231.7,200c0,17.4-1.7,88-31.7,88
+                  s-31.7-70.6-31.7-88s1.7-88,31.7-88S231.7,182.6,231.7,200z"/>
+                  <g>
+                  <circle class="circle-1" fill="#84BD97" cx="0" cy="0" r="3"/>
+                  <text class="text-1" text-anchor="middle" stroke="#000" stroke-width="0.5px" dy=".3em">22</text>
+                  </g>
+                <path class="atom-2" fill="none" stroke="#e5e6e6" stroke-width="1" stroke-miterlimit="10" d="M216.1,227.7c-15,8.9-76.6,43.4-91.9,17.6
+                  s44.6-63.2,59.6-72.1s76.6-43.4,91.9-17.6S231.1,218.8,216.1,227.7z"/>
+                  <circle class="circle-2" fill="#D1C449" cx="0" cy="0" r="3"/>
+                  <text class="text-2" text-anchor="middle" stroke="#000" stroke-width="0.5px" dy=".3em">12</text>
+                <path class="atom-3" fill="none" stroke="#e5e6e6" stroke-width="1" stroke-miterlimit="10" d="M183.9,227.7c15,8.9,76.6,43.4,91.9,17.6
+                  s-44.6-63.2-59.6-72.1s-76.6-43.4-91.9-17.6S168.9,218.8,183.9,227.7z"/>
+                  <circle class="circle-3" fill="#E88B2E" cx="0" cy="0" r="3"/>
+                  <text class="text-3" text-anchor="middle" stroke="#000" stroke-width="0.5px" dy=".3em">8</text>
+                <!-- <circle fill="#e5e6e6" cx="200" cy="202.5" r="4"/> -->
+                </svg>
+              </div>
+
+              <div class="scroll-down">
+                <a href="#features" class="anchor-link">
+                  <span>Scroll Down</span>
+                  <div class="arrow-scroll"></div>
+                </a>
+              </div>
+            </li>
+          </ul>
         </section>
       </section>
-      <section class="section__content mnemonic-overview">
-        <section class="section__header">
+      <section id="features" class="section__content p-t--lg">
+        <!-- <section class="section__header">
           <h2>Overview</h2>
+        </section> -->
+        <section class="section__body grid-2-columns m-t--md">
+          <ul class="grid grid--col-1">
+            <!-- <li></li> -->
+            <li class="p--0">
+              <ul class="masonry--third masonry--ttb">
+                <li>
+                  <a href="components/index.html">
+                    <h4>Components</h4>
+                    <p>Elements that are uniform and consistent turned into modular components that are plug and display.</p>
+                    <span class="arrow-right"></span> 
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <h4>Layout</h4>
+                    <p>Grid and flexbox layouts. Helper classes for uniform spacing all througout the theme. </p>
+                    <span class="arrow-right"></span> 
+                  </a>
+                </li>
+                <li>
+                  <a href="modules/index.htm">
+                    <h4>Modules</h4>
+                    <p>Commonly used modules for navigation and media display.</p>
+                    <span class="arrow-right"></span> 
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <h4>Theme</h4>
+                    <p>Global theme values: color, typography and icons. </p>
+                    <span class="arrow-right"></span> 
+                  </a>
+                </li>
+                <li>
+                  <a href="templates/index.html">
+                    <h4>Templates</h4>
+                    <p>Pre-built templates for header, body, and footer.</p>
+                    <span class="arrow-right"></span> 
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <h4>State</h4>
+                    <p>Lazyload and preloader. <br> Transition effects and animation. </p>
+                    <span class="arrow-right"></span> 
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </section>
+         
+      </section>
+      <section class="section__content mnemonic-overview">
+        <!-- <section class="section__header">
+          <h2>Overview</h2>
+        </section> -->
         <section class="section__body">
           <section class="mnemonic-blocks">
             <ul class="mnemonic-items flex--third">
@@ -364,16 +475,19 @@
           </section>
         </section>
       </section>
-		</main>
-	</div>
-	<footer></footer>
+    </main>
+  </div>
+  <footer></footer>
 
-	<!-- jQuery & Lazyload -->
-	<script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
-	<script type="text/javascript" async src="plugins/lazysizes/lazysizes.min.js"></script>
-	<script type="text/javascript" src="plugins/jquery/jquery.appear.js"></script>
+  <!-- jQuery & Lazyload -->
+  <script type="text/javascript" src="plugins/jquery/jquery.min.js"></script>
+  <script type="text/javascript" async src="plugins/lazysizes/lazysizes.min.js"></script>
+  <script type="text/javascript" src="plugins/jquery/jquery.appear.js"></script>
+
+  <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6859/tween.min_1.js"></script>  
+  <script type="text/javascript" src="js/animate-svg.js"></script>  
   
-	<!-- Mnemonic JS -->
+  <!-- Mnemonic JS -->
   <script type="text/javascript" src="js/app.js"></script>  
   <script>
     $(document).ready(function() {
